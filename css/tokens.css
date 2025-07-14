@@ -1,0 +1,84 @@
+@import './primitives.css';
+
+:root{
+    /* Tokens */
+    --colors-text-brand-primary:var(--primitive-colors-brand-green);
+    --colors-text-brand-color1:var(--primitive-colors-brand-teal);
+    --colors-text-brand-color2:var(--primitive-colors-brand-pink);
+    --colors-text-brand-color3:var(--primitive-colors-brand-orange);
+    --colors-text-brand-color4:var(--primitive-colors-brand-purple);
+    --colors-text-brand-color5:var(--primitive-colors-brand-blue);
+    --colors-text-supportive-error:var(--primitive-colors-supportive-error);
+    --colors-text-supportive-success:var(--primitive-colors-supportive-success);
+    --colors-text-supportive-warning:var(--primitive-colors-supportive-warning);
+    --colors-text-neutral:var(--primitive-colors-neutrals-white);
+    --colors-text-neutral-invert:var(--primitive-colors-neutrals-black);
+
+    --colors-surface-brand-primary:var(--primitive-colors-neutrals-darkgray);
+    --colors-surface-brand-color1:var(--primitive-colors-brand-teal);
+    --colors-surface-brand-color2:var(--primitive-colors-brand-pink);
+    --colors-surface-brand-color3:var(--primitive-colors-brand-orange);
+    --colors-surface-brand-color4:var(--primitive-colors-brand-purple);
+    --colors-surface-brand-color5:var(--primitive-colors-brand-blue);
+    --colors-surface-supportive-error:var(--primitive-colors-supportive-error);
+    --colors-surface-supportive-success:var(--primitive-colors-supportive-success);
+    --colors-surface-supportive-warning:var(--primitive-colors-supportive-warning);
+    --colors-surface-neutral:var(--primitive-colors-neutrals-lightgray);
+    --colors-surface-neutral-invert:var(--primitive-colors-neutrals-black);
+
+    --colors-icon-brand-primary:var(--primitive-colors-neutrals-white);
+    --colors-icon-supportive-error:var(--primitive-colors-supportive-error);
+    --colors-icon-supportive-success:var(--primitive-colors-supportive-success);
+    --colors-icon-supportive-warning:var(--primitive-colors-supportive-warning);
+    --colors-icon-neutral:var(--primitive-colors-neutrals-lightgray);
+    --colors-icon-neutral-invert:var(--primitive-colors-neutrals-darkgray);
+
+    --colors-button-brand-primary:var(--primitive-colors-neutrals-white);
+    --colors-button-supportive-error:var(--primitive-colors-supportive-error);
+    --colors-button-supportive-success:var(--primitive-colors-supportive-success);
+    --colors-button-supportive-warning:var(--primitive-colors-supportive-warning);
+    --colors-button-neutral:var(--primitive-colors-neutrals-lightgray);
+    --colors-button-neutral-invert:var(--primitive-colors-neutrals-darkgray);
+
+    --spacing-none:0px;
+    --spacing-2XS:var(--primitive-spacing-2xs);
+    --spacing-XS:var(--primitive-spacing-xs);
+    --spacing-S:var(--primitive-spacing-s);
+    --spacing-M:var(--primitive-spacing-m);
+    --spacing-L:var(--primitive-spacing-l);
+    --spacing-XL:var(--primitive-spacing-xl);
+    --spacing-2XL:var(--primitive-spacing-2xl);
+    --spacing-3XL:var(--primitive-spacing-3xl);
+    --spacing-4XL:var(--primitive-spacing-4xl);
+
+    --font-weight-light:var(--primitive-font-weight-light);
+    --font-weight-regular:var(--primitive-font-weight-regular);
+    --font-weight-medium:var(--primitive-font-weight-medium);
+    --font-weight-bold:var(--primitive-font-weight-bold);
+
+    --font-lineheight-small:var(--primitive-font-lineheight-small);
+    --font-lineheight-normal:var(--primitive-font-lineheight-normal);
+
+    --font-family-primary:var(--primitive-font-family-headline);
+    --font-family-secondary:var(--primitive-font-family-text);
+    --font-family-icon:var(--primitive-font-family-icons);
+
+    --font-size-xs:var(--primitive-font-size-2xs);
+    --font-size-s:var(--primitive-font-size-s);
+    --font-size-m:var(--primitive-font-size-m);
+    --font-size-ml:var(--primitive-font-size-ml);
+    --font-size-l:var(--primitive-font-size-l);
+    --font-size-xl:var(--primitive-font-size-xl);
+    --font-size-2xl:var(--primitive-font-size-2xl);
+
+    --radius-none:0px;
+    --radius-s:var(--primitive-radius-s);
+    --radius-m:var(--primitive-radius-m);
+    --radius-l:var(--primitive-radius-l);
+    --radius-xl:var(--primitive-radius-xl);
+
+    --container-size-max-width:var(--primitive-container-max-width);
+
+    --container-spacing-medium:var(--primitive-spacing-2xl);
+    --container-spacing-large:var(--primitive-spacing-3xl);
+}

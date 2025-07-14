@@ -1,0 +1,92 @@
+{
+  "projects": {
+    "de": "Projekte",
+    "en": "Projects"
+  },
+  "about": {
+    "de": "Über mich",
+    "en": "About"
+  },
+  "contact": {
+    "de": "Kontakt",
+    "en": "Contact"
+  },
+  "name": "Tim Schedlbauer",
+  "hero1_title": "UI/UX Designer",
+  "hero1_subtitle": {
+    "de": "Mein Fokus - Intuitive digitale Produkte",
+    "en": "My focus - Intuitive digital products"
+  },
+  "hero2_title": "Mobile, Web & Desktop",
+  "hero2_subtitle1": {
+    "de": "Digitale Apps für",
+    "en": "Digital apps for"
+  },
+  "hero2_subtitle2": {
+    "de": "Iterativ. Durchdacht. Nutzerzentriert.",
+    "en": "Iterative. Planned.User-centered"
+  },
+  "skills_subtitle": {
+    "de": "Meine",
+    "en": "My"
+  },
+  "skills_title": "Skills",
+  "skills_1": "UX",
+  "skills_2": {
+    "de": "Research",
+    "en": "Research"
+  },
+  "skills_3": {
+    "de": "Konzeption",
+    "en": "Conception"
+  },
+  "skills_4": "Wireframing",
+  "skills_5": "Prototyping",
+  "skills_6": "Testing",
+  "skills_7": "UI",
+  "skills_8": {
+    "de": "Designsysteme",
+    "en": "Design systems"
+  },
+  "skills_9": {
+    "de": "Grafikdesign",
+    "en": "Graphic design"
+  },
+  "skills_10": {
+    "de": "Responsives Design",
+    "en": "Responsive design"
+  },
+  "skills_11": "Animation",
+  "skills_12": {
+    "de": "Interaktion",
+    "en": "Interaction"
+  },
+  "skills_13": "HTML",
+
+  "skills_14": "CSS",
+  "skills_15": "JavaScript",
+  "skills_16": {
+    "de": "3D-Modellierung",
+    "en": "3D Modeling"
+  },
+  "skills_17": {
+    "de": "KI-Prompting",
+    "en": "AI Prompting"
+  },
+  "tools_subtitle": {
+    "de": "Meine",
+    "en": "My"
+  },
+  "tools_title": "Tools",
+  "tools_1": "Figma",
+  "tools_2": "Experience Design",
+  "tools_3": "Photoshop",
+  "tools_4": "Illustrator",
+  "tools_5": "Webflow",
+  "tools_6": "Blender",
+  "tools_7": "Unity",
+  "tools_8": "Spline",
+  "tools_9": "ChatGPT",
+  "tools_10": "Confluence",
+  "tools_11": "Jira"
+}

@@ -1,0 +1,57 @@
+:root {
+    /* Primitives */
+    --primitive-colors-brand-green: #4aff56;
+    --primitive-colors-brand-teal: #4aff9b;
+    --primitive-colors-brand-pink: #ff4a7d;
+    --primitive-colors-brand-orange: #ffb744;
+    --primitive-colors-brand-purple: #c144ff;
+    --primitive-colors-brand-blue: #4abdff;
+
+    --primitive-colors-neutrals-white: white;
+    --primitive-colors-neutrals-lightgray: #e4e4e4;
+    --primitive-colors-neutrals-mediumgray: #272727;
+    --primitive-colors-neutrals-darkgray: #212122;
+    --primitive-colors-neutrals-black: #101011;
+
+    --primitive-colors-supportive-error: red;
+    --primitive-colors-supportive-warning: #ffe100;
+    --primitive-colors-supportive-success: #15ff00;
+
+    --primitive-font-family-text: 'Comfortaa', sans-serif;
+    --primitive-font-family-headline: 'Comfortaa', sans-serif;
+    --primitive-font-family-icons: 'icons';
+
+    --primitive-font-size-2xs: 12px;
+    --primitive-font-size-xs: 16px;
+    --primitive-font-size-s: 18px;
+    --primitive-font-size-m: 20px;
+    --primitive-font-size-ml: 24px;
+    --primitive-font-size-l: 28px;
+    --primitive-font-size-xl: 36px;
+    --primitive-font-size-2xl: 56px;
+
+    --primitive-font-weight-light: 200;
+    --primitive-font-weight-regular: 400;
+    --primitive-font-weight-medium: 500;
+    --primitive-font-weight-bold: 700;
+
+    --primitive-font-lineheight-small: 1.2;
+    --primitive-font-lineheight-normal: 1.4;
+
+    --primitive-radius-s: 12px;
+    --primitive-radius-m: 24px;
+    --primitive-radius-l: 42px;
+    --primitive-radius-xl: 100px;
+
+    --primitive-spacing-2xs: 8px;
+    --primitive-spacing-xs: 12px;
+    --primitive-spacing-s: 16px;
+    --primitive-spacing-m: 24px;
+    --primitive-spacing-l: 32px;
+    --primitive-spacing-xl: 42px;
+    --primitive-spacing-2xl: 64px;
+    --primitive-spacing-3xl: 128px;
+    --primitive-spacing-4xl: 256px;
+
+    --primitive-container-max-width: 1440px;
+}
