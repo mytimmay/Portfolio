@@ -5,7 +5,8 @@
     "bgColor": "--colors-text-brand-color5",
     "tags": ["UI,", "UX"],
     "titleKey": "project1_title",
-    "descKey": "project1_desc"
+    "descKey": "project1_desc",
+    "link": "project1.html"
   },
   {
     "id": "project2",
@@ -13,7 +14,8 @@
     "bgColor": "--colors-text-brand-color3",
     "tags": ["UI,", "UX,", "Game Design,", "3D,", "PM"],
     "titleKey": "project2_title",
-    "descKey": "project2_desc"
+    "descKey": "project2_desc",
+    "link": "project2.html"
   },
   {
     "id": "project3",
@@ -21,7 +23,8 @@
     "bgColor": "--colors-text-brand-color2",
     "tags": ["UI,", "UX,", "3D,", "PM"],
     "titleKey": "project3_title",
-    "descKey": "project3_desc"
+    "descKey": "project3_desc",
+    "link": "project3.html"
   },
   {
     "id": "project4",
@@ -29,6 +32,7 @@
     "bgColor": "--colors-text-brand-color4",
     "tags": ["UI,", "UX,", "Game Design,", "3D,", "Code"],
     "titleKey": "project4_title",
-    "descKey": "project4_desc"
+    "descKey": "project4_desc",
+    "link": "archive.html"
   }
 ]

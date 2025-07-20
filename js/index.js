@@ -119,8 +119,9 @@ async function renderProjects() {
       const title = translations[proj.titleKey]?.[currentLang] || "";
       const desc = translations[proj.descKey]?.[currentLang] || "";
 
-      const card = document.createElement("div");
+      const card = document.createElement("a");
       card.className = "project-card";
+      card.href = proj.link;
 
       const imageWrapper = document.createElement("div");
       imageWrapper.className = "project-image";

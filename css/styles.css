@@ -345,7 +345,7 @@ button:hover {
 }
 
 .project-card {
-    background-color: var(--colors-surface-brand-primary);
+    background-color: var(--colors-surface-brand-primary) !important;
     border-radius: var(--radius-m);
     overflow: hidden;
     display: flex;
