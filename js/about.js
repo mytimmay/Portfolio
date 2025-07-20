@@ -2,8 +2,10 @@ import { setLanguage, currentLang, translations } from "./i18n.js";
 import { initNav } from "./nav.js";
 import { createTwoColumnSection } from "./layout.js";
 import { initFadeAnimations } from "./animations.js";
+import { loadHeader } from "./header.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
+  await loadHeader();
   await setLanguage(localStorage.getItem("lang") || "de");
 
   document
