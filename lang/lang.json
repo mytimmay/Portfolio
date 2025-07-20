@@ -1,16 +1,7 @@
 {
-  "projects": {
-    "de": "Projekte",
-    "en": "Projects"
-  },
-  "about": {
-    "de": "Über mich",
-    "en": "About"
-  },
-  "contact": {
-    "de": "Kontakt",
-    "en": "Contact"
-  },
+  "projects": { "de": "Projekte", "en": "Projects" },
+  "about": { "de": "Über mich", "en": "About" },
+  "contact": { "de": "Kontakt", "en": "Contact" },
   "name": "Tim Schedlbauer",
   "hero1_title": "UI/UX Designer",
   "hero1_subtitle": {
@@ -24,69 +15,219 @@
   },
   "hero2_subtitle2": {
     "de": "Iterativ. Durchdacht. Nutzerzentriert.",
-    "en": "Iterative. Planned.User-centered"
+    "en": "Iterative. Planned. User-centered"
   },
-  "skills_subtitle": {
-    "de": "Meine",
-    "en": "My"
-  },
-  "skills_title": "Skills",
-  "skills_1": "UX",
-  "skills_2": {
-    "de": "Research",
-    "en": "Research"
-  },
+
+  "skills-subtitle": { "de": "Meine", "en": "My" },
+  "skills-title": "Skills",
+
+  "skills_1": { "label": { "de": "UX", "en": "UX" }, "level": 80 },
+  "skills_2": { "label": { "de": "Research", "en": "Research" }, "level": 70 },
   "skills_3": {
-    "de": "Konzeption",
-    "en": "Conception"
+    "label": { "de": "Konzeption", "en": "Conception" },
+    "level": 80
   },
-  "skills_4": "Wireframing",
-  "skills_5": "Prototyping",
-  "skills_6": "Testing",
-  "skills_7": "UI",
+  "skills_4": { "label": "Wireframing", "level": 70 },
+  "skills_5": { "label": "Prototyping", "level": 90 },
+  "skills_6": { "label": "Testing", "level": 60 },
+  "skills_7": { "label": "UI", "level": 90 },
   "skills_8": {
-    "de": "Designsysteme",
-    "en": "Design systems"
+    "label": { "de": "Designsysteme", "en": "Design systems" },
+    "level": 80
   },
   "skills_9": {
-    "de": "Grafikdesign",
-    "en": "Graphic design"
+    "label": { "de": "Grafikdesign", "en": "Graphic design" },
+    "level": 60
   },
   "skills_10": {
-    "de": "Responsives Design",
-    "en": "Responsive design"
+    "label": { "de": "Responsives Design", "en": "Responsive design" },
+    "level": 90
   },
-  "skills_11": "Animation",
+  "skills_11": { "label": "Animation", "level": 80 },
   "skills_12": {
-    "de": "Interaktion",
-    "en": "Interaction"
+    "label": { "de": "Interaktion", "en": "Interaction" },
+    "level": 90
   },
-  "skills_13": "HTML",
-
-  "skills_14": "CSS",
-  "skills_15": "JavaScript",
+  "skills_13": { "label": "HTML", "level": 80 },
+  "skills_14": { "label": "CSS", "level": 80 },
+  "skills_15": { "label": "JavaScript", "level": 50 },
   "skills_16": {
-    "de": "3D-Modellierung",
-    "en": "3D Modeling"
+    "label": { "de": "3D-Modellierung", "en": "3D Modeling" },
+    "level": 70
   },
   "skills_17": {
-    "de": "KI-Prompting",
-    "en": "AI Prompting"
+    "label": { "de": "KI-Prompting", "en": "AI Prompting" },
+    "level": 70
   },
-  "tools_subtitle": {
-    "de": "Meine",
-    "en": "My"
+
+  "tools-subtitle": { "de": "Meine", "en": "My" },
+  "tools-title": "Tools",
+
+  "tools_1": { "label": "Figma", "level": 90 },
+  "tools_2": { "label": "Experience Design", "level": 90 },
+  "tools_3": { "label": "Photoshop", "level": 60 },
+  "tools_4": { "label": "Illustrator", "level": 80 },
+  "tools_5": { "label": "Webflow", "level": 80 },
+  "tools_6": { "label": "Blender", "level": 70 },
+  "tools_7": { "label": "Unity", "level": 60 },
+  "tools_8": { "label": "Spline", "level": 70 },
+  "tools_9": { "label": "ChatGPT", "level": 70 },
+  "tools_10": { "label": "Confluence", "level": 80 },
+  "tools_11": { "label": "Jira", "level": 70 },
+
+  "project1_title": {
+    "de": "FischerProfile – Interaktiver Showroom",
+    "en": "FischerProfile – Interactive Showroom"
   },
-  "tools_title": "Tools",
-  "tools_1": "Figma",
-  "tools_2": "Experience Design",
-  "tools_3": "Photoshop",
-  "tools_4": "Illustrator",
-  "tools_5": "Webflow",
-  "tools_6": "Blender",
-  "tools_7": "Unity",
-  "tools_8": "Spline",
-  "tools_9": "ChatGPT",
-  "tools_10": "Confluence",
-  "tools_11": "Jira"
+  "project1_desc": {
+    "de": "Der Fischer Profil Showroom ist eine innovative, virtuelle 3D Plattform zur interaktiven Präsentation…",
+    "en": "The Fischer Profile Showroom is an innovative virtual 3D platform for interactive presentations…"
+  },
+
+  "project2_title": {
+    "de": "VISPA Fun – Teambuilding Games",
+    "en": "VISPA Fun – Teambuilding Games"
+  },
+  "project2_desc": {
+    "de": "Ein für WebGL entwickeltes 3D-Spiel, speziell für Remote-Teams, um Teambuilding spielerisch zu gestalten…",
+    "en": "A WebGL-based 3D game developed for remote teams to encourage playful teambuilding…"
+  },
+
+  "project3_title": {
+    "de": "VISPA Workshops – Online Collaboration Plattform",
+    "en": "VISPA Workshops – Online Collaboration Platform"
+  },
+  "project3_desc": {
+    "de": "Eine 3D-Collaboration-App, mit der Teams in virtuellen Räumen effizient zusammenarbeiten können…",
+    "en": "A 3D collaboration app enabling teams to work efficiently in virtual spaces…"
+  },
+
+  "project4_title": {
+    "de": "Archiv",
+    "en": "Archive"
+  },
+  "project4_desc": {
+    "de": "Eine Sammlung von Projekten aus Arbeit, Studium oder Hobby – als Rückblick und Inspiration…",
+    "en": "A collection of projects from work, study, or hobby – serving as reflection and inspiration…"
+  },
+  "about-hero-text": {
+    "de": "<b>Digitale Erlebnisse greifbar machen</b> Genau das treibt mich an. Ich liebe es, interaktive Lösungen zu gestalten, die Menschen nicht nur nutzen, sondern erleben.<br/><br/>Von 3D-Konfiguratoren, die Produkte in völlig neuen Dimensionen zeigen, bis hin zu Online-Collaboration-Tools, die Teams zusammenbringen – meine Arbeit bewegt sich an der Schnittstelle zwischen UX, Technologie und Kreativität. Ich denke nicht nur in Pixeln, sondern in Möglichkeiten.<br/><br/><strong>Gamification, Interaktivität, Immersion</strong> Das sind nicht nur Buzzwords für mich, sondern Prinzipien, mit denen ich digitale Welten baue. Mal funktional, mal spielerisch – aber immer mit dem Menschen im Fokus.",
+    "en": "<strong>Making digital experiences tangible</strong> That is exactly what drives me. I love creating interactive solutions that people not only use, but experience.<br/><br/>From 3D configurators that show products in completely new dimensions to online collaboration tools that bring teams together — my work is at the interface between UX, technology and creativity. I don't just think in terms of pixels, but in terms of possibilities.<br/><br/><strong>Gamification, interactivity, immersion</strong> These are not just buzzwords for me, but principles with which I build digital worlds. Sometimes functional, sometimes playful — but always with people in focus."
+  },
+  "about-experience-headline": {
+    "de": "Erfahrungen",
+    "en": "Experience"
+  },
+  "about-experience-1-title": {
+    "de": "UX/UI Designer",
+    "en": "UX/UI Designer"
+  },
+  "about-experience-1-company": {
+    "de": "Space One GmbH | ",
+    "en": "Space One GmbH | "
+  },
+  "about-experience-1-period": {
+    "de": "November 2020 - August 2024",
+    "en": "November 2020 - August 2024"
+  },
+  "about-experience-1-text": {
+    "de": "Konzeption, Design, Dokumentation und Implementierung komplexer Systeme wie Spielmechaniken, Benutzerberechtigungen, Dashboards, Abonnements, Websites, Unity-Apps, Prototyping, 3D-Modellierung und Animation. Durchführung und Auswertung von Benutzertests. Agiles Projektmanagement und Projektplanung.",
+    "en": "Conception, design, documentation, and implementation of complex systems such as game mechanics, user permissions, dashboards, subscriptions, websites, Unity apps, prototyping, 3D modeling, and animation. Carrying out and evaluating user tests. Agile project management and project planning."
+  },
+  "about-experience-2-title": {
+    "de": "UX/UI Designer - Werkstudent",
+    "en": "UX/UI Designer - working student"
+  },
+  "about-experience-2-company": {
+    "de": "points GmbH | ",
+    "en": "points GmbH | "
+  },
+  "about-experience-2-period": {
+    "de": "Mai 2018 - Januar 2020",
+    "en": "May 2018 - January 2020"
+  },
+  "about-experience-2-text": {
+    "de": "Wireframing und Prototyping für eine Museums-App. Konzeption von nutzerfreundlichen Interfaces, Entwicklung von Navigationsstrukturen und interaktiven Prototypen. Durchführung von Usability-Tests und iterative Verbesserung des Designs auf Basis von Nutzerfeedback.",
+    "en": "Wireframing and prototyping for a museum app. Design of user-friendly interfaces, development of navigation structures and interactive prototypes. Carrying out usability tests and iteratively improving the design based on user feedback."
+  },
+  "about-experience-3-title": {
+    "de": "Informationsdesign (B.A.) - Studium",
+    "en": "Information Design (B.A.) - Study"
+  },
+  "about-experience-3-company": {
+    "de": "Hochschule der Medien | ",
+    "en": "Hochschule der Medien | "
+  },
+  "about-experience-3-period": {
+    "de": "Mai 2016 - August 2020",
+    "en": "May 2016 - August 2020"
+  },
+  "about-experience-3-text": {
+    "de": "Mit Fokus auf UX/UI-Design, visuelle Kommunikation und interaktive Medien, komplexe Designkonzepte, Wireframes, Prototypen, User Flows, Usability, User Research und interaktive Systeme. Anwendung von agilen Methoden zur Erstellung von nutzerzentrierten Designs in verschiedenen Medienprojekten.",
+    "en": "With a focus on UX/UI design, visual communication and interactive media, complex design concepts, wireframes, prototypes, user flows, usability, user research and interactive systems. Application of agile methods to create user-centered designs in various media projects."
+  },
+  "about-experience-4-title": {
+    "de": "Mediengestalter - Minijob",
+    "en": "Media designer - mini-job"
+  },
+  "about-experience-4-company": {
+    "de": "Werbeagentur Beck | ",
+    "en": "Werbeagentur Beck | "
+  },
+  "about-experience-4-period": {
+    "de": "September 2015 - Januar 2016",
+    "en": "September 2015 - January 2016"
+  },
+  "about-experience-4-text": {
+    "de": "Aktualisierung und Neuaufbau der Unternehmenswebsite mit dem CMS WordPress. Optimierung der Seitenstruktur und Umsetzung von Designanpassungen zur Verbesserung der Benutzerfreundlichkeit.",
+    "en": "Upperiod and rebuild the company website with the CMS WordPress. Optimizing the site structure and implementing design adjustments to improve usability."
+  },
+  "about-experience-5-title": {
+    "de": "Mediengestalter - Ausbildung",
+    "en": "Media designer - training"
+  },
+  "about-experience-5-company": {
+    "de": "Werbeagentur Beck | ",
+    "en": "Werbeagentur Beck | "
+  },
+  "about-experience-5-period": {
+    "de": "Juli 2013 - September 2015",
+    "en": "July 2013 - September 2015"
+  },
+  "about-experience-5-text": {
+    "de": "Gestaltung und Umsetzung von Projekten der visuellen Kommunikation. Verantwortlich für die Konzeption, Gestaltung und Produktion von Print- und Digitalmedien, einschließlich Layouts, Typografie, Bildbearbeitung.",
+    "en": "Design and implementation of visual communication projects. Responsible for the conception, design and production of print and digital media, including layouts, typography, image processing."
+  },
+  "about-experience-6-title": {
+    "de": "Mediengestalter - Praktikum",
+    "en": "Media designer - internship"
+  },
+  "about-experience-6-company": {
+    "de": "Biloba IT Balleyer & Lohrmann GbR | ",
+    "en": "Biloba IT Balleyer & Lohrmann GbR | "
+  },
+  "about-experience-6-period": {
+    "de": "Februar - Mai 2013",
+    "en": "February - May 2013"
+  },
+  "about-experience-6-text": {
+    "de": "Gestaltung und Umsetzung von Projekten der visuellen Kommunikation. Verantwortlich für die Konzeption, Gestaltung und Produktion von Print- und Digitalmedien, einschließlich Layouts, Typografie, Bildbearbeitung.",
+    "en": "Design and implementation of visual communication projects. Responsible for the conception, design and production of print and digital media, including layouts, typography, image processing."
+  },
+  "about-experience-7-title": {
+    "de": "Fachhochschulreife",
+    "en": "Vocational diploma"
+  },
+  "about-experience-7-company": {
+    "de": "Steinbeisschule Stuttgart | ",
+    "en": "Steinbeisschule Stuttgart | "
+  },
+  "about-experience-7-period": {
+    "de": "September 2010 - August 2012",
+    "en": "September 2010 - August 2012"
+  },
+  "about-experience-7-text": {
+    "de": "Schwerpunkt auf Grafikdesign, Medienproduktion und visuelle Kommunikation.",
+    "en": "Focus on graphic design, media production, and visual communication."
+  }
 }

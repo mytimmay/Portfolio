@@ -1,0 +1,34 @@
+[
+  {
+    "id": "project1",
+    "image": "./assets/images/project-cards/FischerShowroom-Image.webp",
+    "bgColor": "--colors-text-brand-color5",
+    "tags": ["UI,", "UX"],
+    "titleKey": "project1_title",
+    "descKey": "project1_desc"
+  },
+  {
+    "id": "project2",
+    "image": "./assets/images/project-cards/VispaGame-Image.webp",
+    "bgColor": "--colors-text-brand-color3",
+    "tags": ["UI,", "UX,", "Game Design,", "3D,", "PM"],
+    "titleKey": "project2_title",
+    "descKey": "project2_desc"
+  },
+  {
+    "id": "project3",
+    "image": "./assets/images/project-cards/VispaWorkshop-Image.webp",
+    "bgColor": "--colors-text-brand-color2",
+    "tags": ["UI,", "UX,", "3D,", "PM"],
+    "titleKey": "project3_title",
+    "descKey": "project3_desc"
+  },
+  {
+    "id": "project4",
+    "image": "./assets/images/project-cards/Archive-Image.webp",
+    "bgColor": "--colors-text-brand-color4",
+    "tags": ["UI,", "UX,", "Game Design,", "3D,", "Code"],
+    "titleKey": "project4_title",
+    "descKey": "project4_desc"
+  }
+]
