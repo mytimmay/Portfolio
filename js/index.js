@@ -222,11 +222,11 @@ function setupScrollAndNavigation() {
     const dy = startY - e.changedTouches[0].clientY;
     const section = sections[currentIndex];
     const scrollContainer = getScrollContainer(section);
-    const atTop = scrollContainer?.scrollTop <= 0;
-    const atBottom =
-      scrollContainer &&
-      scrollContainer.scrollTop + scrollContainer.clientHeight >=
-        scrollContainer.scrollHeight - 1;
+    const atTop = scrollContainer ? scrollContainer.scrollTop <= 0 : true;
+    const atBottom = scrollContainer
+      ? scrollContainer.scrollTop + scrollContainer.clientHeight >=
+        scrollContainer.scrollHeight - 1
+      : true;
 
     if ((dy > 50 && atBottom) || (dy < -50 && atTop)) {
       scrollToSection(currentIndex + (dy > 0 ? 1 : -1));
