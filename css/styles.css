@@ -425,6 +425,7 @@ button:hover {
     height: 440px;
     overflow: hidden;
     border-radius: var(--radius-m);
+    flex: 1;
 }
 
 .about-hero-image img {
@@ -436,6 +437,7 @@ button:hover {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    flex: 1.25
 }
 
 .content-wrapper {
@@ -451,12 +453,10 @@ button:hover {
 }
 
 .two-column-list {
+    display: flex;
+    flex-direction: row;
     flex: 0 auto;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1.5fr;
-    grid-auto-columns: 1fr;
     justify-content: center;
-    display: grid;
     padding-left: var(--container-spacing-medium);
     padding-right: var(--container-spacing-medium);
 }
@@ -470,12 +470,66 @@ button:hover {
 .column-right {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1.5;
 }
 
 .smooth-wrapper {
     display: flex;
     flex-direction: column;
+}
+
+#experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-XL);
+}
+
+.experience-entry {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2XS);
+}
+
+.job-meta {
+    flex-flow: wrap;
+    display: flex;
+    font-size: var(--font-size-m);
+    line-height: var(--font-lineheight-normal);
+    font-weight: var(--font-weight-bold);
+}
+
+.job-company {
+    display: flex;
+}
+
+.job-period {
+    display: flex;
+    color: #c3c3c3;
+}
+
+.job-text {
+    font-size: var(--font-size-s);
+    line-height: var(--font-lineheight-normal);
+    display: flex;
+}
+
+/* === TEXT ANIMATION === */
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.6s ease-out;
+}
+
+.in-view {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
 }
 
 /* === TABLET NAV === */

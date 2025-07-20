@@ -27,11 +27,15 @@ async function loadExperience() {
 
     data.experience.forEach((job) => {
       const wrapper = document.createElement("div");
-      wrapper.className = "experience-entry";
+      wrapper.className = "experience-entry fade-right";
 
-      const title = document.createElement("div");
+      const title = document.createElement("h5");
       title.className = "job-title";
       title.textContent = translations[job.title]?.[currentLang] || job.title;
+
+      // Meta-Wrapper
+      const metaWrapper = document.createElement("div");
+      metaWrapper.className = "job-meta";
 
       const company = document.createElement("div");
       company.className = "job-company";
@@ -43,11 +47,14 @@ async function loadExperience() {
       period.textContent =
         translations[job.period]?.[currentLang] || job.period;
 
+      // company + period in metaWrapper packen
+      metaWrapper.append(company, period);
+
       const text = document.createElement("div");
       text.className = "job-text";
       text.textContent = translations[job.text]?.[currentLang] || job.text;
 
-      wrapper.append(title, company, period, text);
+      wrapper.append(title, metaWrapper, text);
       container.appendChild(wrapper);
     });
   } catch (err) {
