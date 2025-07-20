@@ -27,7 +27,7 @@ async function loadExperience() {
 
     data.experience.forEach((job) => {
       const wrapper = document.createElement("div");
-      wrapper.className = "experience-entry";
+      wrapper.className = "experience-entry fade-right";
 
       const title = document.createElement("h5");
       title.className = "job-title";
