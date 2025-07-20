@@ -112,6 +112,7 @@ nav {
 }
 
 .logo img {
+    display: flex;
     width: 34px;
     height: 34px;
 }
@@ -513,26 +514,28 @@ button:hover {
 
 /* === PROJECT HERO === */
 .hero-project {
-    width: 100%;
-    padding-top: var(--container-spacing-large);
-    padding-left: var(--container-spacing-medium);
-    padding-right: var(--container-spacing-medium);
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    padding-top: 80px;
 }
 
 .hero-project-wrapper {
     display: flex;
+    flex-direction: row;
     gap: var(--spacing-2XL);
     width: 100%;
     max-width: var(--container-size-max-width);
+    padding: var(--container-spacing-large) var(--container-spacing-medium);
 }
 
 .hero-project-text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1.25;
+    flex: 1;
     gap: var(--spacing-L);
 }
 
@@ -544,7 +547,7 @@ button:hover {
     height: 440px;
     overflow: hidden;
     border-radius: var(--radius-m);
-    flex: 1;
+    flex: 1.25;
 }
 
 .hero-project-image img {
@@ -552,16 +555,16 @@ button:hover {
     vertical-align: middle;
 }
 
-.hero-project.project1 .hero-project-heading {
-    color: var(--colors-text-brand-color5);
+.hero-project.project1 {
+    background-color: var(--colors-text-brand-color5);
 }
 
-.hero-project.project2 .hero-project-heading {
-    color: var(--colors-text-brand-color3);
+.hero-project.project2 {
+    background-color: var(--colors-text-brand-color3);
 }
 
-.hero-project.project3 .hero-project-heading {
-    color: var(--colors-text-brand-color2);
+.hero-project.project3 {
+    background-color: var(--colors-text-brand-color2);
 }
 
 /* === TEXT ANIMATION === */
@@ -602,6 +605,14 @@ button:hover {
     .about-hero {
         flex-direction: column;
         padding-top: 80px;
+    }
+
+    .hero-project {
+        height: 100%;
+    }
+
+    .hero-project-wrapper {
+        flex-direction: column;
     }
 }
 

@@ -83,7 +83,6 @@
     "de": "Der Fischer Profil Showroom ist eine innovative, virtuelle 3D Plattform zur interaktiven Präsentation…",
     "en": "The Fischer Profile Showroom is an innovative virtual 3D platform for interactive presentations…"
   },
-
   "project2_title": {
     "de": "VISPA Fun – Teambuilding Games",
     "en": "VISPA Fun – Teambuilding Games"
@@ -92,7 +91,6 @@
     "de": "Ein für WebGL entwickeltes 3D-Spiel, speziell für Remote-Teams, um Teambuilding spielerisch zu gestalten…",
     "en": "A WebGL-based 3D game developed for remote teams to encourage playful teambuilding…"
   },
-
   "project3_title": {
     "de": "VISPA Workshops – Online Collaboration Plattform",
     "en": "VISPA Workshops – Online Collaboration Platform"
@@ -101,31 +99,18 @@
     "de": "Eine 3D-Collaboration-App, mit der Teams in virtuellen Räumen effizient zusammenarbeiten können…",
     "en": "A 3D collaboration app enabling teams to work efficiently in virtual spaces…"
   },
-  "project1_heading": {
-    "de": "Fischer Profil -Virtuelle Showrooms",
-    "en": "Fischer Profile - Virtual Showrooms"
-  },
   "project1_text": {
     "de": "Der Fischer Profil Showroom ist eine innovative, virtuelle 3D Plattform zur interaktiven Präsentation von Dach- und Fassadensystemen. Entwickelt als Web-App auf Basis des VISHOW-Systems von Solid White, ermöglicht er Architekten, Kunden und Vertriebsmitarbeitern eine intuitive Produktkonfiguration und -visualisierung.",
     "en": "The Fischer Profil Showroom is an innovative, virtual 3D platform for the interactive presentation of roof and facade systems. Developed as a web app based on Solid White's VISHOW-System, it enables architects, customers and sales staff to configure and visualize products intuitively."
-  },
-  "project2_heading": {
-    "de": "VISPA Fun -  Teambuilding Games",
-    "en": "VISPA Fun -  Teambuilding Games"
   },
   "project2_text": {
     "de": "Ein für WebGL entwickeltes 3D-Spiel, das speziell für Remote-Teams konzipiert wurde, um Teambuilding durch teambasierte Mechaniken zu fördern und zu verbessern. Das Projekt basierte auf \u201eVISPA Workshops\u201c, einem kollaborativen 3D-Ideation- und Workshop-Tool, welches mit einem starken Fokus auf Gamification weiterentwickelt wurde.",
     "en": "A 3D game developed for WebGL, specifically designed for remote teams to promote and improve team building through team-based mechanics. The project was based on \u201cVISPA Workshops\u201d, a collaborative 3D ideation and workshop tool, which was further developed with a strong focus on gamification."
   },
-  "project3_heading": {
-    "de": "VISPA Workshops - 3D-Kollaborations- Plattform",
-    "en": "VISPA Workshops - 3D Collaboration Platform"
-  },
   "project3_text": {
     "de": "Vispa ist eine innovative 3D-Kollaborations-App, die es Teams ermöglicht, in virtuellen Räumen zusammenzuarbeiten. Workshops, Meetings und kreative Projekte können in einer interaktiven Umgebung effizient gestaltet werden. Mit Vispa können Nutzer gemeinsam Modelle visualisieren, Ideen entwickeln und in Echtzeit kommunizieren – ideal für moderne, remote arbeitende Teams.",
     "en": "Vispa is an innovative 3D collaboration app that enables teams to work together in virtual spaces. Workshops, meetings and creative projects can be efficiently designed in an interactive environment. With Vispa, users can jointly visualize models, develop ideas and communicate in real time — ideal for modern, remote teams."
   },
-
   "project4_title": {
     "de": "Archiv",
     "en": "Archive"
