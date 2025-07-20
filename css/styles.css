@@ -511,6 +511,59 @@ button:hover {
     display: flex;
 }
 
+/* === PROJECT HERO === */
+.hero-project {
+    width: 100%;
+    padding-top: var(--container-spacing-large);
+    padding-left: var(--container-spacing-medium);
+    padding-right: var(--container-spacing-medium);
+    display: flex;
+    justify-content: center;
+}
+
+.hero-project-wrapper {
+    display: flex;
+    gap: var(--spacing-2XL);
+    width: 100%;
+    max-width: var(--container-size-max-width);
+}
+
+.hero-project-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1.25;
+    gap: var(--spacing-L);
+}
+
+.hero-project-image {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-flow: column;
+    height: 440px;
+    overflow: hidden;
+    border-radius: var(--radius-m);
+    flex: 1;
+}
+
+.hero-project-image img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.hero-project.project1 .hero-project-heading {
+    color: var(--colors-text-brand-color5);
+}
+
+.hero-project.project2 .hero-project-heading {
+    color: var(--colors-text-brand-color3);
+}
+
+.hero-project.project3 .hero-project-heading {
+    color: var(--colors-text-brand-color2);
+}
+
 /* === TEXT ANIMATION === */
 
 .fade-left {
