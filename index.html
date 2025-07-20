@@ -14,21 +14,21 @@
 
   <body class="scroll-snap">
     <main>
-      <header>
+      <header id="site-header" class="transparent">
         <nav>
-          <div class="nav-brand">
+          <a class="nav-brand" href="index.html#home">
             <div class="logo"><img src="./assets/images/logo/Logo.svg" /></div>
             <div class="link">Tim <br />Schedlbauer</div>
-          </div>
+          </a>
 
           <button class="burger" id="burger-toggle" aria-label="Menü öffnen">
             &#9776;
           </button>
 
           <div class="nav-menu" id="nav-menu">
-            <div class="nav-link" data-i18n="projects"></div>
-            <div class="nav-link" data-i18n="about"></div>
-            <div class="nav-link" data-i18n="contact"></div>
+            <a class="nav-link js-to-projects" data-i18n="projects"></a>
+            <a class="nav-link" href="about.html" data-i18n="about"></a>
+            <a class="nav-link" data-i18n="contact"></a>
             <button
               id="lang-toggle"
               class="lang-btn"
@@ -41,7 +41,7 @@
         </nav>
       </header>
 
-      <section class="section">
+      <section class="section" id="home">
         <div class="max-width">
           <div class="hero-wrapper">
             <div class="hero-text">
@@ -49,7 +49,7 @@
               <h1 data-i18n="hero1_title"></h1>
               <div class="hero-text-subhead" data-i18n="hero1_subtitle"></div>
             </div>
-            <button data-i18n="projects"></button>
+            <button class="js-to-projects" data-i18n="projects"></button>
           </div>
         </div>
         <div class="fullscreen-vid">
@@ -63,14 +63,14 @@
         </div>
       </section>
       <section class="section">
-        <div class="max-width">
+        <div class="max-width right">
           <div class="hero-wrapper">
             <div class="hero-text">
               <div class="hero-text-subhead" data-i18n="hero2_subtitle1"></div>
               <h1 data-i18n="hero2_title"></h1>
               <div class="hero-text-subhead" data-i18n="hero2_subtitle2"></div>
             </div>
-            <button data-i18n="projects"></button>
+            <button class="js-to-projects" data-i18n="projects"></button>
           </div>
         </div>
         <div class="fullscreen-vid">
@@ -83,34 +83,35 @@
           ></video>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-mobile-overflow">
         <div class="max-width">
-          <div class="hero-wrapper">
-            <div class="hero-text">
-              <div class="hero-text-subhead"></div>
-              <h1></h1>
-              <div class="hero-text-subhead"></div>
+          <div class="skills-wrapper">
+            <div class="hero-text no-max-width">
+              <div class="hero-text-subhead" data-i18n="skills-subtitle"></div>
+              <h1 data-i18n="skills-title"></h1>
+              <div id="skillsContainer" class="chip-container"></div>
             </div>
-            <button></button>
+            <div class="hero-text no-max-width">
+              <div class="hero-text-subhead" data-i18n="tools-subtitle"></div>
+              <h1 data-i18n="tools-title"></h1>
+              <div id="toolsContainer" class="chip-container"></div>
+            </div>
+            <button data-i18n="about"></button>
           </div>
         </div>
       </section>
-      <section class="section section-mobile-overflow">
-        <div class="max-width">
-          <div class="hero-wrapper"></div>
-        </div>
-      </section>
-      <section class="section section-overflow">
-        <div class="max-width">
-          <div class="hero-wrapper"></div>
+      <section id="projects-section" class="section section-scrollable">
+        <div class="scroll-content">
+          <h2 data-i18n="projects"></h2>
+          <div class="project-cards-grid" id="projectsContainer"></div>
         </div>
       </section>
     </main>
 
-    <script src="js/i18n.js"></script>
-    <script src="js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>

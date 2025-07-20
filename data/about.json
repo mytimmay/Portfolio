@@ -1,0 +1,46 @@
+{
+  "experience": [
+    {
+      "title": "about-experience-1-title",
+      "company": "about-experience-1-company",
+      "period": "about-experience-1-period",
+      "text": "about-experience-1-text"
+    },
+    {
+      "title": "about-experience-2-title",
+      "company": "about-experience-2-company",
+      "period": "about-experience-2-period",
+      "text": "about-experience-2-text"
+    },
+    {
+      "title": "about-experience-3-title",
+      "company": "about-experience-3-company",
+      "period": "about-experience-3-period",
+      "text": "about-experience-3-text"
+    },
+    {
+      "title": "about-experience-4-title",
+      "company": "about-experience-4-company",
+      "period": "about-experience-4-period",
+      "text": "about-experience-4-text"
+    },
+    {
+      "title": "about-experience-5-title",
+      "company": "about-experience-5-company",
+      "period": "about-experience-5-period",
+      "text": "about-experience-5-text"
+    },
+    {
+      "title": "about-experience-6-title",
+      "company": "about-experience-6-company",
+      "period": "about-experience-6-period",
+      "text": "about-experience-6-text"
+    },
+    {
+      "title": "about-experience-7-title",
+      "company": "about-experience-7-company",
+      "period": "about-experience-7-period",
+      "text": "about-experience-7-text"
+    }
+  ]
+}

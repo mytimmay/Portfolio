@@ -1,51 +1,42 @@
-let currentLang = 'de';
-let translations = {};
+export let currentLang = "de";
+export let translations = {};
 
 async function loadTranslations() {
-  const response = await fetch('lang/lang.json');
+  const response = await fetch("lang/lang.json");
   translations = await response.json();
 }
 
-async function setLanguage(lang) {
+function updateLangButtonUI() {
+  document.querySelectorAll(".lang-option").forEach((el) => {
+    const lang = el.getAttribute("data-lang");
+    el.classList.toggle("active", lang === currentLang);
+  });
+}
+
+export async function setLanguage(lang) {
   currentLang = lang;
+  await loadTranslations();
 
-  if (!translations || Object.keys(translations).length === 0) {
-    await loadTranslations();
-  }
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    const value = translations[key];
+    const isHTML = el.hasAttribute("data-i18n-html");
 
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[key] && translations[key][lang]) {
-      el.innerText = translations[key][lang];
+    let content = "";
+
+    if (typeof value === "string") {
+      content = value;
+    } else if (value && typeof value === "object" && value[lang]) {
+      content = value[lang];
+    }
+
+    if (isHTML) {
+      el.innerHTML = content;
+    } else {
+      el.innerText = content;
     }
   });
 
-  localStorage.setItem('lang', lang);
-
-  // Aktiviere visuell den aktuellen Sprachabschnitt
+  localStorage.setItem("lang", lang);
   updateLangButtonUI();
 }
-
-function updateLangButtonUI() {
-  document.querySelectorAll('.lang-option').forEach(el => {
-    const lang = el.getAttribute('data-lang');
-    if (lang === currentLang) {
-      el.classList.add('active');
-    } else {
-      el.classList.remove('active');
-    }
-  });
-}
-
-window.addEventListener('DOMContentLoaded', async () => {
-  const savedLang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
-  await setLanguage(savedLang === 'en' ? 'en' : 'de');
-
-  const langToggleBtn = document.getElementById("lang-toggle");
-  if (langToggleBtn) {
-    langToggleBtn.addEventListener("click", async () => {
-      const newLang = currentLang === 'de' ? 'en' : 'de';
-      await setLanguage(newLang);
-    });
-  }
-});
