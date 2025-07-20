@@ -1,5 +1,6 @@
 import { setLanguage, currentLang, translations } from "./i18n.js";
 import { initNav, highlightProjectButtons } from "./nav.js";
+import { initFadeAnimations } from "./animations.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await setLanguage(localStorage.getItem("lang") || "de");
@@ -9,20 +10,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     ?.addEventListener("click", async () => {
       const newLang = currentLang === "de" ? "en" : "de";
       await setLanguage(newLang);
-      renderChipsAndProjects(); // Nach Sprachwechsel
+      await renderChipsAndProjects(); // Nach Sprachwechsel
+      initFadeAnimations();
     });
 
   initNav(highlightProjectButtons);
-  renderChipsAndProjects();
+  await renderChipsAndProjects();
+  initFadeAnimations();
   setupScrollAndNavigation();
   window.history.scrollRestoration = "manual";
   setTimeout(() => window.scrollTo(0, 0), 0);
 });
 
-function renderChipsAndProjects() {
+async function renderChipsAndProjects() {
   renderChipsFromI18n({ prefix: "skills", containerId: "skillsContainer" });
   renderChipsFromI18n({ prefix: "tools", containerId: "toolsContainer" });
-  renderProjects();
+  await renderProjects();
 }
 
 // === Chips ===
@@ -116,8 +119,9 @@ async function renderProjects() {
       const title = translations[proj.titleKey]?.[currentLang] || "";
       const desc = translations[proj.descKey]?.[currentLang] || "";
 
-      const card = document.createElement("div");
+      const card = document.createElement("a");
       card.className = "project-card";
+      card.href = proj.link;
 
       const imageWrapper = document.createElement("div");
       imageWrapper.className = "project-image";
@@ -222,11 +226,11 @@ function setupScrollAndNavigation() {
     const dy = startY - e.changedTouches[0].clientY;
     const section = sections[currentIndex];
     const scrollContainer = getScrollContainer(section);
-    const atTop = scrollContainer?.scrollTop <= 0;
-    const atBottom =
-      scrollContainer &&
-      scrollContainer.scrollTop + scrollContainer.clientHeight >=
-        scrollContainer.scrollHeight - 1;
+    const atTop = scrollContainer ? scrollContainer.scrollTop <= 0 : true;
+    const atBottom = scrollContainer
+      ? scrollContainer.scrollTop + scrollContainer.clientHeight >=
+        scrollContainer.scrollHeight - 1
+      : true;
 
     if ((dy > 50 && atBottom) || (dy < -50 && atTop)) {
       scrollToSection(currentIndex + (dy > 0 ? 1 : -1));
