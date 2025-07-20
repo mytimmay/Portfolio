@@ -1,5 +1,6 @@
 import { setLanguage, currentLang, translations } from "./i18n.js";
 import { initNav, highlightProjectButtons } from "./nav.js";
+import { initFadeAnimations } from "./animations.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await setLanguage(localStorage.getItem("lang") || "de");
@@ -9,20 +10,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     ?.addEventListener("click", async () => {
       const newLang = currentLang === "de" ? "en" : "de";
       await setLanguage(newLang);
-      renderChipsAndProjects(); // Nach Sprachwechsel
+      await renderChipsAndProjects(); // Nach Sprachwechsel
+      initFadeAnimations();
     });
 
   initNav(highlightProjectButtons);
-  renderChipsAndProjects();
+  await renderChipsAndProjects();
+  initFadeAnimations();
   setupScrollAndNavigation();
   window.history.scrollRestoration = "manual";
   setTimeout(() => window.scrollTo(0, 0), 0);
 });
 
-function renderChipsAndProjects() {
+async function renderChipsAndProjects() {
   renderChipsFromI18n({ prefix: "skills", containerId: "skillsContainer" });
   renderChipsFromI18n({ prefix: "tools", containerId: "toolsContainer" });
-  renderProjects();
+  await renderProjects();
 }
 
 // === Chips ===
