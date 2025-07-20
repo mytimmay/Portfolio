@@ -445,9 +445,7 @@ button:hover {
     flex-direction: column;
     gap: var(--spacing-3XL);
     max-width: var(--container-size-max-width);
-    padding-top: var(--spacing-3XL);
-    padding-left: var(--container-spacing-medium);
-    padding-right: var(--container-spacing-medium);
+    padding: var(--spacing-3XL) var(--container-spacing-medium);
     margin: 0 auto;
     width: 100%;
 }
@@ -518,19 +516,19 @@ button:hover {
 .fade-left {
     opacity: 0;
     transform: translateX(-50px);
-    transition: all 0.6s ease-out;
+    transition: all 1.2s ease;
 }
 
 .fade-right {
     opacity: 0;
     transform: translateX(50px);
-    transition: all 0.6s ease-out;
+    transition: all 1.2s ease;
 }
 
 .fade-top {
     opacity: 0;
     transform: translateY(-50px);
-    transition: all 0.6s ease-out;
+    transition: all 1.2s ease;
 }
 
 .in-view {
