@@ -1,5 +1,6 @@
 import { setLanguage, currentLang, translations } from "./i18n.js";
 import { initNav } from "./nav.js";
+import { createTwoColumnSection } from "./layout.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await setLanguage(localStorage.getItem("lang") || "de");
@@ -17,15 +18,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 async function loadExperience() {
-  const container = document.getElementById("experience-list");
+  const container = document.getElementById("experience-section");
   if (!container) return;
 
   try {
     const res = await fetch("data/about.json");
     const data = await res.json();
-    container.innerHTML = "";
 
-    data.experience.forEach((job) => {
+    const entries = data.experience.map((job) => {
       const wrapper = document.createElement("div");
       wrapper.className = "experience-entry fade-right";
 
@@ -33,7 +33,6 @@ async function loadExperience() {
       title.className = "job-title";
       title.textContent = translations[job.title]?.[currentLang] || job.title;
 
-      // Meta-Wrapper
       const metaWrapper = document.createElement("div");
       metaWrapper.className = "job-meta";
 
@@ -47,7 +46,6 @@ async function loadExperience() {
       period.textContent =
         translations[job.period]?.[currentLang] || job.period;
 
-      // company + period in metaWrapper packen
       metaWrapper.append(company, period);
 
       const text = document.createElement("div");
@@ -55,8 +53,19 @@ async function loadExperience() {
       text.textContent = translations[job.text]?.[currentLang] || job.text;
 
       wrapper.append(title, metaWrapper, text);
-      container.appendChild(wrapper);
+      return wrapper;
     });
+
+    container.innerHTML = "";
+    container.appendChild(
+      createTwoColumnSection(
+        "about-experience-headline",
+        entries,
+        translations,
+        currentLang,
+        "experience-list"
+      )
+    );
   } catch (err) {
     console.error("Fehler beim Laden der Erfahrung:", err);
   }
