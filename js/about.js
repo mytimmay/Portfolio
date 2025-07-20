@@ -1,6 +1,7 @@
 import { setLanguage, currentLang, translations } from "./i18n.js";
 import { initNav } from "./nav.js";
 import { createTwoColumnSection } from "./layout.js";
+import { initFadeAnimations } from "./animations.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await setLanguage(localStorage.getItem("lang") || "de");
@@ -10,11 +11,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     ?.addEventListener("click", async () => {
       const newLang = currentLang === "de" ? "en" : "de";
       await setLanguage(newLang);
-      loadExperience(); // Erfahrungseinträge neu übersetzen
+      await loadExperience(); // Erfahrungseinträge neu übersetzen
     });
 
   initNav();
-  loadExperience();
+  await loadExperience();
+  initFadeAnimations();
 });
 
 async function loadExperience() {
@@ -66,6 +68,7 @@ async function loadExperience() {
         "experience-list"
       )
     );
+    initFadeAnimations();
   } catch (err) {
     console.error("Fehler beim Laden der Erfahrung:", err);
   }
