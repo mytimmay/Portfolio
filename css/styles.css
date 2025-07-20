@@ -527,9 +527,15 @@ button:hover {
     transition: all 0.6s ease-out;
 }
 
+.fade-top {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.6s ease-out;
+}
+
 .in-view {
     opacity: 1 !important;
-    transform: translateX(0) !important;
+    transform: translate(0) !important;
 }
 
 /* === TABLET NAV === */

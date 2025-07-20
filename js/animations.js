@@ -1,5 +1,7 @@
 export function initFadeAnimations() {
-  const elements = document.querySelectorAll('.fade-left, .fade-right');
+  const elements = document.querySelectorAll(
+    '.fade-left, .fade-right, .fade-top'
+  );
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
