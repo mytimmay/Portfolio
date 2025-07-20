@@ -2,9 +2,10 @@ export function initFadeAnimations() {
   const elements = document.querySelectorAll(
     '.fade-left, .fade-right, .fade-top'
   );
+
   const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
         } else {
@@ -15,5 +16,13 @@ export function initFadeAnimations() {
     { threshold: 0.1 }
   );
 
-  elements.forEach(el => observer.observe(el));
+  const startObserving = () => {
+    elements.forEach((el) => observer.observe(el));
+  };
+
+  if (document.readyState === 'complete') {
+    startObserving();
+  } else {
+    window.addEventListener('load', startObserving, { once: true });
+  }
 }
