@@ -1,6 +1,13 @@
 export let currentLang = "de";
 export let translations = {};
 
+export function getTranslation(key, lang = currentLang) {
+  const value = translations[key];
+  if (typeof value === "string") return value;
+  if (value && typeof value === "object" && value[lang]) return value[lang];
+  return key;
+}
+
 async function loadTranslations() {
   const response = await fetch("lang/lang.json");
   translations = await response.json();
@@ -19,16 +26,9 @@ export async function setLanguage(lang) {
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    const value = translations[key];
     const isHTML = el.hasAttribute("data-i18n-html");
 
-    let content = "";
-
-    if (typeof value === "string") {
-      content = value;
-    } else if (value && typeof value === "object" && value[lang]) {
-      content = value[lang];
-    }
+    const content = getTranslation(key, lang);
 
     if (isHTML) {
       el.innerHTML = content;

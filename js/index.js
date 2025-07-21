@@ -1,4 +1,10 @@
-import { setLanguage, currentLang, translations, initLangToggle } from "./i18n.js";
+import {
+  setLanguage,
+  currentLang,
+  translations,
+  initLangToggle,
+  getTranslation,
+} from "./i18n.js";
 import { initNav, highlightProjectButtons } from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
@@ -42,22 +48,8 @@ function renderChipsFromI18n({ prefix, containerId }) {
   keys.forEach((key, index) => {
     const value = translations[key];
 
-    let label = "";
-    let level = 0;
-
-    if (typeof value === "string") {
-      label = value;
-    } else if (typeof value === "object") {
-      if (value.label) {
-        label =
-          typeof value.label === "object"
-            ? value.label[currentLang]
-            : value.label;
-      } else if (value[currentLang]) {
-        label = value[currentLang];
-      }
-      level = value.level ?? 0;
-    }
+    const label = getTranslation(key, currentLang);
+    const level = typeof value === "object" && value.level ? value.level : 0;
 
     const chip = document.createElement("div");
     chip.className = "chip";
@@ -114,8 +106,8 @@ async function renderProjects() {
     ];
 
     projects.forEach((proj, index) => {
-      const title = translations[proj.titleKey]?.[currentLang] || "";
-      const desc = translations[proj.descKey]?.[currentLang] || "";
+      const title = getTranslation(proj.titleKey, currentLang);
+      const desc = getTranslation(proj.descKey, currentLang);
 
       const card = document.createElement("a");
       card.className = "project-card";

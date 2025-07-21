@@ -3,6 +3,7 @@ import {
   currentLang,
   translations,
   initLangToggle,
+  getTranslation,
 } from "./i18n.js";
 import { initNav } from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
@@ -104,7 +105,7 @@ function renderSections() {
     let el;
     if (sec.type === "twoColumn") {
       const p = document.createElement("p");
-      p.textContent = translations[sec.text]?.[currentLang] || sec.text;
+      p.textContent = getTranslation(sec.text, currentLang);
       el = createTwoColumnSection(sec.left, [p], translations, currentLang);
     } else if (sec.type === "video") {
       const vid = document.createElement("video");
@@ -112,8 +113,8 @@ function renderSections() {
       vid.controls = true;
       el = document.createElement("div");
       el.appendChild(vid);
-    } else if (sec.type === "designprocess") {
-      el = createDesignProcessSection(translations, currentLang, sec.phases);
+    } else if (sec.type === "designPhases") {
+      el = createDesignProcessSection(sec.data, translations, currentLang);
     } else if (sec.type === "details") {
       el = createDetailsSection(sec.data, translations, currentLang);
     }
