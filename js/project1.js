@@ -3,6 +3,7 @@ import {
   currentLang,
   translations,
   initLangToggle,
+  getTranslation,
 } from "./i18n.js";
 import { initNav } from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
@@ -40,6 +41,27 @@ function renderSections() {
     { title: "project_detail4", items: ["project1_year"] },
   ];
 
+  const designPhases = [
+    {
+      title: "designprocess_title1",
+      methods: [
+        "designprocess_analyse_method1",
+        "designprocess_analyse_method2",
+      ],
+    },
+    {
+      title: "designprocess_title2",
+      methods: [
+        "designprocess_concept_method1",
+        "designprocess_concept_method2",
+      ],
+    },
+    {
+      title: "designprocess_title3",
+      methods: ["designprocess_design_method1", "designprocess_design_method2"],
+    },
+  ];
+
   const sections = [
     { type: "details", data: details },
     {
@@ -48,22 +70,18 @@ function renderSections() {
       text: "project1_sec1_text",
     },
     {
-      type: "video",
-      src: "./assets/videos/TimSchedlbauer_Portfoliovideo_Scene1.webm",
-    },
-    {
       type: "twoColumn",
       left: "project1_sec2_title",
       text: "project1_sec2_text",
     },
-    { type: "designprocess" },
+    { type: "designPhases", data: designPhases },
   ];
 
   sections.forEach((sec) => {
     let el;
     if (sec.type === "twoColumn") {
       const p = document.createElement("p");
-      p.textContent = translations[sec.text]?.[currentLang] || sec.text;
+      p.textContent = getTranslation(sec.text, currentLang);
       el = createTwoColumnSection(sec.left, [p], translations, currentLang);
     } else if (sec.type === "video") {
       const vid = document.createElement("video");
@@ -71,8 +89,8 @@ function renderSections() {
       vid.controls = true;
       el = document.createElement("div");
       el.appendChild(vid);
-    } else if (sec.type === "designprocess") {
-      el = createDesignProcessSection(translations, currentLang, sec.phases);
+    } else if (sec.type === "designPhases") {
+      el = createDesignProcessSection(sec.data, translations, currentLang);
     } else if (sec.type === "details") {
       el = createDetailsSection(sec.data, translations, currentLang);
     }

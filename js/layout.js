@@ -1,23 +1,31 @@
-export function createTwoColumnSection(leftKey, rightElements, translations, currentLang, rightId) {
-  const wrapper = document.createElement('div');
-  wrapper.className = 'two-column-list';
+import { getTranslation } from "./i18n.js";
 
-  const leftCol = document.createElement('div');
-  leftCol.className = 'column-left';
+export function createTwoColumnSection(
+  leftKey,
+  rightElements,
+  translations,
+  currentLang,
+  rightId
+) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "two-column-list";
 
-  const headline = document.createElement('h4');
-  headline.className = 'fade-left';
-  headline.textContent = translations[leftKey]?.[currentLang] || leftKey;
+  const leftCol = document.createElement("div");
+  leftCol.className = "column-left";
+
+  const headline = document.createElement("h4");
+  headline.className = "fade-left";
+  headline.textContent = getTranslation(leftKey, currentLang);
   leftCol.appendChild(headline);
 
-  const rightCol = document.createElement('div');
-  rightCol.className = 'column-right';
+  const rightCol = document.createElement("div");
+  rightCol.className = "column-right";
   if (rightId) {
     rightCol.id = rightId;
   }
 
   if (Array.isArray(rightElements)) {
-    rightElements.forEach(el => rightCol.appendChild(el));
+    rightElements.forEach((el) => rightCol.appendChild(el));
   } else if (rightElements) {
     rightCol.appendChild(rightElements);
   }
@@ -26,68 +34,37 @@ export function createTwoColumnSection(leftKey, rightElements, translations, cur
   return wrapper;
 }
 
-const defaultPhases = [
-    {
-      title: 'designprocess_title1',
-      methods: [
-        'designprocess_analyse_method1',
-        'designprocess_analyse_method2',
-        'designprocess_analyse_method3',
-        'designprocess_analyse_method4',
-        'designprocess_analyse_method5'
-      ]
-    },
-    {
-      title: 'designprocess_title2',
-      methods: [
-        'designprocess_concept_method1',
-        'designprocess_concept_method2',
-        'designprocess_concept_method3',
-        'designprocess_concept_method4',
-        'designprocess_concept_method5'
-      ]
-    },
-    {
-      title: 'designprocess_title3',
-      methods: [
-        'designprocess_design_method1',
-        'designprocess_design_method2',
-        'designprocess_design_method3',
-        'designprocess_design_method4',
-        'designprocess_design_method5',
-        'designprocess_design_method6',
-        'designprocess_design_method7',
-        'designprocess_design_method8',
-        'designprocess_design_method9'
-      ]
-    },
-    {
-      title: 'designprocess_title4',
-      methods: ['designprocess_testing_method1']
-    }
-  ];
+export function createDesignProcessSection(
+  designPhases,
+  translations,
+  currentLang
+) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "details";
 
-export function createDesignProcessSection(translations, currentLang, phases = defaultPhases) {
+  designPhases.forEach((phase) => {
+    const list = document.createElement("div");
+    list.className = "details-list";
 
-  const wrapper = document.createElement('div');
-  wrapper.className = 'details';
+    const icon = document.createElement("div");
+    icon.className = "icon-circle";
 
-  phases.forEach(phase => {
-    const list = document.createElement('div');
-    list.className = 'details-list';
+    const fonticon = document.createElement("div");
+    fonticon.className = "font-icon";
 
-    const h4 = document.createElement('h4');
-    h4.textContent = translations[phase.title]?.[currentLang] || phase.title;
+    const h4 = document.createElement("h4");
+    h4.textContent = getTranslation(phase.title, currentLang);
 
-    const items = document.createElement('div');
-    items.className = 'details-list-items';
-    phase.methods.forEach(key => {
-      const span = document.createElement('span');
-      span.textContent = translations[key]?.[currentLang] || key;
+    const items = document.createElement("div");
+    items.className = "details-list-items";
+    phase.methods.forEach((key) => {
+      const span = document.createElement("span");
+      span.textContent = getTranslation(key, currentLang);
       items.appendChild(span);
     });
 
-    list.append(h4, items);
+    icon.appendChild(fonticon);
+    list.append(icon, h4, items);
     wrapper.appendChild(list);
   });
 
@@ -95,21 +72,21 @@ export function createDesignProcessSection(translations, currentLang, phases = d
 }
 
 export function createDetailsSection(sections, translations, currentLang) {
-  const wrapper = document.createElement('div');
-  wrapper.className = 'details';
+  const wrapper = document.createElement("div");
+  wrapper.className = "details";
 
-  sections.forEach(sec => {
-    const list = document.createElement('div');
-    list.className = 'details-list';
+  sections.forEach((sec) => {
+    const list = document.createElement("div");
+    list.className = "details-list";
 
-    const h4 = document.createElement('h4');
-    h4.textContent = translations[sec.title]?.[currentLang] || sec.title;
+    const h4 = document.createElement("h4");
+    h4.textContent = getTranslation(sec.title, currentLang);
 
-    const items = document.createElement('div');
-    items.className = 'details-list-items';
-    sec.items.forEach(key => {
-      const span = document.createElement('span');
-      span.textContent = translations[key]?.[currentLang] || key;
+    const items = document.createElement("div");
+    items.className = "details-list-items";
+    sec.items.forEach((key) => {
+      const span = document.createElement("span");
+      span.textContent = getTranslation(key, currentLang);
       items.appendChild(span);
     });
 

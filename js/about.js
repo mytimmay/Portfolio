@@ -1,4 +1,10 @@
-import { setLanguage, currentLang, translations, initLangToggle } from "./i18n.js";
+import {
+  setLanguage,
+  currentLang,
+  translations,
+  initLangToggle,
+  getTranslation,
+} from "./i18n.js";
 import { initNav } from "./nav.js";
 import { createTwoColumnSection } from "./layout.js";
 import { initFadeAnimations } from "./animations.js";
@@ -31,26 +37,24 @@ async function loadExperience() {
 
       const title = document.createElement("h5");
       title.className = "job-title";
-      title.textContent = translations[job.title]?.[currentLang] || job.title;
+      title.textContent = getTranslation(job.title, currentLang);
 
       const metaWrapper = document.createElement("div");
       metaWrapper.className = "job-meta";
 
       const company = document.createElement("div");
       company.className = "job-company";
-      company.textContent =
-        translations[job.company]?.[currentLang] || job.company;
+      company.textContent = getTranslation(job.company, currentLang);
 
       const period = document.createElement("div");
       period.className = "job-period";
-      period.textContent =
-        translations[job.period]?.[currentLang] || job.period;
+      period.textContent = getTranslation(job.period, currentLang);
 
       metaWrapper.append(company, period);
 
       const text = document.createElement("div");
       text.className = "job-text";
-      text.textContent = translations[job.text]?.[currentLang] || job.text;
+      text.textContent = getTranslation(job.text, currentLang);
 
       wrapper.append(title, metaWrapper, text);
       return wrapper;
