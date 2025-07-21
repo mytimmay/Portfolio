@@ -238,5 +238,244 @@
   "about-experience-7-text": {
     "de": "Schwerpunkt auf Grafikdesign, Medienproduktion und visuelle Kommunikation.",
     "en": "Focus on graphic design, media production, and visual communication."
+  },
+  "project_detail1": {
+    "de": "Meine Rolle",
+    "en": "My Role"
+  },
+  "project_detail2": {
+    "de": "Software",
+    "en": "Software"
+  },
+  "project_detail3": {
+    "de": "Team",
+    "en": "Team"
+  },
+  "project_detail4": {
+    "de": "Dauer",
+    "en": "Year"
+  },
+  "project_role1": {
+    "de": "UX/UI Designer",
+    "en": "UX/UI Designer"
+  },
+  "project_role2": {
+    "de": "Game Designer",
+    "en": "Game Designer"
+  },
+  "project_role3": {
+    "de": "3D Artist",
+    "en": "3D Artist"
+  },
+  "project_role4": {
+    "de": "Projekt-\nmanagement",
+    "en": "Project-\nmanagement"
+  },
+  "project_role5": {
+    "de": "Frontend Developer",
+    "en": "Frontend Developer"
+  },
+  "software_1": "Figma",
+  "software_2": "Adobe XD",
+  "software_3": "Photoshop",
+  "software_4": "Illustrator",
+  "software_5": "Webflow",
+  "software_6": "Blender",
+  "software_7": "Unity",
+  "software_8": "Spline",
+  "software_9": "ChatGPT",
+  "software_10": "Confluence",
+  "software_11": "Jira",
+  "project_team1": {
+    "de": "Entwickler",
+    "en": "Developers"
+  },
+  "project_team2": {
+    "de": "Vertriebler",
+    "en": "Salesperson"
+  },
+  "project_team3": {
+    "de": "Designer",
+    "en": "Designers"
+  },
+  "project_team4": {
+    "de": "Gründer",
+    "en": "Founders"
+  },
+  "designprocess_title": {
+    "de": "Design Prozess",
+    "en": "Design process"
+  },
+  "designprocess_title1": {
+    "de": "Analyse",
+    "en": "Analysis"
+  },
+  "designprocess_title2": {
+    "de": "Konzept",
+    "en": "Concept"
+  },
+  "designprocess_title3": {
+    "de": "Design",
+    "en": "Design"
+  },
+  "designprocess_title4": {
+    "de": "Testing",
+    "en": "Testing"
+  },
+  "designprocess_analyse_method1": {
+    "de": "Experten Evaluation",
+    "en": "Expert evaluation"
+  },
+  "designprocess_analyse_method2": {
+    "de": "Competitive Analysis",
+    "en": "Competitive Analysis"
+  },
+  "designprocess_analyse_method3": {
+    "de": "Desk Research",
+    "en": "Desk Research"
+  },
+  "designprocess_analyse_method4": {
+    "de": "User Research",
+    "en": "User Research"
+  },
+  "designprocess_analyse_method5": {
+    "de": "User Personas",
+    "en": "User Personas"
+  },
+  "designprocess_concept_method1": {
+    "de": "Flow Graphs",
+    "en": "Flow Graphs"
+  },
+  "designprocess_concept_method2": {
+    "de": "Prototypen",
+    "en": "Prototypes"
+  },
+  "designprocess_concept_method3": {
+    "de": "Moodbaords",
+    "en": "Moodbaords"
+  },
+  "designprocess_concept_method4": {
+    "de": "Storyboards",
+    "en": "Storyboards"
+  },
+  "designprocess_concept_method5": {
+    "de": "User Flows",
+    "en": "User Flows"
+  },
+  "designprocess_design_method1": {
+    "de": "Designsystem",
+    "en": "Design system"
+  },
+  "designprocess_design_method2": {
+    "de": "User Interface",
+    "en": "User interface"
+  },
+  "designprocess_design_method3": {
+    "de": "Mechanics",
+    "en": "Mechanics"
+  },
+  "designprocess_design_method4": {
+    "de": "World & Story",
+    "en": "World & Story"
+  },
+  "designprocess_design_method5": {
+    "de": "Level & Balance",
+    "en": "Level & Balance"
+  },
+  "designprocess_design_method6": {
+    "de": "Team Analyse",
+    "en": "Team analysis"
+  },
+  "designprocess_design_method7": {
+    "de": "Website & Control Panel",
+    "en": "Website & Control Panel"
+  },
+  "designprocess_design_method8": {
+    "de": "Umgebung",
+    "en": "Environment"
+  },
+  "designprocess_design_method9": {
+    "de": "Templates",
+    "en": "Templates"
+  },
+  "designprocess_testing_method1": {
+    "de": "Feedback & Anpassungen",
+    "en": "Feedback & adjustments"
+  },
+  "project1_year": {
+    "de": "April 2024 -\nJuni 2024",
+    "en": "April 2024 -\nJune 2024"
+  },
+  "project2_year": {
+    "de": "Juni 2023 -\nApril 2024",
+    "en": "June 2023 -\nApril 2024"
+  },
+  "project3_year": {
+    "de": "November 2020 -\nJuni 2023",
+    "en": "November 2020 -\nJune 2023"
+  },
+  "project4_year": {
+    "de": "Juni 2023 - Juli 2024",
+    "en": "June 2023 - July 2024"
+  },
+  "project5_year": {
+    "de": "Januar 2020 - April 2020",
+    "en": "January 2020 - April 2020"
+  },
+  "project6_year": {
+    "de": "Sommersemester 2019",
+    "en": "Summer term 2019"
+  },
+  "archive-project_detail": {
+    "de": "Meine Aufgaben:",
+    "en": "My tasks:"
+  },
+  "project5_title": {
+    "de": "VISHOW - Website & Designsystem",
+    "en": "VISHOW - Website & Designsystem"
+  },
+  "project5_desc": {
+    "de": "Die VISHOW-Website dient als Präsentationswebsite für das VISHOW-System von “Solid White”. Sie dient als zentrale Plattform für die Präsentation innovativer 3D-Showroom-Lösungen. Besondere Funktionen umfassen ansprechende Animationen, responsives Design und eine klare Struktur, die den Nutzern eine einfache Erkundung der Dienstleistungen und Produkte ermöglicht",
+    "en": "The VISHOW-website serves as a presentation website for the “Solid White” VISHOW-system. It serves as a central platform for presenting innovative 3D showroom solutions. Special features include appealing animations, responsive design, and a clear structure that allows users to easily explore the services and products."
+  },
+  "project5_tasks": {
+    "de": "Research, Konzeption, Design und Umsetzung",
+    "en": "Research, concept, design and implementation"
+  },
+  "project5_tools": {
+    "de": "Figma, Hubspot",
+    "en": "Figma, Hubspot"
+  },
+  "project6_title": {
+    "de": "Prototypischen Augmented Reality-Anwendung",
+    "en": "Prototypical augmented reality application"
+  },
+  "project6_desc": {
+    "de": "Entwicklung einer prototypischen Augmented Reality-Anwendung zur Unterstützung des Lernens von Arduino-Schaltplänen zur Steigerung des Lernerlebnisses. Dieses Projekt fand im Rahmen meiner Bachelorarbeit statt.",
+    "en": "Development of a prototype augmented reality application to support the learning of Arduino circuit diagrams to improve the learning experience. This project was part of my bachelor thesis."
+  },
+  "project6_tasks": {
+    "de": "Gesamtes Projekt",
+    "en": "Entire project"
+  },
+  "project6_tools": {
+    "de": "Unity, Adobe XD & Illustrator, Blender, Arduino",
+    "en": "Unity, Adobe XD & Illustrator, Blender, Arduino"
+  },
+  "project7_title": {
+    "de": "Spacebox & Rocketgame",
+    "en": "Spacebox & Rocketgame"
+  },
+  "project7_desc": {
+    "de": "Konzeption, Gestaltung und prototypische Umsetzung eines Arduino-basierten Spielecontroller, mit dem ein Raketenstart beispielhaft durchlebt werden kann. Dieses Projekt entstand im Rahmen der Lehrveranstaltung Interfacegestaltung in einem 2er Team.",
+    "en": "Conception, design and prototypical implementation of an Arduino-based game controller, which can be used as an example of a rocket launch. This project was developed as part of the course “Interface Design” in a team of 2."
+  },
+  "project7_tasks": {
+    "de": "Research, Konzeption, Prototyp, Programmierung, 3D-Druck",
+    "en": "Research, concept, prototype, programming, 3D printing"
+  },
+  "project7_tools": {
+    "de": "Arduino IDE, Arduino Mega, Node.js, p5.js, p5.play.js, Adobe XD & Illustrator, Fusion 360",
+    "en": "Arduino IDE, Arduino Mega, Node.js, p5.js, p5.play.js, Adobe XD & Illustrator, Fusion 360"
   }
 }

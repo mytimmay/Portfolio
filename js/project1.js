@@ -15,10 +15,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   await setLanguage(localStorage.getItem("lang") || "de");
 
-  document.getElementById("lang-toggle")?.addEventListener("click", async () => {
-    const newLang = currentLang === "de" ? "en" : "de";
-    await setLanguage(newLang);
-  });
+  document
+    .getElementById("lang-toggle")
+    ?.addEventListener("click", async () => {
+      const newLang = currentLang === "de" ? "en" : "de";
+      await setLanguage(newLang);
+    });
 
   initNav();
   initFadeAnimations();

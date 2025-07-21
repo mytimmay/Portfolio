@@ -592,6 +592,35 @@ button:hover {
     transform: translate(0) !important;
 }
 
+/* === PROJECT STUFF === */
+
+.project-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: var(--spacing-2XL);
+
+    padding: var(--spacing-2XL) var(--container-spacing-medium);
+}
+
+.project-details-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--spacing-M);
+}
+
+.project-details-list-items {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--spacing-XS);
+}
+
 /* === TABLET NAV === */
 @media (max-width: 991px) {
     .project-cards-grid {
