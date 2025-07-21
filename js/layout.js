@@ -1,3 +1,5 @@
+import { getTranslation } from "./i18n.js";
+
 export function createTwoColumnSection(
   leftKey,
   rightElements,
@@ -13,7 +15,7 @@ export function createTwoColumnSection(
 
   const headline = document.createElement("h4");
   headline.className = "fade-left";
-  headline.textContent = translations[leftKey]?.[currentLang] || leftKey;
+  headline.textContent = getTranslation(leftKey, currentLang);
   leftCol.appendChild(headline);
 
   const rightCol = document.createElement("div");
@@ -45,13 +47,13 @@ export function createDesignProcessSection(
     list.className = "details-list";
 
     const h4 = document.createElement("h4");
-    h4.textContent = translations[phase.title]?.[currentLang] || phase.title;
+    h4.textContent = getTranslation(phase.title, currentLang);
 
     const items = document.createElement("div");
     items.className = "details-list-items";
     phase.methods.forEach((key) => {
       const span = document.createElement("span");
-      span.textContent = translations[key]?.[currentLang] || key;
+      span.textContent = getTranslation(key, currentLang);
       items.appendChild(span);
     });
 
@@ -71,13 +73,13 @@ export function createDetailsSection(sections, translations, currentLang) {
     list.className = "details-list";
 
     const h4 = document.createElement("h4");
-    h4.textContent = translations[sec.title]?.[currentLang] || sec.title;
+    h4.textContent = getTranslation(sec.title, currentLang);
 
     const items = document.createElement("div");
     items.className = "details-list-items";
     sec.items.forEach((key) => {
       const span = document.createElement("span");
-      span.textContent = translations[key]?.[currentLang] || key;
+      span.textContent = getTranslation(key, currentLang);
       items.appendChild(span);
     });
 
