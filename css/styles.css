@@ -594,7 +594,7 @@ button:hover {
 
 /* === PROJECT STUFF === */
 
-.project-details {
+.details {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -607,14 +607,14 @@ button:hover {
     padding: var(--spacing-2XL) var(--container-spacing-medium);
 }
 
-.project-details-list {
+.details-list {
     display: flex;
     flex-direction: column;
 
     gap: var(--spacing-M);
 }
 
-.project-details-list-items {
+.details-list-items {
     display: flex;
     flex-direction: column;
 

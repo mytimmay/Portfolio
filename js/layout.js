@@ -26,8 +26,7 @@ export function createTwoColumnSection(leftKey, rightElements, translations, cur
   return wrapper;
 }
 
-export function createDesignProcessSection(translations, currentLang) {
-  const phases = [
+const defaultPhases = [
     {
       title: 'designprocess_title1',
       methods: [
@@ -68,19 +67,47 @@ export function createDesignProcessSection(translations, currentLang) {
     }
   ];
 
+export function createDesignProcessSection(translations, currentLang, phases = defaultPhases) {
+
   const wrapper = document.createElement('div');
-  wrapper.className = 'project-details';
+  wrapper.className = 'details';
 
   phases.forEach(phase => {
     const list = document.createElement('div');
-    list.className = 'project-details-list';
+    list.className = 'details-list';
 
     const h4 = document.createElement('h4');
     h4.textContent = translations[phase.title]?.[currentLang] || phase.title;
 
     const items = document.createElement('div');
-    items.className = 'project-details-list-items';
+    items.className = 'details-list-items';
     phase.methods.forEach(key => {
+      const span = document.createElement('span');
+      span.textContent = translations[key]?.[currentLang] || key;
+      items.appendChild(span);
+    });
+
+    list.append(h4, items);
+    wrapper.appendChild(list);
+  });
+
+  return wrapper;
+}
+
+export function createDetailsSection(sections, translations, currentLang) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'details';
+
+  sections.forEach(sec => {
+    const list = document.createElement('div');
+    list.className = 'details-list';
+
+    const h4 = document.createElement('h4');
+    h4.textContent = translations[sec.title]?.[currentLang] || sec.title;
+
+    const items = document.createElement('div');
+    items.className = 'details-list-items';
+    sec.items.forEach(key => {
       const span = document.createElement('span');
       span.textContent = translations[key]?.[currentLang] || key;
       items.appendChild(span);
