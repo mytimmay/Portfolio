@@ -103,6 +103,16 @@
     "de": "Der Fischer Profil Showroom ist eine innovative, virtuelle 3D Plattform zur interaktiven Präsentation von Dach- und Fassadensystemen. Entwickelt als Web-App auf Basis des VISHOW-Systems von Solid White, ermöglicht er Architekten, Kunden und Vertriebsmitarbeitern eine intuitive Produktkonfiguration und -visualisierung.",
     "en": "The Fischer Profil Showroom is an innovative, virtual 3D platform for the interactive presentation of roof and facade systems. Developed as a web app based on Solid White's VISHOW-System, it enables architects, customers and sales staff to configure and visualize products intuitively."
   },
+  "project1_sec1_title": { "de": "Herausforderung", "en": "Challenge" },
+  "project1_sec1_text": {
+    "de": "Kurzer Text zur Herausforderung des Projekts.",
+    "en": "Short text describing the project's challenge."
+  },
+  "project1_sec2_title": { "de": "L\u00f6sung", "en": "Solution" },
+  "project1_sec2_text": {
+    "de": "Kurzer Text zur entwickelten L\u00f6sung.",
+    "en": "Short text about the developed solution."
+  },
   "project2_text": {
     "de": "Ein für WebGL entwickeltes 3D-Spiel, das speziell für Remote-Teams konzipiert wurde, um Teambuilding durch teambasierte Mechaniken zu fördern und zu verbessern. Das Projekt basierte auf \u201eVISPA Workshops\u201c, einem kollaborativen 3D-Ideation- und Workshop-Tool, welches mit einem starken Fokus auf Gamification weiterentwickelt wurde.",
     "en": "A 3D game developed for WebGL, specifically designed for remote teams to promote and improve team building through team-based mechanics. The project was based on \u201cVISPA Workshops\u201d, a collaborative 3D ideation and workshop tool, which was further developed with a strong focus on gamification."

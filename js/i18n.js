@@ -40,3 +40,11 @@ export async function setLanguage(lang) {
   localStorage.setItem("lang", lang);
   updateLangButtonUI();
 }
+
+export function initLangToggle(callback) {
+  document.getElementById("lang-toggle")?.addEventListener("click", async () => {
+    const newLang = currentLang === "de" ? "en" : "de";
+    await setLanguage(newLang);
+    if (typeof callback === "function") callback();
+  });
+}
