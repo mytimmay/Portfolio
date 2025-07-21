@@ -40,6 +40,47 @@ function renderSections() {
     { title: "project_detail4", items: ["project1_year"] },
   ];
 
+  const designPhases = [
+    {
+      title: "designprocess_title1",
+      methods: [
+        "designprocess_analyse_method1",
+        "designprocess_analyse_method2",
+        "designprocess_analyse_method3",
+        "designprocess_analyse_method4",
+        "designprocess_analyse_method5",
+      ],
+    },
+    {
+      title: "designprocess_title2",
+      methods: [
+        "designprocess_concept_method1",
+        "designprocess_concept_method2",
+        "designprocess_concept_method3",
+        "designprocess_concept_method4",
+        "designprocess_concept_method5",
+      ],
+    },
+    {
+      title: "designprocess_title3",
+      methods: [
+        "designprocess_design_method1",
+        "designprocess_design_method2",
+        "designprocess_design_method3",
+        "designprocess_design_method4",
+        "designprocess_design_method5",
+        "designprocess_design_method6",
+        "designprocess_design_method7",
+        "designprocess_design_method8",
+        "designprocess_design_method9",
+      ],
+    },
+    {
+      title: "designprocess_title4",
+      methods: ["designprocess_testing_method1"],
+    },
+  ];
+
   const sections = [
     { type: "details", data: details },
     {
@@ -56,7 +97,7 @@ function renderSections() {
       left: "project1_sec2_title",
       text: "project1_sec2_text",
     },
-    { type: "designprocess" },
+    { type: "designPhases", data: designPhases },
   ];
 
   sections.forEach((sec) => {
