@@ -1,4 +1,9 @@
-import { setLanguage, currentLang, translations, initLangToggle } from "./i18n.js";
+import {
+  setLanguage,
+  currentLang,
+  translations,
+  initLangToggle,
+} from "./i18n.js";
 import { initNav } from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
@@ -28,16 +33,30 @@ function renderSections() {
   const details = [
     { title: "project_detail1", items: ["project_role1"] },
     { title: "project_detail2", items: ["software_1"] },
-    { title: "project_detail3", items: ["project_team1", "project_team3", "project_team4"] },
-    { title: "project_detail4", items: ["project1_year"] }
+    {
+      title: "project_detail3",
+      items: ["project_team1", "project_team3", "project_team4"],
+    },
+    { title: "project_detail4", items: ["project1_year"] },
   ];
 
   const sections = [
     { type: "details", data: details },
-    { type: "twoColumn", left: "project1_sec1_title", text: "project1_sec1_text" },
-    { type: "video", src: "./assets/videos/TimSchedlbauer_Portfoliovideo_Scene1.webm" },
-    { type: "twoColumn", left: "project1_sec2_title", text: "project1_sec2_text" },
-    { type: "designprocess" }
+    {
+      type: "twoColumn",
+      left: "project1_sec1_title",
+      text: "project1_sec1_text",
+    },
+    {
+      type: "video",
+      src: "./assets/videos/TimSchedlbauer_Portfoliovideo_Scene1.webm",
+    },
+    {
+      type: "twoColumn",
+      left: "project1_sec2_title",
+      text: "project1_sec2_text",
+    },
+    { type: "designprocess" },
   ];
 
   sections.forEach((sec) => {
