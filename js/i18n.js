@@ -4,7 +4,14 @@ export let translations = {};
 export function getTranslation(key, lang = currentLang) {
   const value = translations[key];
   if (typeof value === "string") return value;
-  if (value && typeof value === "object" && value[lang]) return value[lang];
+  if (value && typeof value === "object") {
+    if (value[lang]) return value[lang];
+    if (value.label) {
+      const label = value.label;
+      if (typeof label === "string") return label;
+      if (label && typeof label === "object" && label[lang]) return label[lang];
+    }
+  }
   return key;
 }
 
