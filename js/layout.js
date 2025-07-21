@@ -46,6 +46,12 @@ export function createDesignProcessSection(
     const list = document.createElement("div");
     list.className = "details-list";
 
+    const icon = document.createElement("div");
+    icon.className = "icon-circle";
+
+    const fonticon = document.createElement("div");
+    fonticon.className = "font-icon";
+
     const h4 = document.createElement("h4");
     h4.textContent = getTranslation(phase.title, currentLang);
 
@@ -57,7 +63,8 @@ export function createDesignProcessSection(
       items.appendChild(span);
     });
 
-    list.append(h4, items);
+    icon.appendChild(fonticon);
+    list.append(icon, h4, items);
     wrapper.appendChild(list);
   });
 

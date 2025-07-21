@@ -47,9 +47,6 @@ function renderSections() {
       methods: [
         "designprocess_analyse_method1",
         "designprocess_analyse_method2",
-        "designprocess_analyse_method3",
-        "designprocess_analyse_method4",
-        "designprocess_analyse_method5",
       ],
     },
     {
@@ -57,28 +54,11 @@ function renderSections() {
       methods: [
         "designprocess_concept_method1",
         "designprocess_concept_method2",
-        "designprocess_concept_method3",
-        "designprocess_concept_method4",
-        "designprocess_concept_method5",
       ],
     },
     {
       title: "designprocess_title3",
-      methods: [
-        "designprocess_design_method1",
-        "designprocess_design_method2",
-        "designprocess_design_method3",
-        "designprocess_design_method4",
-        "designprocess_design_method5",
-        "designprocess_design_method6",
-        "designprocess_design_method7",
-        "designprocess_design_method8",
-        "designprocess_design_method9",
-      ],
-    },
-    {
-      title: "designprocess_title4",
-      methods: ["designprocess_testing_method1"],
+      methods: ["designprocess_design_method1", "designprocess_design_method2"],
     },
   ];
 
@@ -88,10 +68,6 @@ function renderSections() {
       type: "twoColumn",
       left: "project1_sec1_title",
       text: "project1_sec1_text",
-    },
-    {
-      type: "video",
-      src: "./assets/videos/TimSchedlbauer_Portfoliovideo_Scene1.webm",
     },
     {
       type: "twoColumn",
