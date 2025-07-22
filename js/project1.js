@@ -14,13 +14,13 @@ import {
   createDetailsSection,
   createProcessStep,
 } from "./layout.js";
-import { convertYouTubeUrl, parseYouTubeStartTime } from "./youtubeUtils.js";
+import { convertYouTubeUrl } from "./youtubeUtils.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader();
   await setLanguage(localStorage.getItem("lang") || "de");
 
-  initLangToggle(renderSections);
+  initLangToggle();
 
   initNav();
   renderSections();
@@ -185,7 +185,14 @@ function renderSections() {
     let el;
     if (sec.type === "twoColumn") {
       const p = document.createElement("p");
-      p.textContent = getTranslation(sec.text, currentLang);
+      p.setAttribute("data-i18n", sec.text);
+      const content = getTranslation(sec.text, currentLang);
+      if (content.includes("<br>") || content.includes("\n")) {
+        p.setAttribute("data-i18n-html", "");
+        p.innerHTML = content;
+      } else {
+        p.textContent = content;
+      }
       el = createTwoColumnSection(sec.left, [p], translations, currentLang);
     } else if (sec.type === "youtube-video") {
       const iframe = document.createElement("iframe");

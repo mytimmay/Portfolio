@@ -13,10 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader({ transparent: true, indexPage: true });
   await setLanguage(localStorage.getItem("lang") || "de");
 
-  initLangToggle(async () => {
-    await renderChipsAndProjects();
-    initFadeAnimations();
-  });
+  initLangToggle();
 
   initNav(highlightProjectButtons);
   await renderChipsAndProjects();
@@ -56,6 +53,7 @@ function renderChipsFromI18n({ prefix, containerId }) {
     chip.style.setProperty("--fill", "0%");
 
     const span = document.createElement("span");
+    span.setAttribute("data-i18n", key);
     span.textContent = label;
     chip.appendChild(span);
     container.appendChild(chip);
@@ -133,11 +131,21 @@ async function renderProjects() {
 
       const info = document.createElement("div");
       info.className = "project-info";
-      info.innerHTML = `
-        <div class="project-tags">${tagsHTML}</div>
-        <h3>${title}</h3>
-        <p class="text-block">${desc}</p>
-      `;
+
+      const tagsEl = document.createElement("div");
+      tagsEl.className = "project-tags";
+      tagsEl.innerHTML = tagsHTML;
+
+      const h3 = document.createElement("h3");
+      h3.setAttribute("data-i18n", proj.titleKey);
+      h3.textContent = title;
+
+      const p = document.createElement("p");
+      p.className = "text-block";
+      p.setAttribute("data-i18n", proj.descKey);
+      p.textContent = desc;
+
+      info.append(tagsEl, h3, p);
 
       card.appendChild(imageWrapper);
       card.appendChild(info);

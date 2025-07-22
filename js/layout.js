@@ -15,6 +15,7 @@ export function createTwoColumnSection(
 
   const headline = document.createElement("h4");
   headline.className = "fade-left";
+  headline.setAttribute("data-i18n", leftKey);
   headline.textContent = getTranslation(leftKey, currentLang);
   leftCol.appendChild(headline);
 
@@ -60,12 +61,14 @@ export function createDesignProcessSection(
     }
 
     const h4 = document.createElement("h4");
+    h4.setAttribute("data-i18n", phase.title);
     h4.textContent = getTranslation(phase.title, currentLang);
 
     const items = document.createElement("div");
     items.className = "process-list-items";
     phase.methods.forEach((key) => {
       const span = document.createElement("span");
+      span.setAttribute("data-i18n", key);
       span.textContent = getTranslation(key, currentLang);
       items.appendChild(span);
     });
@@ -86,13 +89,21 @@ export function createDetailsSection(sections, translations, currentLang) {
     list.className = "details-list";
 
     const h4 = document.createElement("h4");
+    h4.setAttribute("data-i18n", sec.title);
     h4.textContent = getTranslation(sec.title, currentLang);
 
     const items = document.createElement("div");
     items.className = "details-list-items";
     sec.items.forEach((key) => {
       const span = document.createElement("span");
-      span.innerHTML = getTranslation(key, currentLang);
+      span.setAttribute("data-i18n", key);
+      const content = getTranslation(key, currentLang);
+      if (content.includes("<br>") || content.includes("\n")) {
+        span.setAttribute("data-i18n-html", "");
+        span.innerHTML = content;
+      } else {
+        span.textContent = content;
+      }
       items.appendChild(span);
     });
 
@@ -108,6 +119,7 @@ export function createProcessStep(step, translations, currentLang) {
   wrapper.className = "process-step";
 
   const h1 = document.createElement("h1");
+  h1.setAttribute("data-i18n", step.title);
   h1.textContent = getTranslation(step.title, currentLang);
 
   wrapper.appendChild(h1);

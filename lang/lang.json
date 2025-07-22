@@ -2,6 +2,7 @@
   "projects": { "de": "Projekte", "en": "Projects" },
   "about": { "de": "Über mich", "en": "About" },
   "contact": { "de": "Kontakt", "en": "Contact" },
+  "menu_toggle": { "de": "Menü öffnen", "en": "Open menu" },
   "name": "Tim Schedlbauer",
   "hero1_title": "UI/UX Designer",
   "hero1_subtitle": {

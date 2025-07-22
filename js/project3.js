@@ -8,13 +8,13 @@ import { initNav } from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
 import { createDetailsSection } from "./layout.js";
-import { convertYouTubeUrl, parseYouTubeStartTime } from "./youtubeUtils.js";
+import { convertYouTubeUrl } from "./youtubeUtils.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader();
   await setLanguage(localStorage.getItem("lang") || "de");
 
-  initLangToggle(renderSections);
+  initLangToggle();
 
   initNav();
   renderSections();
