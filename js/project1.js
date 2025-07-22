@@ -114,6 +114,8 @@ function renderSections() {
       text: "competitiveanalysis_project1",
     },
     { type: "group-end" },
+    { type: "step", h1: "designprocess_title2" },
+    { type: "group-start" },
     {
       type: "twoColumn",
       left: "flowgraph",
@@ -132,6 +134,9 @@ function renderSections() {
       type: "image",
       src: "assets/images/project-fischer/FischerProfil_Prototypen.webp",
     },
+    { type: "group-end" },
+    { type: "step", h1: "designprocess_title3" },
+    { type: "group-start" },
     {
       type: "twoColumn",
       left: "designsystem",
@@ -154,6 +159,9 @@ function renderSections() {
       type: "image",
       src: "assets/images/project-fischer/FischerProfil_UI.webp",
     },
+    { type: "group-end" },
+    { type: "step", h1: "designprocess_title5" },
+    { type: "group-start" },
     {
       type: "twoColumn",
       left: "moredrafts",
@@ -164,6 +172,7 @@ function renderSections() {
       left: "researchtesting",
       text: "researchtesting_project1",
     },
+    { type: "group-end" },
   ];
 
   let groupWrapper = null; // für <div class="content-wrapper">
