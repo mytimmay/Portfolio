@@ -7,7 +7,7 @@ import {
 import { initNav } from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
-import { createDetailsSection } from "./layout.js";
+import { createDetailsSection, createProjectHeroSection } from "./layout.js";
 import { convertYouTubeUrl } from "./youtubeUtils.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initLangToggle();
 
   initNav();
+  renderHero();
   renderSections();
   initFadeAnimations();
 });
@@ -62,4 +63,24 @@ function renderSections() {
   const el = createDetailsSection(details, translations, currentLang);
   el.classList.add("dynamic-section");
   container.appendChild(el);
+}
+
+function renderHero() {
+  const main = document.querySelector("main");
+  const wrapper = document.querySelector(".smooth-wrapper");
+  if (!main || !wrapper) return;
+
+  const hero = createProjectHeroSection(
+    {
+      className: "project3",
+      titleKey: "project3_title",
+      textKey: "project3_text",
+      imageSrc: "assets/images/project-cards/VispaWorkshop-Image.webp",
+      imageAlt: "VISPA Workshops",
+    },
+    translations,
+    currentLang
+  );
+
+  main.insertBefore(hero, wrapper);
 }

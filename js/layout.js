@@ -126,3 +126,46 @@ export function createProcessStep(step, translations, currentLang) {
 
   return wrapper;
 }
+
+export function createProjectHeroSection(
+  config,
+  translations,
+  currentLang
+) {
+  const { className, titleKey, textKey, imageSrc, imageAlt } = config;
+
+  const section = document.createElement("section");
+  section.classList.add("hero-project");
+  if (className) section.classList.add(className);
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "hero-project-wrapper";
+
+  const textWrapper = document.createElement("div");
+  textWrapper.className = "hero-project-text-wrapper fade-left";
+
+  const h1 = document.createElement("h1");
+  h1.className = "hero-project-heading";
+  h1.setAttribute("data-i18n", titleKey);
+  h1.textContent = getTranslation(titleKey, currentLang);
+
+  const p = document.createElement("p");
+  p.className = "hero-project-text";
+  p.setAttribute("data-i18n", textKey);
+  p.textContent = getTranslation(textKey, currentLang);
+
+  textWrapper.append(h1, p);
+
+  const imageWrapper = document.createElement("div");
+  imageWrapper.className = "hero-project-image fade-right";
+
+  const img = document.createElement("img");
+  img.src = imageSrc;
+  if (imageAlt) img.alt = imageAlt;
+  imageWrapper.appendChild(img);
+
+  wrapper.append(textWrapper, imageWrapper);
+  section.appendChild(wrapper);
+
+  return section;
+}
