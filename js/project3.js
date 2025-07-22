@@ -3,6 +3,7 @@ import { initNav } from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
 import { createDetailsSection } from "./layout.js";
+import { convertYouTubeUrl, parseYouTubeStartTime } from "./youtubeUtils.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader();
