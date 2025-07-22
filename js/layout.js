@@ -25,8 +25,12 @@ export function createTwoColumnSection(
   }
 
   if (Array.isArray(rightElements)) {
-    rightElements.forEach((el) => rightCol.appendChild(el));
+    rightElements.forEach((el) => {
+      el.classList.add("fade-right"); // <–– neue Klasse
+      rightCol.appendChild(el);
+    });
   } else if (rightElements) {
+    rightElements.classList.add("fade-right"); // <–– neue Klasse
     rightCol.appendChild(rightElements);
   }
 
@@ -40,30 +44,32 @@ export function createDesignProcessSection(
   currentLang
 ) {
   const wrapper = document.createElement("div");
-  wrapper.className = "details";
+  wrapper.className = "process";
 
   designPhases.forEach((phase) => {
     const list = document.createElement("div");
-    list.className = "details-list";
+    list.className = "process-list";
 
     const icon = document.createElement("div");
     icon.className = "icon-circle";
 
-    const fonticon = document.createElement("div");
-    fonticon.className = "font-icon";
+    if (phase.image) {
+      const img = document.createElement("img");
+      img.src = phase.image;
+      icon.appendChild(img);
+    }
 
     const h4 = document.createElement("h4");
     h4.textContent = getTranslation(phase.title, currentLang);
 
     const items = document.createElement("div");
-    items.className = "details-list-items";
+    items.className = "process-list-items";
     phase.methods.forEach((key) => {
       const span = document.createElement("span");
       span.textContent = getTranslation(key, currentLang);
       items.appendChild(span);
     });
 
-    icon.appendChild(fonticon);
     list.append(icon, h4, items);
     wrapper.appendChild(list);
   });
@@ -86,7 +92,7 @@ export function createDetailsSection(sections, translations, currentLang) {
     items.className = "details-list-items";
     sec.items.forEach((key) => {
       const span = document.createElement("span");
-      span.textContent = getTranslation(key, currentLang);
+      span.innerHTML = getTranslation(key, currentLang);
       items.appendChild(span);
     });
 
