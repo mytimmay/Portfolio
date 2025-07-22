@@ -2,6 +2,7 @@
   "projects": { "de": "Projekte", "en": "Projects" },
   "about": { "de": "Über mich", "en": "About" },
   "contact": { "de": "Kontakt", "en": "Contact" },
+  "menu_toggle": { "de": "Menü öffnen", "en": "Open menu" },
   "name": "Tim Schedlbauer",
   "hero1_title": "UI/UX Designer",
   "hero1_subtitle": {
@@ -321,6 +322,10 @@
   "designprocess_title4": {
     "de": "Testing",
     "en": "Testing"
+  },
+  "designprocess_title5": {
+    "de": "Fazit",
+    "en": "Conclusion"
   },
   "designprocess_analyse_method1": {
     "de": "Experten Evaluation",
