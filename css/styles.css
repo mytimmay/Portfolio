@@ -661,6 +661,17 @@ button:hover {
     height: 128px;
 }
 
+/* === PROJECT STEP === */
+
+.process-step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--colors-surface-brand-primary);
+    padding: var(--spacing-2XL) 0;
+}
+
 /* === VIDEOS === */
 
 .youtube-wrapper {

@@ -1,4 +1,9 @@
-import { setLanguage, initLangToggle, currentLang, translations } from "./i18n.js";
+import {
+  setLanguage,
+  initLangToggle,
+  currentLang,
+  translations,
+} from "./i18n.js";
 import { initNav } from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
@@ -17,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function renderSections() {
-  const container = document.querySelector(".content-wrapper");
+  const container = document.querySelector(".smooth-wrapper");
   if (!container) return;
 
   container.innerHTML = "";
@@ -35,11 +40,22 @@ function renderSections() {
     },
     {
       title: "project_detail2",
-      items: ["software_1", "software_6", "software_7", "software_10", "software_11"],
+      items: [
+        "software_1",
+        "software_6",
+        "software_7",
+        "software_10",
+        "software_11",
+      ],
     },
     {
       title: "project_detail3",
-      items: ["project_team1", "project_team2", "project_team3", "project_team4"],
+      items: [
+        "project_team1",
+        "project_team2",
+        "project_team3",
+        "project_team4",
+      ],
     },
     { title: "project_detail4", items: ["project2_year"] },
   ];

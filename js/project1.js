@@ -12,6 +12,7 @@ import {
   createTwoColumnSection,
   createDesignProcessSection,
   createDetailsSection,
+  createProcessStep,
 } from "./layout.js";
 import { convertYouTubeUrl, parseYouTubeStartTime } from "./youtubeUtils.js";
 
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function renderSections() {
-  const container = document.querySelector(".content-wrapper");
+  const container = document.querySelector(".smooth-wrapper");
   if (!container) return;
 
   container.querySelectorAll(".dynamic-section").forEach((el) => el.remove());
@@ -67,11 +68,12 @@ function renderSections() {
   ];
 
   const sections = [
+    { type: "group-start" },
     { type: "details", data: details },
     {
       type: "twoColumn",
-      left: "project1_sec1_title",
-      text: "project1_sec1_text",
+      left: "tasks",
+      text: "tasks_project1",
     },
     {
       type: "youtube-video",
@@ -79,17 +81,107 @@ function renderSections() {
     },
     {
       type: "twoColumn",
-      left: "project1_sec2_title",
-      text: "project1_sec2_text",
+      left: "problemstatement",
+      text: "problemstatement_project1",
+    },
+    {
+      type: "twoColumn",
+      left: "goals",
+      text: "goals_project1",
+    },
+    {
+      type: "twoColumn",
+      left: "usergroup",
+      text: "usergroup_project1",
+    },
+    { type: "designPhases", data: designPhases },
+    { type: "group-end" },
+    { type: "step", h1: "designprocess_title1" },
+    { type: "group-start" },
+    {
+      type: "twoColumn",
+      left: "preface",
+      text: "preface_project1",
+    },
+    {
+      type: "twoColumn",
+      left: "deskresearch",
+      text: "deskresearch_project1",
+    },
+    {
+      type: "twoColumn",
+      left: "competitiveanalysis",
+      text: "competitiveanalysis_project1",
+    },
+    { type: "group-end" },
+    {
+      type: "twoColumn",
+      left: "flowgraph",
+      text: "flowgraph_project1",
+    },
+    {
+      type: "image",
+      src: "assets/images/project-fischer/FischerProfil_Flowgraph.webp",
+    },
+    {
+      type: "twoColumn",
+      left: "prototypes",
+      text: "prototypes_project1",
+    },
+    {
+      type: "image",
+      src: "assets/images/project-fischer/FischerProfil_Prototypen.webp",
+    },
+    {
+      type: "twoColumn",
+      left: "designsystem",
+      text: "designsystem_project1",
+    },
+    {
+      type: "image",
+      src: "assets/images/project-fischer/FischerProfil_DesignSystem.webp",
+    },
+    {
+      type: "twoColumn",
+      left: "userinterface",
+      text: "userinterface_project1",
+    },
+    {
+      type: "image",
+      src: "assets/images/project-fischer/FischerProfil_UI_Sidebar_Tutorial.webp",
     },
     {
       type: "image",
       src: "assets/images/project-fischer/FischerProfil_UI.webp",
     },
-    { type: "designPhases", data: designPhases },
+    {
+      type: "twoColumn",
+      left: "moredrafts",
+      text: "moredrafts_project1",
+    },
+    {
+      type: "twoColumn",
+      left: "researchtesting",
+      text: "researchtesting_project1",
+    },
   ];
 
+  let groupWrapper = null; // für <div class="content-wrapper">
+
   sections.forEach((sec) => {
+    if (sec.type === "group-start") {
+      groupWrapper = document.createElement("div");
+      groupWrapper.classList.add("content-wrapper");
+      return;
+    }
+
+    if (sec.type === "group-end") {
+      if (groupWrapper) {
+        container.appendChild(groupWrapper);
+        groupWrapper = null;
+      }
+      return;
+    }
     let el;
     if (sec.type === "twoColumn") {
       const p = document.createElement("p");
@@ -109,6 +201,8 @@ function renderSections() {
       el.appendChild(iframe);
     } else if (sec.type === "designPhases") {
       el = createDesignProcessSection(sec.data, translations, currentLang);
+    } else if (sec.type === "step") {
+      el = createProcessStep({ title: sec.h1 }, translations, currentLang);
     } else if (sec.type === "details") {
       el = createDetailsSection(sec.data, translations, currentLang);
     } else if (sec.type === "image") {
@@ -120,7 +214,11 @@ function renderSections() {
     }
     if (el) {
       el.classList.add("dynamic-section");
-      container.appendChild(el);
+      if (groupWrapper) {
+        groupWrapper.appendChild(el);
+      } else {
+        container.appendChild(el);
+      }
     }
   });
 }

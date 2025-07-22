@@ -102,3 +102,15 @@ export function createDetailsSection(sections, translations, currentLang) {
 
   return wrapper;
 }
+
+export function createProcessStep(step, translations, currentLang) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "process-step";
+
+  const h1 = document.createElement("h1");
+  h1.textContent = getTranslation(step.title, currentLang);
+
+  wrapper.appendChild(h1);
+
+  return wrapper;
+}
