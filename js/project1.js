@@ -13,6 +13,7 @@ import {
   createDesignProcessSection,
   createDetailsSection,
   createProcessStep,
+  createProjectHeroSection,
 } from "./layout.js";
 import { convertYouTubeUrl } from "./youtubeUtils.js";
 
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initLangToggle();
 
   initNav();
+  renderHero();
   renderSections();
   initFadeAnimations();
 });
@@ -237,4 +239,24 @@ function renderSections() {
       }
     }
   });
+}
+
+function renderHero() {
+  const main = document.querySelector("main");
+  const wrapper = document.querySelector(".smooth-wrapper");
+  if (!main || !wrapper) return;
+
+  const hero = createProjectHeroSection(
+    {
+      className: "project1",
+      titleKey: "project1_title",
+      textKey: "project1_text",
+      imageSrc: "assets/images/project-cards/FischerShowroom-Image.webp",
+      imageAlt: "Fischer Profil Showroom",
+    },
+    translations,
+    currentLang
+  );
+
+  main.insertBefore(hero, wrapper);
 }
