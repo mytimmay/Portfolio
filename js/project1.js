@@ -48,6 +48,7 @@ function renderSections() {
         "designprocess_analyse_method1",
         "designprocess_analyse_method2",
       ],
+      image: "assets/icons/Search.svg",
     },
     {
       title: "designprocess_title2",
@@ -55,10 +56,12 @@ function renderSections() {
         "designprocess_concept_method1",
         "designprocess_concept_method2",
       ],
+      image: "assets/icons/Choose.svg",
     },
     {
       title: "designprocess_title3",
       methods: ["designprocess_design_method1", "designprocess_design_method2"],
+      image: "assets/icons/Colorpalett.svg",
     },
   ];
 
@@ -70,9 +73,17 @@ function renderSections() {
       text: "project1_sec1_text",
     },
     {
+      type: "youtube-video",
+      src: "https://www.youtube.com/watch?v=_oMTvgcB48U&t=2s",
+    },
+    {
       type: "twoColumn",
       left: "project1_sec2_title",
       text: "project1_sec2_text",
+    },
+    {
+      type: "image",
+      src: "assets/images/project-fischer/FischerProfil_UI.webp",
     },
     { type: "designPhases", data: designPhases },
   ];
@@ -83,20 +94,56 @@ function renderSections() {
       const p = document.createElement("p");
       p.textContent = getTranslation(sec.text, currentLang);
       el = createTwoColumnSection(sec.left, [p], translations, currentLang);
-    } else if (sec.type === "video") {
-      const vid = document.createElement("video");
-      vid.src = sec.src;
-      vid.controls = true;
+    } else if (sec.type === "youtube-video") {
+      const iframe = document.createElement("iframe");
+      iframe.src = convertYouTubeUrl(sec.src);
+      iframe.title = "YouTube video player";
+      iframe.frameBorder = "0";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+
       el = document.createElement("div");
-      el.appendChild(vid);
+      el.classList.add("youtube-wrapper");
+      el.appendChild(iframe);
     } else if (sec.type === "designPhases") {
       el = createDesignProcessSection(sec.data, translations, currentLang);
     } else if (sec.type === "details") {
       el = createDetailsSection(sec.data, translations, currentLang);
+    } else if (sec.type === "image") {
+      const img = document.createElement("img");
+      img.src = sec.src;
+      img.loading = "lazy";
+      el = document.createElement("div");
+      el.appendChild(img);
     }
     if (el) {
       el.classList.add("dynamic-section");
       container.appendChild(el);
     }
   });
+}
+
+function convertYouTubeUrl(url) {
+  const urlObj = new URL(url);
+  const videoId = urlObj.searchParams.get("v");
+  const start = urlObj.searchParams.get("t");
+
+  let embedUrl = `https://www.youtube.com/embed/${videoId}`;
+  if (start) {
+    // YouTube erlaubt Startzeit im Format Sekunden
+    const seconds = parseYouTubeStartTime(start);
+    embedUrl += `?start=${seconds}`;
+  }
+
+  return embedUrl;
+}
+
+function parseYouTubeStartTime(t) {
+  // "2s" oder "1m30s" -> Sekunden umrechnen
+  const match = t.match(/(?:(\d+)m)?(\d+)s/);
+  if (!match) return 0;
+  const minutes = parseInt(match[1] || 0, 10);
+  const seconds = parseInt(match[2] || 0, 10);
+  return minutes * 60 + seconds;
 }

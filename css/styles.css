@@ -592,7 +592,7 @@ button:hover {
     transform: translate(0) !important;
 }
 
-/* === PROJECT STUFF === */
+/* === PROJECT DETAILS === */
 
 .details {
     display: flex;
@@ -612,10 +612,38 @@ button:hover {
     flex-direction: column;
     gap: var(--spacing-M);
     flex: 1;
-    align-items: center;
 }
 
 .details-list-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-XS);
+}
+
+/* === PROJECT PROCESS === */
+
+.process {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: var(--spacing-2XL);
+
+    padding: var(--spacing-2XL) var(--container-spacing-medium);
+}
+
+.process-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-M);
+    flex: 1;
+    align-items: center;
+}
+
+.process-list-items {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-XS);
@@ -631,6 +659,33 @@ button:hover {
     flex-flow: row;
     width: 128px;
     height: 128px;
+}
+
+/* === VIDEOS === */
+
+.youtube-wrapper {
+    border-radius: var(--radius-m);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 Seitenverhältnis */
+}
+
+.youtube-wrapper iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* === IMAGES === */
+
+img {
+    max-width: 100%;
+    display: inline-block;
 }
 
 

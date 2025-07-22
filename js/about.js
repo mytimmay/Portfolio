@@ -33,7 +33,7 @@ async function loadExperience() {
 
     const entries = data.experience.map((job) => {
       const wrapper = document.createElement("div");
-      wrapper.className = "experience-entry fade-right";
+      wrapper.className = "experience-entry";
 
       const title = document.createElement("h5");
       title.className = "job-title";
