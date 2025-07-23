@@ -23,10 +23,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function renderSections() {
   const container = document.querySelector(".smooth-wrapper");
-  const main = document.querySelector("main");
-  if (!container || !main) return;
+  if (!container) return;
 
-  main.querySelector(".hero-project")?.remove();
+  container.querySelectorAll(".dynamic-section").forEach((el) => el.remove());
 
   const hero = createProjectHeroSection(
     {
@@ -40,9 +39,8 @@ function renderSections() {
     currentLang
   );
 
-  main.insertBefore(hero, container);
-
-  container.innerHTML = "";
+  hero.classList.add("dynamic-section");
+  container.prepend(hero);
 
   const details = [
     {
