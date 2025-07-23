@@ -25,14 +25,30 @@ document.addEventListener("DOMContentLoaded", async () => {
   initLangToggle();
 
   initNav();
-  renderHero();
   renderSections();
   initFadeAnimations();
 });
 
 function renderSections() {
   const container = document.querySelector(".smooth-wrapper");
-  if (!container) return;
+  const main = document.querySelector("main");
+  if (!container || !main) return;
+
+  main.querySelector(".hero-project")?.remove();
+
+  const hero = createProjectHeroSection(
+    {
+      className: "project1",
+      titleKey: "project1_title",
+      textKey: "project1_text",
+      imageSrc: "assets/images/project-cards/FischerShowroom-Image.webp",
+      imageAlt: "Fischer Profil Showroom",
+    },
+    translations,
+    currentLang
+  );
+
+  main.insertBefore(hero, container);
 
   container.querySelectorAll(".dynamic-section").forEach((el) => el.remove());
 
@@ -264,24 +280,4 @@ function renderSections() {
       appendToCurrentGroup(el);
     }
   });
-}
-
-function renderHero() {
-  const main = document.querySelector("main");
-  const wrapper = document.querySelector(".smooth-wrapper");
-  if (!main || !wrapper) return;
-
-  const hero = createProjectHeroSection(
-    {
-      className: "project1",
-      titleKey: "project1_title",
-      textKey: "project1_text",
-      imageSrc: "assets/images/project-cards/FischerShowroom-Image.webp",
-      imageAlt: "Fischer Profil Showroom",
-    },
-    translations,
-    currentLang
-  );
-
-  main.insertBefore(hero, wrapper);
 }
