@@ -19,6 +19,7 @@ body {
     color: var(--colors-text-neutral);
     background-color: var(--colors-surface-neutral-invert);
 
+
 }
 
 .main {
@@ -68,6 +69,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100vw;
     z-index: 999;
     height: 80px;
     background-color: var(--colors-surface-neutral-invert);
@@ -483,6 +485,7 @@ button:hover {
 .smooth-wrapper {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 #experience-list {

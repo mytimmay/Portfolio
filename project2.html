@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tim Schedlbauer – Project 2</title>
+    <title data-i18n="project2_title"></title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon/Favicon.svg"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/tokens.css" />
     <link
@@ -16,5 +21,16 @@
       <div class="smooth-wrapper" id="luxy"></div>
     </main>
     <script type="module" src="js/project2.js"></script>
+    <script src="https://min30327.github.io/luxy.js/dist/js/luxy.js"></script>
+
+    <script charset="utf-8">
+      var isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+      if (!isMobile) {
+        luxy.init({
+          wrapper: "#luxy",
+          wrapperSpeed: 0.065,
+        });
+      }
+    </script>
   </body>
 </html>
