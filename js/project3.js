@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   initLangToggle();
 
   initNav();
-  renderHero();
   renderSections();
   initFadeAnimations();
 });
@@ -26,7 +25,22 @@ function renderSections() {
   const container = document.querySelector(".smooth-wrapper");
   if (!container) return;
 
-  container.innerHTML = "";
+  container.querySelectorAll(".dynamic-section").forEach((el) => el.remove());
+
+  const hero = createProjectHeroSection(
+    {
+      className: "project3",
+      titleKey: "project3_title",
+      textKey: "project3_text",
+      imageSrc: "assets/images/project-cards/VispaWorkshop-Image.webp",
+      imageAlt: "VISPA Workshops",
+    },
+    translations,
+    currentLang
+  );
+
+  hero.classList.add("dynamic-section");
+  container.prepend(hero);
 
   const details = [
     {
@@ -63,24 +77,4 @@ function renderSections() {
   const el = createDetailsSection(details, translations, currentLang);
   el.classList.add("dynamic-section");
   container.appendChild(el);
-}
-
-function renderHero() {
-  const main = document.querySelector("main");
-  const wrapper = document.querySelector(".smooth-wrapper");
-  if (!main || !wrapper) return;
-
-  const hero = createProjectHeroSection(
-    {
-      className: "project3",
-      titleKey: "project3_title",
-      textKey: "project3_text",
-      imageSrc: "assets/images/project-cards/VispaWorkshop-Image.webp",
-      imageAlt: "VISPA Workshops",
-    },
-    translations,
-    currentLang
-  );
-
-  main.insertBefore(hero, wrapper);
 }
