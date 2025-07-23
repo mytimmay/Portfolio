@@ -14,6 +14,7 @@ import {
   createDetailsSection,
   createProcessStep,
   createProjectHeroSection,
+  createMoreProjectsSection,
 } from "./layout.js";
 import { convertYouTubeUrl } from "./youtubeUtils.js";
 
@@ -34,6 +35,16 @@ function renderSections() {
   if (!container) return;
 
   container.querySelectorAll(".dynamic-section").forEach((el) => el.remove());
+
+  const groupStack = [];
+
+  const appendToCurrentGroup = (el) => {
+    if (groupStack.length > 0) {
+      groupStack[groupStack.length - 1].appendChild(el);
+    } else {
+      container.appendChild(el);
+    }
+  };
 
   const details = [
     { title: "project_detail1", items: ["project_role1"] },
@@ -67,6 +78,11 @@ function renderSections() {
       methods: ["designprocess_design_method1", "designprocess_design_method2"],
       image: "assets/icons/Colorpalett.svg",
     },
+  ];
+
+  const urls = [
+    { title: "project2_title", href: "project2.html" },
+    { title: "project3_title", href: "project3.html" },
   ];
 
   const sections = [
@@ -118,6 +134,7 @@ function renderSections() {
     { type: "group-end" },
     { type: "step", h1: "designprocess_title2" },
     { type: "group-start" },
+    { type: "group-start", className: "subcontent-wrapper" },
     {
       type: "twoColumn",
       left: "flowgraph",
@@ -127,6 +144,8 @@ function renderSections() {
       type: "image",
       src: "assets/images/project-fischer/FischerProfil_Flowgraph.webp",
     },
+    { type: "group-end" },
+    { type: "group-start", className: "subcontent-wrapper" },
     {
       type: "twoColumn",
       left: "prototypes",
@@ -137,8 +156,10 @@ function renderSections() {
       src: "assets/images/project-fischer/FischerProfil_Prototypen.webp",
     },
     { type: "group-end" },
+    { type: "group-end" },
     { type: "step", h1: "designprocess_title3" },
     { type: "group-start" },
+    { type: "group-start", className: "subcontent-wrapper" },
     {
       type: "twoColumn",
       left: "designsystem",
@@ -148,11 +169,14 @@ function renderSections() {
       type: "image",
       src: "assets/images/project-fischer/FischerProfil_DesignSystem.webp",
     },
+    { type: "group-end" },
+    { type: "group-start", className: "subcontent-wrapper" },
     {
       type: "twoColumn",
       left: "userinterface",
       text: "userinterface_project1",
     },
+    { type: "group-start", className: "image-wrapper" },
     {
       type: "image",
       src: "assets/images/project-fischer/FischerProfil_UI_Sidebar_Tutorial.webp",
@@ -161,6 +185,8 @@ function renderSections() {
       type: "image",
       src: "assets/images/project-fischer/FischerProfil_UI.webp",
     },
+    { type: "group-end" },
+    { type: "group-end" },
     { type: "group-end" },
     { type: "step", h1: "designprocess_title5" },
     { type: "group-start" },
@@ -175,25 +201,25 @@ function renderSections() {
       text: "researchtesting_project1",
     },
     { type: "group-end" },
+    { type: "moreProjects", data: urls },
   ];
-
-  let groupWrapper = null; // für <div class="content-wrapper">
 
   sections.forEach((sec) => {
     if (sec.type === "group-start") {
-      groupWrapper = document.createElement("div");
-      groupWrapper.classList.add("content-wrapper");
+      const newGroup = document.createElement("div");
+      const cls = sec.className || "content-wrapper";
+      newGroup.classList.add(cls);
+      groupStack.push(newGroup);
       return;
     }
 
     if (sec.type === "group-end") {
-      if (groupWrapper) {
-        container.appendChild(groupWrapper);
-        groupWrapper = null;
-      }
+      const finishedGroup = groupStack.pop();
+      appendToCurrentGroup(finishedGroup);
       return;
     }
-    let el;
+
+    let el = null;
     if (sec.type === "twoColumn") {
       const p = document.createElement("p");
       p.setAttribute("data-i18n", sec.text);
@@ -229,14 +255,13 @@ function renderSections() {
       img.loading = "lazy";
       el = document.createElement("div");
       el.appendChild(img);
+    } else if (sec.type === "moreProjects") {
+      el = createMoreProjectsSection(sec.data, translations, currentLang);
     }
+
     if (el) {
       el.classList.add("dynamic-section");
-      if (groupWrapper) {
-        groupWrapper.appendChild(el);
-      } else {
-        container.appendChild(el);
-      }
+      appendToCurrentGroup(el);
     }
   });
 }

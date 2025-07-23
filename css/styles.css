@@ -18,6 +18,7 @@ body {
     line-height: var(--font-lineheight-normal);
     color: var(--colors-text-neutral);
     background-color: var(--colors-surface-neutral-invert);
+
 }
 
 .main {
@@ -66,7 +67,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 999;
     height: 80px;
     background-color: var(--colors-surface-neutral-invert);
@@ -451,6 +452,12 @@ button:hover {
     width: 100%;
 }
 
+.subcontent-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2XL)
+}
+
 .two-column-list {
     display: flex;
     flex-direction: row;
@@ -458,6 +465,7 @@ button:hover {
     justify-content: center;
     padding-left: var(--container-spacing-medium);
     padding-right: var(--container-spacing-medium);
+    gap: var(--spacing-L);
 }
 
 .column-left {
@@ -624,15 +632,19 @@ button:hover {
 
 .process {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-2XL);
+    padding: var(--spacing-2XL) var(--container-spacing-medium);
+}
+
+.process-lists {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
     align-items: flex-start;
     justify-content: space-between;
-
     gap: var(--spacing-2XL);
-
-    padding: var(--spacing-2XL) var(--container-spacing-medium);
 }
 
 .process-list {
@@ -641,6 +653,7 @@ button:hover {
     gap: var(--spacing-M);
     flex: 1;
     align-items: center;
+    text-align: center;
 }
 
 .process-list-items {
@@ -692,11 +705,40 @@ button:hover {
     left: 0;
 }
 
+/* === DYNAMIC === */
+
+.dynamic-section {
+    display: flex;
+}
+
 /* === IMAGES === */
 
 img {
     max-width: 100%;
     display: inline-block;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-S);
+}
+
+/* === PROJECT LINKS === */
+
+.more-project-links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: var(--spacing-3XL) auto;
+    gap: var(--spacing-L);
+}
+
+.more-project-links-items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--spacing-M);
 }
 
 
@@ -783,5 +825,10 @@ img {
 
     .right {
         justify-content: unset;
+    }
+
+    .process-lists {
+        flex-direction: column;
+        align-items: center;
     }
 }

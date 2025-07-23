@@ -1,4 +1,4 @@
-import { getTranslation } from "./i18n.js";
+import { currentLang, getTranslation } from "./i18n.js";
 
 export function createTwoColumnSection(
   leftKey,
@@ -47,6 +47,16 @@ export function createDesignProcessSection(
   const wrapper = document.createElement("div");
   wrapper.className = "process";
 
+  const head = document.createElement("h4");
+  head.className = "process-head";
+  head.setAttribute("data-i18n", "designprocess_title");
+  head.textContent = getTranslation("designprocess_title", currentLang);
+
+  wrapper.appendChild(head);
+
+  const listWrapper = document.createElement("div");
+  listWrapper.className = "process-lists";
+
   designPhases.forEach((phase) => {
     const list = document.createElement("div");
     list.className = "process-list";
@@ -67,16 +77,17 @@ export function createDesignProcessSection(
     const items = document.createElement("div");
     items.className = "process-list-items";
     phase.methods.forEach((key) => {
-      const span = document.createElement("span");
-      span.setAttribute("data-i18n", key);
-      span.textContent = getTranslation(key, currentLang);
-      items.appendChild(span);
+      const entry = document.createElement("div");
+      entry.setAttribute("data-i18n", key);
+      entry.textContent = getTranslation(key, currentLang);
+      items.appendChild(entry);
     });
 
     list.append(icon, h4, items);
-    wrapper.appendChild(list);
+    listWrapper.appendChild(list);
   });
 
+  wrapper.appendChild(listWrapper);
   return wrapper;
 }
 
@@ -127,11 +138,7 @@ export function createProcessStep(step, translations, currentLang) {
   return wrapper;
 }
 
-export function createProjectHeroSection(
-  config,
-  translations,
-  currentLang
-) {
+export function createProjectHeroSection(config, translations, currentLang) {
   const { className, titleKey, textKey, imageSrc, imageAlt } = config;
 
   const section = document.createElement("section");
@@ -167,5 +174,29 @@ export function createProjectHeroSection(
   wrapper.append(textWrapper, imageWrapper);
   section.appendChild(wrapper);
 
+  return section;
+}
+
+export function createMoreProjectsSection(url, translations, currentLang) {
+  const section = document.createElement("section");
+  section.classList.add("more-project-links");
+
+  const h2 = document.createElement("h2");
+  h2.setAttribute("data-i18n", "more_projects");
+  h2.textContent = getTranslation("more_projects", currentLang);
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "more-project-links-items";
+
+  url.forEach((li) => {
+    const link = document.createElement("a");
+    link.className = "links";
+    link.href = li.href || "#";
+    link.setAttribute("data-i18n", li.title);
+    link.textContent = getTranslation(li.title, currentLang);
+    wrapper.append(link);
+  });
+
+  section.append(h2, wrapper);
   return section;
 }
