@@ -398,6 +398,7 @@ button:hover {
     gap: var(--spacing-2XS);
     padding: var(--spacing-S) var(--spacing-M);
     flex: 0 auto;
+    flex-flow: wrap;
 }
 
 .project-tag {
