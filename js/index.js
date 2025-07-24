@@ -211,8 +211,50 @@ function setupScrollAndNavigation() {
 
   window.addEventListener("keydown", (e) => {
     if (isAnimating) return;
-    if (e.key === "ArrowDown") scrollToSection(currentIndex + 1);
-    if (e.key === "ArrowUp") scrollToSection(currentIndex - 1);
+    const section = sections[currentIndex];
+    const scrollContainer = getScrollContainer(section);
+
+    if (e.key === "PageDown") {
+      e.preventDefault();
+      if (scrollContainer) {
+        const atBottom =
+          scrollContainer.scrollTop + scrollContainer.clientHeight >=
+          scrollContainer.scrollHeight - 1;
+        if (!atBottom) {
+          scrollContainer.scrollTop = Math.min(
+            scrollContainer.scrollTop + scrollContainer.clientHeight,
+            scrollContainer.scrollHeight
+          );
+          return;
+        }
+      }
+      scrollToSection(currentIndex + 1);
+    }
+
+    if (e.key === "PageUp") {
+      e.preventDefault();
+      if (scrollContainer) {
+        const atTop = scrollContainer.scrollTop <= 0;
+        if (!atTop) {
+          scrollContainer.scrollTop = Math.max(
+            scrollContainer.scrollTop - scrollContainer.clientHeight,
+            0
+          );
+          return;
+        }
+      }
+      scrollToSection(currentIndex - 1);
+    }
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      scrollToSection(currentIndex + 1);
+    }
+
+    if (e.key === "ArrowUp") {
+      e.preventDefault();
+      scrollToSection(currentIndex - 1);
+    }
   });
 
   let startY = 0;
