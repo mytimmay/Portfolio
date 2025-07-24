@@ -2,6 +2,7 @@
   "projects": { "de": "Projekte", "en": "Projects" },
   "about": { "de": "Über mich", "en": "About" },
   "contact": { "de": "Kontakt", "en": "Contact" },
+  "menu_toggle": { "de": "Menü öffnen", "en": "Open menu" },
   "name": "Tim Schedlbauer",
   "hero1_title": "UI/UX Designer",
   "hero1_subtitle": {
@@ -76,42 +77,32 @@
   "tools_11": { "label": "Jira", "level": 70 },
 
   "project1_title": {
-    "de": "FischerProfile – Interaktiver Showroom",
-    "en": "FischerProfile – Interactive Showroom"
+    "de": "FischerProfile – 3D Showroom",
+    "en": "FischerProfile – 3D Showroom"
   },
   "project1_desc": {
     "de": "Der Fischer Profil Showroom ist eine innovative, virtuelle 3D Plattform zur interaktiven Präsentation…",
     "en": "The Fischer Profile Showroom is an innovative virtual 3D platform for interactive presentations…"
   },
   "project2_title": {
-    "de": "VISPA Fun – Teambuilding Games",
-    "en": "VISPA Fun – Teambuilding Games"
+    "de": "VISPA – Teambuilding Games",
+    "en": "VISPA – Teambuilding Games"
   },
   "project2_desc": {
     "de": "Ein für WebGL entwickeltes 3D-Spiel, speziell für Remote-Teams, um Teambuilding spielerisch zu gestalten…",
     "en": "A WebGL-based 3D game developed for remote teams to encourage playful teambuilding…"
   },
   "project3_title": {
-    "de": "VISPA Workshops – Online Collaboration Plattform",
-    "en": "VISPA Workshops – Online Collaboration Platform"
+    "de": "VISPA Workshops",
+    "en": "VISPA Workshops"
   },
   "project3_desc": {
     "de": "Eine 3D-Collaboration-App, mit der Teams in virtuellen Räumen effizient zusammenarbeiten können…",
     "en": "A 3D collaboration app enabling teams to work efficiently in virtual spaces…"
   },
   "project1_text": {
-    "de": "Der Fischer Profil Showroom ist eine innovative, virtuelle 3D Plattform zur interaktiven Präsentation von Dach- und Fassadensystemen. Entwickelt als Web-App auf Basis des VISHOW-Systems von Solid White, ermöglicht er Architekten, Kunden und Vertriebsmitarbeitern eine intuitive Produktkonfiguration und -visualisierung.",
-    "en": "The Fischer Profil Showroom is an innovative, virtual 3D platform for the interactive presentation of roof and facade systems. Developed as a web app based on Solid White's VISHOW-System, it enables architects, customers and sales staff to configure and visualize products intuitively."
-  },
-  "project1_sec1_title": { "de": "Herausforderung", "en": "Challenge" },
-  "project1_sec1_text": {
-    "de": "Kurzer Text zur Herausforderung des Projekts.",
-    "en": "Short text describing the project's challenge."
-  },
-  "project1_sec2_title": { "de": "L\u00f6sung", "en": "Solution" },
-  "project1_sec2_text": {
-    "de": "Kurzer Text zur entwickelten L\u00f6sung.",
-    "en": "Short text about the developed solution."
+    "de": "Der Fischer Profil 3D Showroom ist eine innovative, virtuelle 3D Plattform zur interaktiven Präsentation von Dach- und Fassadensystemen. Entwickelt als Web-App auf Basis des VISHOW-Systems von Solid White, ermöglicht er Architekten, Kunden und Vertriebsmitarbeitern eine intuitive Produktkonfiguration und -visualisierung.",
+    "en": "The Fischer Profil 3D Showroom is an innovative, virtual 3D platform for the interactive presentation of roof and facade systems. Developed as a web app based on Solid White's VISHOW-System, it enables architects, customers and sales staff to configure and visualize products intuitively."
   },
   "project2_text": {
     "de": "Ein für WebGL entwickeltes 3D-Spiel, das speziell für Remote-Teams konzipiert wurde, um Teambuilding durch teambasierte Mechaniken zu fördern und zu verbessern. Das Projekt basierte auf \u201eVISPA Workshops\u201c, einem kollaborativen 3D-Ideation- und Workshop-Tool, welches mit einem starken Fokus auf Gamification weiterentwickelt wurde.",
@@ -332,6 +323,10 @@
     "de": "Testing",
     "en": "Testing"
   },
+  "designprocess_title5": {
+    "de": "Fazit",
+    "en": "Conclusion"
+  },
   "designprocess_analyse_method1": {
     "de": "Experten Evaluation",
     "en": "Expert evaluation"
@@ -424,21 +419,33 @@
     "de": "November 2020 -<br>Juni 2023",
     "en": "November 2020 -<br>June 2023"
   },
-  "project4_year": {
+  "project5_year": {
     "de": "Juni 2023 - Juli 2024",
     "en": "June 2023 - July 2024"
   },
-  "project5_year": {
+  "project6_year": {
     "de": "Januar 2020 - April 2020",
     "en": "January 2020 - April 2020"
   },
-  "project6_year": {
+  "project7_year": {
     "de": "Sommersemester 2019",
     "en": "Summer term 2019"
   },
   "archive-project_detail": {
     "de": "Meine Aufgaben:",
     "en": "My tasks:"
+  },
+  "archive-project_detail2": {
+    "de": "Tools:",
+    "en": "Tools:"
+  },
+  "archive-project_detail3": {
+    "de": "Datum:",
+    "en": "Date:"
+  },
+  "archive-project_detail4": {
+    "de": "Link:",
+    "en": "Link:"
   },
   "project5_title": {
     "de": "VISHOW - Website & Designsystem",
@@ -487,5 +494,375 @@
   "project7_tools": {
     "de": "Arduino IDE, Arduino Mega, Node.js, p5.js, p5.play.js, Adobe XD & Illustrator, Fusion 360",
     "en": "Arduino IDE, Arduino Mega, Node.js, p5.js, p5.play.js, Adobe XD & Illustrator, Fusion 360"
-  }
+  },
+  "tasks": {
+    "de": "Meine Aufgaben",
+    "en": "My tasks"
+  },
+  "tasks_project1": {
+    "de": "Konzeption und Gestaltung eines Online-Produktkonfigurators auf Basis des VISHOW-Systems von SolidWhite. Erstellung und Erweiterung des Designsystems in Figma zur Sicherstellung einer konsistenten und skalierbaren Gestaltung.",
+    "en": "Conception and design of an online product configurator based on SolidWhite's VISHOW-System. Creating and expanding the design system in Figma to ensure a consistent and scalable design."
+  },
+  "tasks_project2": {
+    "de": "Game Design<br>Konzeption, Design, Umsetzung, Anpassung und Evaluation der Spielmechaniken, Welt, Levels und Geschichte.<br><br>UX/UI<br>Gestaltung einer benutzerfreundlichen Oberfläche, Optimierung der Nutzererfahrung sowie Erstellung von Marketingmaterialien.<br><br>3D-Assets<br>Erstellung visueller Elemente für die Spielwelt.<br><br>Projektmanagement<br>Koordination und Überwachung des Entwicklungsprozesses.",
+    "en": "Game Design<br>Conception, design, implementation, adaptation and evaluation of game mechanics, world, levels and story.<br><br>UX/UI<br>Designing a user-friendly interface, optimizing the user experience and creating marketing materials.<br><br>3D assets<br>Create visual elements for the game world.<br><br>project management<br>Coordination and monitoring of the development process."
+  },
+  "tasks_project3": {
+    "de": "Ich trat dem Team bei, als bereits ein funktionsfähiger Prototyp vorlag. Das Team befand sich zu diesem Zeitpunkt in der Umsetzung einer Neuentwicklung, grobe Konzepte und ein Zeitplan waren bereits vorhanden.<br><br>UX/UI<br>Konzeption und Gestaltung von benutzerfreundlichen Funktionen, Mechaniken und UI. Optimierung der Nutzererfahrung sowie Erstellung von Marketingmaterialien.‍<br><br>3D-Assets<br>Erstellung visueller Elemente.‍<br><br>Projektmanagement<br>Im späteren Verlauf des Projektes wurde ich immer mehr in die Koordination und Überwachung des Entwicklungsprozesses eingebunden.",
+    "en": "I joined the team when a working prototype was already available. At this point, the team was implementing a new development; rough concepts and a timetable were already in place.<br><br>UX/UI<br>Conception and design of user-friendly functions, mechanics and UI. Optimizing the user experience and creating marketing materials.‍<br><br>3D assets<br>Create visual elements.‍<br><br>Project management<br>As the project progressed, I became more and more involved in coordinating and monitoring the development process."
+  },
+  "project_link": {
+    "de": "zum live Projekt",
+    "en": "to the live project"
+  },
+  "problemstatement": {
+    "de": "Problemstellung",
+    "en": "Problem statement"
+  },
+  "problemstatement_project1": {
+    "de": "Fischer Profil stand vor der Herausforderung, die Vorteile ihrer Dach- und Fassadensysteme klar und ansprechend zu vermitteln.<br><br>Ein virtueller Showroom sollte die Produkte interaktiv visualisieren. Dafür musste das VISHOW-System an die spezifische Anforderungen von Fischer Profil angepasst, funktional erweitert und das Corporate Design integriert werden.",
+    "en": "Fischer Profil was faced with the challenge of communicating the benefits of their roof and façade systems in a clear and appealing way.<br><br>A virtual showroom should visualize the products interactively. To do this, the VISHOW system had to be adapted to the specific requirements of Fischer Profil, functionally expanded and the corporate design integrated."
+  },
+  "problemstatement_project2": {
+    "de": "Da die angestrebte Etablierung von 'VISPA Workshops', auf dem dieses Projekt basiert, ausblieb, wurde der Fokus auf die Entwicklung eines Teambuilding-Spiels für Remote-Teams verlagert.<br><br>Der anfängliche Plan, beide Anwendungsfälle zu vereinen, erwies sich aufgrund reduzierter Ressourcen als nicht realisierbar. Statt einer vollständigen Neuentwicklung wurden bestehende Systeme übernommen, um kurzfristig das Ziel zu erreichen, eine bestimmte Anzahl an Kunden zu generieren.<br><br>Unter begrenztem Zeitrahmen musste ein Spieldesign mit teambasierten Mechaniken entwickelt und die übernommenen Systeme angepasst werden. Ziel war es, eine geeignete User Experience für den neuen Anwendungsfall und die veränderte Zielgruppe zu schaffen.",
+    "en": "Since the intended establishment of “VISPA Workshops”, on which this project is based, failed to materialize, the focus was shifted to developing a team building game for remote teams.<br><br>The initial plan to combine both use cases proved impossible due to reduced resources. Instead of a completely new development, existing systems were adopted in order to achieve the goal of generating a specific number of customers in the short term.<br><br>Within a limited time frame, a game design with team-based mechanics had to be developed and the adopted systems had to be adapted. The aim was to create a suitable user experience for the new use case and the changed target group."
+  },
+  "problemstatement_project3": {
+    "de": "Die Digitalisierung der Arbeitswelt verlangt nach neuen Tools, die über Videocalls und 2D-Lösungen hinausgehen. 3D-Kollaborationsräume bieten vielversprechende Ansätze, doch technische Anforderungen, mangelnde Nutzerfreundlichkeit und komplexe Koordination erschweren die breite Nutzung.",
+    "en": "The digitization of the working world requires new tools that go beyond video calls and 2D solutions. 3D collaboration spaces offer promising approaches, but technical requirements, lack of usability and complex coordination make widespread use difficult."
+  },
+  "goals": {
+    "de": "Ziele",
+    "en": "Goals"
+  },
+  "goals_project1": {
+    "de": "In kurzer Zeit sollte das VISHOW-System angepasst werden, um eine effiziente Webanwendung für Fischer Profil zu schaffen. <br><br>Der Fokus lag auf einer performanten und benutzerfreundlichen Lösung, die nicht nur detaillierte Einblicke in die Produkte bietet, sondern es den Nutzern auch ermöglicht, ein Beispiel-Bauprojekt durch Auswahl und individuelle Einfärbung der Produkte zu konfigurieren. Diese interaktive Funktionalität sollte eine personalisierte, visuelle Darstellung der Produktauswahl ermöglichen und so den Entscheidungsprozess unterstützen.",
+    "en": "The ViShow system should be adapted in a short period of time to create an efficient web application for Fischer Profil. <br><br>The focus was on a high-performance and user-friendly solution that not only offers detailed insights into the products, but also enables users to configure a sample construction project by selecting and individually coloring the products. This interactive functionality should enable a personalized, visual presentation of the product selection and thus support the decision-making process."
+  },
+  "goals_project2": {
+    "de": "Neben dem Teambuilding und Spaß am Spiel lag der Fokus auf einer psychologischen und methodischen Auswertung der individuellen Fähigkeiten der Teilnehmer sowie der Teamdynamik.<br><br>Nach jeder Session sollte ein Maßnahmenplan entstehen, um langfristig zentrale Fähigkeiten wie Kommunikation und Vertrauen im Team gezielt zu verbessern.",
+    "en": "In addition to team building and fun playing, the focus was on a psychological and methodical evaluation of the participants' individual abilities and team dynamics.<br><br>After each session, an action plan should be developed to specifically improve key skills such as communication and trust in the team in the long term."
+  },
+  "goals_project3": {
+    "de": "Vispa soll diese Herausforderungen mit einer Plattform für immersive, interaktive Zusammenarbeit lösen. Personalisierte Avatare sollen Präsenz schaffen, die Third-Person-Perspektive und Gamification-Elemente sollen eine erweiterte Immersion erzeugen und alle nötigen Features zur Zusammenarbeit sollen die Produktivität steigern.",
+    "en": "Vispa aims to solve these challenges with a platform for immersive, interactive collaboration. Personalized avatars should create presence, the third-person perspective and gamification elements should create extended immersion and all necessary features for collaboration should increase productivity."
+  },
+  "usergroup": {
+    "de": "Nutzergruppe",
+    "en": "User group"
+  },
+  "usergroup_project1": {
+    "de": "Die Nutzer des virtuellen Showrooms von Fischer Profil sind vor allem Architekten, Bauingenieure, Vertriebsmitarbeiter und Kunden mit Interesse an innovativen Baulösungen. <br><br>Die Herausforderung bestand darin, eine interaktive Plattform zu entwickeln, die sowohl Fachleuten als auch Endkunden eine einfache und intuitive Produktauswahl sowie -konfiguration ermöglicht.",
+    "en": "The users of Fischer Profil's virtual showroom are primarily architects, civil engineers, sales representatives and customers interested in innovative construction solutions.<br><br>The challenge was to develop an interactive platform that would enable both professionals and end customers to select and configure products easily and intuitively."
+  },
+  "usergroup_project2": {
+    "de": "Die Nutzer von 'VISPA Fun' waren internationale oder im Homeoffice arbeitende Teams mit einer leichten Affinität für Technologie und dem Interesse, ihre Teamfähigkeiten zu verbessern.<br><br>Von Teamleitern über Designer bis hin zu Programmierern – mit unterschiedlichsten Computer- und Spielerfahrungen – bestand die Herausforderung darin, ein teambasiertes Spiel zu entwickeln, das alle Teammitglieder anspricht und ihnen gemeinsames Wachstum ermöglicht.",
+    "en": "The users of 'VISPA Fun' were international or home office teams with a slight affinity for technology and an interest in improving their team skills.<br><br>From team leaders to designers to programmers — with a wide range of computer and gaming experiences — the challenge was to create a team-based game that appeals to all team members and enables them to grow together."
+  },
+  "usergroup_project3": {
+    "de": "Die Nutzer von Vispa sind Unternehmen und kreative Gruppen sowie Remote-Teams, die nach innovativen Lösungen für eine effiziente Zusammenarbeit suchen.<br><br>Von Teamleitern über Designer bis hin zu Entwicklern – die Herausforderung bestand darin, eine benutzerfreundliche 3D-Plattform zu schaffen, die sowohl technisch versierte als auch weniger erfahrene Nutzer anspricht und ihnen ermöglicht, effektiv zusammenzuarbeiten.",
+    "en": "Vispa users include companies and creative groups as well as remote teams who are looking for innovative solutions for efficient collaboration.<br><br>From team leaders to designers to developers, the challenge was to create an easy-to-use 3D platform that appeals to both tech-savvy and less experienced users and enables them to work together effectively."
+  },
+  "preface": {
+    "de": "Vorwort",
+    "en": "Preface"
+  },
+  "preface_project1": {
+    "de": "Auf User Research und weitere Analysen wurde im Rahmen des Projekts verzichtet, wodurch Entscheidungen primär auf bestehenden Erkenntnissen und Anforderungen basierten.",
+    "en": "User research and further analyses were dispensed with as part of the project, meaning that decisions were based primarily on existing findings and requirements."
+  },
+  "preface_project3": {
+    "de": "Da bereits ein Prototyp vorhanden war, der erste Ideen von „VISPA“ aufzeigte, lag zum Zeitpunkt meines Beitritts zum Team der Fokus auf der Umsetzung und Neuentwicklung von „VISPA“. Meine Empfehlung, die Thematik genauer zu analysieren und Nutzergruppen zu definieren, wurde daher zurückgestellt.",
+    "en": "Since a prototype was already available that showed the first ideas of “VISPA”, at the time I joined the team, the focus was on implementing and developing new “VISPA”. My recommendation to analyse the topic in more detail and to define user groups has therefore been postponed."
+  },
+  "deskresearch": {
+    "de": "Desk Research",
+    "en": "Desk Research"
+  },
+  "deskresearch_project1": {
+    "de": "Da ich erstmals mit dem VISHOW-System arbeitete, überprüfte ich es während meiner Nutzung auf gängige UX- und Usability-Aspekte. Dabei identifizierte ich schnell Optimierungspotenziale, insbesondere in der Navigation zwischen Produkten und Showrooms sowie in weiteren Bereichen.",
+    "en": "Since I was working with the ViShow system for the first time, I checked it for common UX and usability aspects while using it. In doing so, I quickly identified optimization potential, particularly in navigating between products and showrooms as well as in other areas."
+  },
+  "deskresearch_project2": {
+    "de": "Der erste Schritt bestand darin, herauszufinden, was „Teambuilding“ überhaupt bedeutet, welche Fähigkeiten gefördert werden, welche Art von Spielen es bereits gibt, die täglich angewendet werden, und wie eine Analyse stattfinden kann, um Verbesserungsvorschläge zu liefern.",
+    "en": "The first step was to find out what “team building” actually means, what skills are being promoted, what types of games already exist that are used on a daily basis, and how an analysis can be carried out to provide suggestions for improvement."
+  },
+  "deskresearch_project3": {
+    "de": "Jede neu geplante Funktion wurde auf ihre Anforderungen geprüft und klar definiert. Dabei wurde überprüft, ob bereits Flows, Bibliotheken oder andere Informationen existieren, von denen wir bei der Planung und Umsetzung profitieren können, um schnell und effektiv das Bestmögliche für unsere Nutzer zu entwickeln.",
+    "en": "Each newly planned function was tested for its requirements and clearly defined. It checked whether flows, libraries or other information already exist that we can benefit from during planning and implementation in order to quickly and effectively develop the best possible solution for our users."
+  },
+  "competitiveanalysis": {
+    "de": "Competitive Analysis",
+    "en": "Competitive Analysis"
+  },
+  "competitiveanalysis_project1": {
+    "de": "Da absehbar war, dass das VISHOW-System Anpassungen erfordern würde, analysierte ich den Markt nach bestehenden 3D-Konfiguratoren, um bewährte Vorgehensweisen frühzeitig in den Entwicklungsprozess einzubeziehen.",
+    "en": "Since it was foreseeable that the ViShow system would require adjustments, I analyzed the market for existing 3D configurators in order to incorporate best practices into the development process at an early stage."
+  },
+  "competitiveanalysis_project2": {
+    "de": "Ein weiterer Schritt war es, eine Marktanalyse aufzubereiten, die Konkurrenten sowohl im Online-Bereich als auch Teambuilding-Angebote, die vor Ort stattfinden, aufzeigt.<br><br>Es wurde weiter ermittelt, welche Ergebnisse diese Angebote liefern und was sie womöglich nicht liefern.",
+    "en": "A further step was to prepare a market analysis that identified competitors both in the online sector and team building offers that take place on site.<br><br>It was also determined what results these offers deliver and what they may not deliver."
+  },
+  "competitiveanalysis_project3": {
+    "de": "Orientierung fanden wir an den gängigsten 2D-Kollaborationstools und natürlich auch an Computerspielen. Herausfordernd war es jedoch, Funktionen, die nur in einer 2D-Variante existieren, jederzeit so sinnvoll und benutzerfreundlich wie möglich in die 3D-Umgebung zu übertragen.",
+    "en": "We found orientation on the most common 2D collaboration tools and, of course, on computer games. However, it was a challenge to transfer functions that only exist in a 2D variant into the 3D environment as useful and user-friendly as possible at all times."
+  },
+  "flowgraph": {
+    "de": "Flow Graph",
+    "en": "Flow graph"
+  },
+  "flowgraph_project1": {
+    "de": "Die möglichen Produkte sowie deren Struktur und Aufbau wurden im Kundenbriefing festgehalten und anschließend erweitert. Durch die Gliederung dieser Inhalte auf Basis des bestehenden VISHOW-Systems konnten frühzeitig offene Fragen identifiziert und geklärt werden.",
+    "en": "The possible products as well as their structure and structure were set out in the customer briefing and then expanded. By structuring this content on the basis of the existing ViShow system, open questions could be identified and clarified at an early stage."
+  },
+  "flowgraph_project3": {
+    "de": "Die Struktur und Logik der Nutzerinteraktionen, Abläufe und Verknüpfungen definierten wir mithilfe von Flow Graphs. So konnten in der Konzeptphase frühzeitig Herausforderungen erkannt und eine benutzerfreundliche Grundlage geschaffen werden.",
+    "en": "We defined the structure and logic of user interactions, processes and links using flow graphs. In this way, challenges could be identified early on in the concept phase and a user-friendly basis was created."
+  },
+  "prototypes": {
+    "de": "Prototypen",
+    "en": "Prototypes"
+  },
+  "prototypes_project1": {
+    "de": "Zunächst wurden zwei Prototypen erstellt: Der erste Prototyp basierte auf dem bestehenden Interaktionskonzept und Design des VISHOW-Systems. Im zweiten Prototyp wurden sowohl das Interaktionskonzept überarbeitet als auch ein umfassendes Redesign konzipiert, um die in der Analysephase identifizierten Probleme gezielt zu lösen.",
+    "en": "Two prototypes were first created: The first prototype was based on the existing interaction concept and design of the ViShow system. In the second prototype, both the interaction concept was revised and a comprehensive redesign was designed to specifically solve the problems identified during the analysis phase."
+  },
+  "prototypes_project3": {
+    "de": "Interaktive Prototypen boten die Möglichkeit, Funktionen und Abläufe frühzeitig erlebbar zu machen. Nutzer und Entwickler konnten durch die Anwendung klicken, um Feedback zu geben, Schwachstellen zu erkennen und die Nutzerfreundlichkeit zu prüfen – noch bevor die eigentliche Entwicklung begann.",
+    "en": "Interactive prototypes offered the opportunity to experience functions and processes at an early stage. Users and developers could click through the application to provide feedback, identify weaknesses, and check usability — even before actual development began."
+  },
+  "designsystem": {
+    "de": "Designsystem",
+    "en": "Design system"
+  },
+  "designsystem_project1": {
+    "de": "Um nicht nur das Corporate Design des Kunden in VISHOW zu integrieren, wurde das Designsystem umfassend geprüft und erweitert, um ein noch flexibleres und anpassbareres System für die Zukunft zu gewährleisten.<br><br>In Figma setzte ich dies durch den Einsatz von Variablen und interaktiven Komponenten um, sodass sowohl einzelne Funktionen als auch komplexe Prototypen schnell und effizient erstellt werden konnten.",
+    "en": "In order not only to integrate the customer's corporate design into VISHOW, the design system was comprehensively reviewed and expanded to ensure an even more flexible and customizable system for the future.<br><br>In Figma, I implemented this by using variables and interactive components so that both individual functions and complex prototypes could be created quickly and efficiently."
+  },
+  "userinterface": {
+    "de": "User Interface",
+    "en": "User interface"
+  },
+  "userinterface_project1": {
+    "de": "Basierend auf dem Designsystem wurde das User Interface in den bestehenden Prototyp integriert. Der Fokus lag dabei auf einer einwandfreien Usability und User Experience als auch auf einem modularen Design, das es ermöglicht, zukünftige Produkte oder Änderungen einfach und kosteneffizient umzusetzen.",
+    "en": "Based on the design system, the user interface was integrated into the existing prototype. The focus was on flawless usability and user experience as well as on a modular design that makes it possible to implement future products or changes easily and cost-effectively."
+  },
+  "userinterface_project3_1": {
+    "de": "Spacebrowser, Toolbar & Objektbrowser<br>Die 3D-Räume, in denen unsere Nutzer ihren kreativen Gedanken freien Lauf lassen konnten, tauften wir „Spaces“. Dies war der allererste Einstieg in die 3D-Welt, ähnlich einer Seite oder einem Projekt. Innerhalb dieses „Spaces“ konnten mithilfe der „Toolbar“, die den jeweiligen „Objektbrowser“ öffnete, alle Arten von Objekten per Drag & Drop in den „Space“ gezogen und somit erstellt werden.",
+    "en": "Spacebrowser, Toolbar & Object Browser<br>We named the 3D spaces in which our users could let their creative thoughts run wild. This was the very first entry into the 3D world, similar to a page or project. Within this “space”, using the “toolbar”, which opened the respective “object browser”, all types of objects could be dragged and dropped into the “space” and thus created."
+  },
+  "userinterface_project3_2": {
+    "de": "Voting, Timers, Agenda<br>Um die Produktivität zu steigern, entwickelten wir ein Votingsystem und einen Timer, wie sie auch aus anderen Tools bekannt sind. Zusätzlich konzipierten wir ein umfassendes Agendasystem, mit dem Workshops besser strukturiert und beliebige Aktionen ausgelöst werden konnten.",
+    "en": "Voting, Timers, Agenda<br>In order to increase productivity, we developed a voting system and a timer, as they are also known from other tools. In addition, we designed a comprehensive agenda system that could be used to better structure workshops and trigger any action."
+  },
+  "userinterface_project3_3": {
+    "de": "Teilen & Teilnehmerlisten<br>Als Kollaborationsplattform war es notwendig, dass unsere Nutzer ihre „Spaces“ so einfach wie möglich per Link oder E-Mail teilen konnten. Berechtigungen, die sich aus dem jeweiligen Abonnement sowie innerhalb des „Spaces“ ergaben, waren ein Teil des Systems. Mithilfe der Teilnehmerlisten konnten die Nutzer nicht nur sehen, wer sich im „Space“ befindet, sondern auch die jeweilige Position, Sprachindikatoren und weitere Informationen entnehmen.",
+    "en": "Sharing & Participant Lists<br>As a collaboration platform, it was necessary for our users to be able to share their “spaces” as easily as possible via link or email. Authorizations resulting from the respective subscription and within the “space” were part of the system. With the help of the participant lists, users could not only see who was in the “Space”, but also find out the respective position, language indicators and other information."
+  },
+  "userinterface_project3_4": {
+    "de": "Einstellungen, Tutorial<br>Ein benutzerfreundliches Einstellungsmenü und umfassende Tutorials waren essenzielle Features, um den Einstieg für unsere Nutzer so einfach wie möglich zu gestalten. Die interaktiven Tutorials führten Schritt für Schritt durch die wichtigsten Funktionen und sorgten dafür, dass unsere Nutzer schnell mit allen Tools vertraut wurden",
+    "en": "Settings, tutorial<br>A user-friendly settings menu and comprehensive tutorials were essential features to make it as easy as possible for our users to get started. The interactive tutorials led through the most important functions step by step and ensured that our users quickly became familiar with all tools."
+  },
+  "userinterface_project3_5": {
+    "de": "Media-Upload<br>Ein intuitiver Media-Upload war ein essenzielles Feature, das unseren Nutzern das Teilen und Präsentieren ihrer Inhalte erleichterte. Bilder, Videos und andere Dateien konnten direkt in die „Spaces“ hochgeladen und nahtlos in Präsentationen oder Workshops integriert werden.",
+    "en": "Media upload<br>An intuitive media upload was an essential feature that made it easy for our users to share and present their content. Images, videos and other files could be uploaded directly to the “Spaces” and seamlessly integrated into presentations or workshops."
+  },
+  "userinterface_project3_6": {
+    "de": "Voicechat<br>Ein integrierter Voicechat war ein zentrales Feature, das die Kommunikation zwischen den Nutzern in Echtzeit erleichterte. Visualisierte Sprachindikatoren halfen dabei, aktive Sprecher zu erkennen, und sorgten für eine reibungslose Zusammenarbeit in Workshops und Meetings.",
+    "en": "Voice chat<br>An integrated voice chat was a key feature that made communication between users easier in real time. Visualized language indicators helped identify active speakers and ensured seamless collaboration in workshops and meetings."
+  },
+  "moredrafts": {
+    "de": "Weitere Entwürfe",
+    "en": "More drafts"
+  },
+  "moredrafts_project1": {
+    "de": "Aufgrund begrenzter Ressourcen konnten einige nutzerfreundliche Designs und Funktionen nicht wie ursprünglich geplant umgesetzt werden. Diese Anpassungen hätte ich gerne im Endprodukt gesehen.",
+    "en": "Due to limited resources, some user-friendly designs and features could not be implemented as originally planned. I would have liked to see these adjustments in the final product."
+  },
+  "researchtesting": {
+    "de": "Research & Testing",
+    "en": "Research & Testing"
+  },
+  "researchtesting_project1": {
+    "de": "Leider wurde im Rahmen dieses Projekts auf User Research verzichtet, was die Möglichkeit einschränkte, direkte Nutzerfeedbacks in den Entwicklungsprozess einzubeziehen. Dadurch fehlte eine fundierte Grundlage, um spezifische Bedürfnisse und Erwartungen der Zielgruppen präzise zu identifizieren.<br><br>Es fanden keine umfassenden Nutzertests unserer Seite statt, wodurch die Möglichkeit eingeschränkt war, potenzielle Usability-Probleme und technische Schwächen frühzeitig und im Nachgang zu identifizieren.<br><br>Trotz dieser Umstände konnte durch die Anwendung bewährter Usability-Prinzipien und durch die enge Zusammenarbeit mit dem Kunden ein benutzerfreundliches und funktionales Ergebnis erzielt werden.",
+    "en": "Unfortunately, this project did not involve user research, which limited the ability to include direct user feedback in the development process. As a result, there was no solid basis for precisely identifying the specific needs and expectations of the target groups.<br><br>There was no comprehensive user testing of our site, which limited the ability to identify potential usability problems and technical weaknesses early and afterwards.<br><br>Despite these circumstances, a user-friendly and functional result was achieved by applying proven usability principles and working closely with the customer."
+  },
+  "userresearch": {
+    "de": "User Research",
+    "en": "User Research"
+  },
+  "userresearch_project2": {
+    "de": "Es wurden Interviews mit der Zielgruppe durchgeführt, hauptsächlich mit Teamleitern, um die Bereitschaft für ein solches Online-Event zu ermitteln.<br><br>Die Ergebnisse umfassten folgende Themen: Analyse der bestehenden Probleme, Identifikation geeigneter Teambuilding-Maßnahmen, Nachweis der Verbesserung dieser Probleme, eine Zufriedenheitsbefragung sowie der Wunsch nach geringem Zeitaufwand.",
+    "en": "Interviews were conducted with the target group, primarily with team leaders, to determine readiness for such an online event.<br><br>The results included the following topics: analysis of existing problems, identification of suitable team building measures, proof of improvement of these problems, a satisfaction survey and the desire to spend little time."
+  },
+  "userpersonas": {
+    "de": "User Personas",
+    "en": "User Personas"
+  },
+  "userpersonas_project2": {
+    "de": "Auf Basis der User-Research-Ergebnisse und weiterer Annahmen wurden Personas angefertigt, die das breite Spektrum unserer User abbilden sollen.<br><br>Die ausgewählten Nutzertypen spiegeln häufige Rollen in Teams wider: Softwareentwickler, Projektmanager, Marketing-Spezialisten, Analysten und Grafikdesigner.",
+    "en": "Based on user research results and further assumptions, personas were created to represent the broad spectrum of our users.<br><br>The selected user types reflect common roles in teams: software developers, project managers, marketing specialists, analysts, and graphic designers."
+  },
+  "moodboards": {
+    "de": "Moodboards",
+    "en": "Moodboards"
+  },
+  "moodboards_project2": {
+    "de": "Mit Hilfe von Moodboards wurden verschiedene Stimmungen und Emotionen visualisiert, die eine aufregende und abwechslungsreiche Reise für unsere Nutzer schaffen sollen.",
+    "en": "With the help of mood boards, various moods and emotions were visualized, which should create an exciting and varied journey for our users."
+  },
+  "moodboards_project3": {
+    "de": "Den Stil der 3D-Welt, die Umgebung, die Charaktere, die Farben sowie alle Gegenstände, die unsere Nutzer verwenden konnten, definierten wir in Moodboards. Eine freundliche, harmonische und kreativ anregende Umgebung sollte unsere Nutzer erwarten.",
+    "en": "We defined the style of the 3D world, the environment, the characters, the colors and all objects that our users could use in mood boards. Our users should expect a friendly, harmonious and creatively stimulating environment."
+  },
+  "storyboards": {
+    "de": "Storyboards",
+    "en": "Storyboards"
+  },
+  "storyboards_project2": {
+    "de": "Basierend auf den Research-Ergebnissen, den Moodboards und den bereits bestehenden Mechaniken/Systemen wurde ein Storyboard erstellt, in dem erste Spiel- und Level-Mechaniken, die Geschichte und erste Sound-Ideen sowie das User Interface vereint wurden.",
+    "en": "Based on the research results, the mood boards and the existing mechanics/systems, a storyboard was created which combined the first game and level mechanics, the story and initial sound ideas as well as the user interface."
+  },
+  "userflows": {
+    "de": "User Flows",
+    "en": "Userflows"
+  },
+  "userflows_project2": {
+    "de": "Der ursprüngliche User Flow von „VISPA Workshops“ wurde für das neue Konzept angepasst. Das bisherige Registrierungs- und Login-System wurde durch ein Gastlogin ersetzt, das lediglich einen Link zum Spiel und die Eingabe eines User-Nicknames erforderte. Dadurch konnten Nutzer innerhalb weniger Sekunden direkt über ihren Browser dem Spiel beitreten.<br><br>Allerdings brachte dieser vereinfachte User Flow auch Schwächen mit sich: Nutzer konnten nur über private Einladungen teilnehmen und weder ihren Avatar gestalten noch ihren Nicknamen vor Spielbeginn auswählen. Um diese Einschränkungen zu beheben, wurde ein optimierter User Flow entwickelt, der diese Schwächen adressierte.",
+    "en": "The original user flow of “VISPA Workshops” was adapted for the new concept. The previous registration and login system was replaced by a guest login, which only required a link to the game and the input of a user nickname. This allowed users to join the game directly from their browser within a few seconds.<br><br>However, this simplified user flow also had weaknesses: Users could only participate via private invitations and could neither design their avatar nor select their nickname before starting the game. To address these limitations, an optimized user flow was developed that addressed these weaknesses."
+  },
+  "mechanics": {
+    "de": "Mechanics & UI",
+    "en": "Mechanics & UI"
+  },
+  "mechanics_project2_1": {
+    "de": "Triggers<br>Wir erweiterten das VISPA Workshop Tool um die Mechaniken einer Avatar- und Objektkollision. Diese ermöglichten die Erkennung, ob sich ein bestimmter Gegenstand oder Avatar an einer definierten Position befindet oder kollidiert. Darauf basierend konnten weitere Aktionen ausgelöst werden, wie beispielsweise das Öffnen von Türen, das Bewegen von Objekten, Plattformen oder das Auslösen von Ton und ähnlichen Interaktionen.",
+    "en": "Triggers<br>We extended the VISPA workshop tool to include the mechanics of an avatar and object collision. These made it possible to recognize whether a specific object or avatar is in a defined position or collides. Based on this, further actions could be triggered, such as opening doors, moving objects, platforms, or triggering sound and similar interactions."
+  },
+  "mechanics_project2_2": {
+    "de": "Pickup & Use<br>Interne Tests zeigten, dass die Drag-&-Drop-Funktion aus den VISPA Workshops nicht den gewünschten Spielspaß bot. Daher wurde eine auf Multiplayer-Spiele angepasste Mechanik entwickelt, die es Nutzern ermöglichte, Objekte in ihrer Nähe durch einfache Tasteninteraktionen aufzunehmen oder zu benutzen. Dabei wurden Aktionen ausgeführt, Animationen und Sounds ausgelöst, und aufgenommene Objekte schwebten vor dem Avatar.",
+    "en": "Pickup & Use<br>Internal testing showed that the drag-and-drop feature from the VISPA Workshops wasn't the fun they were looking for, so a mechanic adapted to multiplayer games was developed that allowed users to pick up or use objects close to them through simple button interactions. Actions were carried out, animations and sounds were triggered, and recorded objects floated in front of the avatar."
+  },
+  "mechanics_project2_3": {
+    "de": "Quests & Notizbuch<br>Es wurde ein Quest-System entworfen, das Nutzern über Texteinblendungen und Sounds klar und intuitiv anzeigte, wann neue Aufgaben verfügbar waren oder abgeschlossen wurden. Ergänzend dazu wurde ein Notizbuch integriert, in dem Spieler Hinweise und Rätsel aus dem Level sammeln konnten, um den Spielfortschritt zu unterstützen.",
+    "en": "Quests & notebook<br>A quest system was designed that used text overlays and sounds to show users clearly and intuitively when new tasks were available or completed. In addition, a notebook was integrated, in which players could collect clues and puzzles from the level to support game progress."
+  },
+  "mechanics_project2_4": {
+    "de": "Survival Aspekte<br>Um das Frustrationslevel für unsere unterschiedlichen Nutzergruppen so gering wie möglich zu halten, fiel die Entscheidung gegen ein, wie in Spielen sehr übliches, Bestrafungssystem. Um jedoch trotzdem Spannung zu erzeugen, wurde aus dem Survival Genre übliche Thematiken genutzt: Unterschlupf, Hydriert bleiben, Kälte und Wärme sowie Hilfe rufen und leisten.",
+    "en": "Survival aspects<br>In order to keep the frustration level as low as possible for our various user groups, the decision was made against a punishment system, which is very common in games. However, in order to create excitement, common themes from the survival genre were used: shelter, staying hydrated, cold and warmth, and calling and providing help."
+  },
+  "mechanics_project2_5": {
+    "de": "Avatare & Emotes<br>Um den Nutzern ein möglichst immersives Erlebnis zu bieten, wurde das „ReadyPlayerMe“-Avatarsystem integriert, das eine individuelle Gestaltung des Aussehens ermöglichte. Ergänzend dazu konnten die Nutzer jederzeit über Sprache und Emotes miteinander kommunizieren, um die Interaktion weiter zu fördern.",
+    "en": "Avatars & emotes<br>In order to offer users the most immersive experience possible, the “ReadyPlayerMe” avatar system was integrated, which made it possible to customize the look. In addition, users were able to communicate with each other at any time using voice and emotes to further promote interaction."
+  },
+  "mechanics_project2_6": {
+    "de": "Weiteres<br>Um den Einstieg ins Spiel so schnell und einfach wie möglich zu gestalten, ersetzten wir das ursprüngliche Registrierungs- und Login-System durch einen einfachen Gast-Login, bei dem lediglich die Eingabe eines Namens erforderlich war. Zudem konnten die Nutzer über ein Optionsmenü Grafik-, Ton- und Eingabeeinstellungen individuell anpassen.",
+    "en": "More<br>To make getting started with the game as quick and easy as possible, we replaced the original registration and login system with a simple guest login, which simply required a name to be entered. Users were also able to individually adjust graphics, sound and input settings via an options menu."
+  },
+  "world": {
+    "de": "World & Story",
+    "en": "World & Story"
+  },
+  "world_project2": {
+    "de": "Die Spielwelt wurde in einem Low-Poly-Stil entworfen, der durch kräftige Farben und einfache Geometrien definiert ist. Da für WebGL entwickelt wurde, setzten wir Texturen, Maps, Licht sowie aufwändige Shader nur sehr minimalistisch ein. Der Fokus lag auf Performance und optimierten Ladezeiten, um auch auf Office-Laptops eine reibungslose Spielerfahrung  zu ermöglichen.<br><br>Um die Nutzer schnell in die Geschichte eintauchen zu lassen, begann das Abenteuer mit einer Geschäftsreise, die tragischerweise in einer Flugzeug-Notlandung ohne Verletzte endete. Die Spieler stellten sich anschließend gemeinsam ungeklärten Geheimnissen, mysteriösen Ereignissen und teambasierten Herausforderungen, um das Hauptziel – das Senden eines Notsignals – zu erreichen. Im weiteren Verlauf wechselten die Rollen: Die Abenteurer wurden selbst zu Helfern und mussten den Spuren eines verschollenes Forscherteams folgen, welches sie immer tiefer in die mysteriösen Ereignisse verwickelte.",
+    "en": "The game world was designed in a low-poly style defined by bold colors and simple geometries. Since it was developed for WebGL, we only used textures, maps, lighting and complex shaders in a very minimalistic way. The focus was on performance and optimized loading times to provide a smooth gaming experience even on office laptops.<br><br>To quickly immerse users in the story, the adventure began with a business trip, which tragically ended in an emergency plane landing with no injuries. Players then tackled unexplained secrets, mysterious events, and team-based challenges together to achieve the main goal — sending a distress signal. As things progressed, roles changed: The adventurers became helpers themselves and had to follow in the footsteps of a lost team of researchers, which involved them ever deeper in the mysterious events."
+  },
+  "level": {
+    "de": "Level & Balance",
+    "en": "Level & Balance"
+  },
+  "level_project2": {
+    "de": "Mit Hilfe des User Research wurde schnell klar, dass die Gruppengrößen sehr stark variieren und somit legten wir eine Begrenzung von 6-24 Spielern sowie eine Spieldauer von 45min fest, welche jederzeit bei der Level und Mechanik-Entwicklung beachtet wurde. Letztendlich wurden alle teambasierten Mechaniken im Level so konzipiert, dass wir diese einfach skalieren konnten.<br><br>Um unsere Nutzer nicht nur durch die Geschichte zu leiten, sondern auch, um noch fehlende Teile in der Entwicklung auszugleichen, wurde entschieden, das Level mit einem Moderator anzuleiten, welcher auch fortlaufend im Spiel kleine Anpassungen vornehmen konnte.",
+    "en": "With the help of user research, it quickly became clear that the group sizes vary greatly and so we set a limit of 6-24 players and a playing time of 45 minutes, which was taken into account at all times when developing levels and mechanics. In the end, all team-based mechanics in the level were designed so that we could easily scale them.<br><br>In order not only to guide our users through the story, but also to make up for missing parts in development, it was decided to guide the level with a moderator who was also able to make minor adjustments to the game on an ongoing basis."
+  },
+  "teamanalyse": {
+    "de": "Team Analyse",
+    "en": "Team analysis"
+  },
+  "teamanalyse_project2": {
+    "de": "Aus Entwicklungs- und Zeitgründen entschieden wir uns, jede Teambuilding-Session von einem Moderator begleiten zu lassen. Dies bot den Vorteil, die Dynamik und Interaktion des Teams live beobachten zu können. Ergänzend wurde das Spiel durch ein 360-Grad-Feedback-System sowie eine abschließende Gruppendiskussion erweitert. Dies ermöglichte den Teammitgliedern nicht nur eine Selbstreflexion, sondern auch eine ganzheitliche Betrachtung des Teams.<br><br>Für die Teamleitung bereiteten wir individuelle Auswertungen auf, die folgende Aspekte bewerteten: Teamdynamik und Kommunikation, Vertrauen und Beziehungen, Führung und Rollenverständnis, Effizienz und Zielverwirklichung, Teamgeist und Motivation, Feedback und Reflexion, Problemlösungs- und Konfliktmanagement.<br><br>Zusätzlich erhielt das Team nach jeder Session eine spielerisch gestaltete Auswertung. Diese stellte Achievements, erworbene Fähigkeiten, Erkenntnisse und einen Gesamtscore grafisch dar, um Fortschritte und Erfolge zu visualisieren.",
+    "en": "For reasons of development and time, we decided to have each team building session supervised by a moderator. This offered the advantage of being able to observe the team's dynamics and interaction live. In addition, the game was expanded with a 360-degree feedback system and a final group discussion. This enabled team members not only to reflect on themselves, but also to take a holistic view of the team.<br><br>For team management, we prepared individual evaluations that assessed the following aspects: team dynamics and communication, trust and relationships, leadership and role understanding, efficiency and goal achievement, team spirit and motivation, feedback and reflection, problem-solving and conflict management.<br><br>In addition, the team received a playfully designed evaluation after each session. This graphically presented achievements, acquired skills, insights and an overall score to visualize progress and successes."
+  },
+  "feedback": {
+    "de": "Feedback & Anpassungen",
+    "en": "Feedback & adjustments"
+  },
+  "feedback_project2": {
+    "de": "Der gesamte Entwicklungsprozess wurde agil und iterativ gestaltet, mit einem starken Fokus auf interdisziplinärer Zusammenarbeit. Konzepte entstanden in engem Austausch zwischen Entwicklern, Designern und dem Marketingteam, um sicherzustellen, dass alle Perspektiven einbezogen wurden.<br><br>Die Umsetzung erfolgte in kleinen, testbaren Einheiten, die intern überprüft und verfeinert wurden. Sobald diese Einheiten ausreichend ausgereift waren, wurden sie in größeren Abschnitten mit Nutzern getestet. Diese größeren Iterationen durchliefen drei Feedback- und Anpassungszyklen: testen, verbessern, und erneut testen, bis eine optimale Version erreicht wurde. Dieses iterative Vorgehen ermöglichte kontinuierliche Verbesserungen und eine anpassungsfähige Entwicklung.",
+    "en": "The entire development process was designed to be agile and iterative, with a strong focus on interdisciplinary collaboration. Concepts were developed in close exchange between developers, designers and the marketing team to ensure that all perspectives were included.<br><br>The implementation was carried out in small, testable units, which were reviewed and refined internally. As soon as these units were sufficiently sophisticated, they were tested in larger sections with users. These larger iterations went through three cycles of feedback and adjustment: testing, improving, and testing again until an optimal version was reached. This iterative approach enabled continuous improvements and adaptable development."
+  },
+  "feedback_project3": {
+    "de": "Regelmäßiges Testing war ein entscheidender Bestandteil, um die Qualität und Benutzerfreundlichkeit der Plattform zu gewährleisten. Nutzerfeedback aus Testsessions wurde systematisch gesammelt und analysiert, um Schwachstellen zu erkennen. Basierend darauf wurden gezielte Anpassungen vorgenommen, die sowohl die Funktionalität als auch das Nutzererlebnis kontinuierlich optimierten.<br><br>Ein Beispiel hierfür war die Kamerasteuerung und 3D-Manipulation, die zunächst aus dem Prototyp übernommen wurden. Nach mehreren Testsessions konnte ich aufzeigen, welche Probleme insbesondere unerfahrene Nutzer damit hatten. Daraufhin wurde ein neues Konzept für die Kamera und 3D-Manipulation entwickelt, das deutliche Verbesserungen versprach.",
+    "en": "Regular testing was a crucial part of ensuring the quality and usability of the platform. User feedback from test sessions was systematically collected and analysed to identify weak points. Based on this, targeted adjustments were made that continuously optimized both the functionality and the user experience.<br><br>One example of this was camera control and 3D manipulation, which were initially adopted from the prototype. After several test sessions, I was able to show what problems inexperienced users in particular had with it. As a result, a new concept for the camera and 3D manipulation was developed, which promised significant improvements."
+  },
+  "moremechanics": {
+    "de": "Weitere Mechaniken",
+    "en": "More mechanics"
+  },
+  "moremechanics_project2": {
+    "de": "Alle Konzepte wurden mit einem langfristigen Blick entwickelt. Zu den angedachten Features zählten ein Inventarsystem, öffentliche Zugänglichkeit, zusätzliche Kapitel, Spiele für alle Phasen der Teamentwicklung, eine „Synergy“-Mechanik zur Visualisierung von Teamdynamiken, eine dynamische und automatische Teambewertung, viele weitere Mechaniken sowie ein Neuaufbau des Projektes. Diese Ideen konnten jedoch aufgrund von Ressourcen- und Zeitmangel nur teilweise umgesetzt werden.",
+    "en": "All concepts were developed with a long-term view. The planned features included an inventory system, public accessibility, additional chapters, games for all phases of team development, a “synergy” mechanism for visualizing team dynamics, a dynamic and automatic team evaluation, many other mechanics and a rebuilding of the project. However, due to lack of resources and time, these ideas could only be partially implemented."
+  },
+  "moremechanics_project3": {
+    "de": "Bereits konzipiert waren weitere Funktionen wie der Homescreen, das virtuelle Office, Ebenen, Welten, Unternehmensbereiche, Interaktionen zwischen Avataren und vieles mehr.<br><br>Alle Funktionen, die wir konzipierten, wurden in Versionen aufgeteilt, sodass wir sicherstellen konnten, dass zunächst die Basis einer Funktion entwickelt wird und Raum für weitere Verbesserungen bleibt. Dies hatte jedoch auch den Nachteil, dass häufiger neue Funktionen hinzugefügt wurden, anstatt bestehende zu optimieren.",
+    "en": "Other functions such as the home screen, the virtual office, levels, worlds, company areas, interactions between avatars and much more had already been designed.<br><br>All functions that we designed were divided into versions so that we could ensure that the basis of a function was developed first and that there was room for further improvements. However, this also had the disadvantage that new features were added more frequently instead of optimizing existing ones."
+  },
+  "development": {
+    "de": "Entwicklung",
+    "en": "Development"
+  },
+  "development_project2": {
+    "de": "Mit dem Wechsel zu „VISPA Fun - Teambuilding Games“ reduzierte sich das Team erheblich, und das Ziel, innerhalb eines Jahres eine gewisse Anzahl von Kunden zu generieren, stand im Vordergrund. Deshalb wurde das bestehende „VISPA Workshops“-System durch Team- und Spielmechaniken erweitert, anstatt eine Neuentwicklung zu starten. Diese pragmatische Entscheidung führte kurzfristig zu Ergebnissen, verursachte jedoch langfristig Probleme wie Bugs und ineffiziente Systeme, die hohe Ressourcen erforderten.",
+    "en": "With the switch to “VISPA Fun - Team Building Games”, the team was significantly reduced, and the goal of generating a certain number of customers within a year was paramount. For this reason, the existing “VISPA Workshops” system was expanded with team and game mechanics instead of starting a new development. This pragmatic decision produced results in the short term, but in the long term it caused problems such as bugs and inefficient systems that required high resources."
+  },
+  "development_project3": {
+    "de": "Unser sehr junges, internationales Team arbeitete stetig interdisziplinär an der Optimierung des Workflows und der Sprints, was mir auch einen intensiven Einblick in die Planung und Durchführung des Projektmanagements ermöglichte.<br><br>Gerne hätte ich weitere UX-Methoden tiefer in die Entwicklung integriert und einen ausführlichen User Research durchgeführt, um die Nutzergruppen zu definieren.",
+    "en": "Our very young, international team worked constantly on an interdisciplinary basis to optimize the workflow and sprints, which also gave me an intensive insight into the planning and implementation of project management.<br><br>I would have liked to integrate further UX methods more deeply into development and carry out detailed user research to define the user groups."
+  },
+  "startup": {
+    "de": "Das Startup",
+    "en": "The startup"
+  },
+  "startup_project2": {
+    "de": "VISPA war für mich, als erster Job nach dem Studium, eine große Chance, meine Fähigkeiten einzusetzen, Neues zu lernen und praktisch anzuwenden. Obwohl wir unser Ziel, eine bestimmte Kundenanzahl zu erreichen, erfüllten, wurde die Nische „Remote-Teambuilding“ jedoch abschließend von den Gründern und Investoren als wenig gewinnbringend eingestuft, was letztlich zur Insolvenz führte. Trotz des Endes bereue ich die Erfahrung keineswegs, da sie mir beruflich und persönlich wertvolle Einblicke und Fähigkeiten vermittelt hat.",
+    "en": "As my first job after graduation, VISPA was a great opportunity for me to use my skills, learn new things and put them into practice. Although we met our goal of reaching a certain number of customers, however, the “remote team building” niche was ultimately rated as unprofitable by the founders and investors, which ultimately led to insolvency. Despite the end, I have no regrets about the experience, as it gave me valuable insights and skills professionally and personally."
+  },
+  "startup_project3": {
+    "de": "Das angestrebte Vorgehen der „Blitzskalierung“ ging letztendlich leider nicht auf, da die Konkurrenz am Markt bereits zu etabliert war und der Wettbewerb auf Dauer zu kostenintensiv wurde. Dies führte dazu, dass Ressourcen reduziert wurden und wir den Rettungsversuch mit „VISPA Fun - Teambuilding Games“ starteten.<br><br>Dennoch bleibt „VISPA“ für mich eine riesige Bereicherung, da ich die seltene Gelegenheit hatte, ein Projekt dieser Größenordnung von Grund auf mitzuentwickeln und wertvolle Erfahrungen sowie Einblicke zu sammeln.",
+    "en": "Unfortunately, the desired “flash scaling” approach did not work out in the end, as the competition on the market was already too established and competition became too cost-intensive in the long run. As a result, resources were reduced and we started the rescue attempt with “VISPA Fun - Team Building Games”.<br><br>Nevertheless, “VISPA” remains a huge asset for me, as I had the rare opportunity to help develop a project of this scale from scratch and gain valuable experience and insights."
+  },
+  "website": {
+    "de": "Website & Control Panel",
+    "en": "Website & Control Panel"
+  },
+  "website_project3": {
+    "de": "Um einen reibungslosen Einstieg in „VISPA“ zu gewährleisten, war eine einwandfreie Usability unser Fokus. Erklärungen, Videos, Vorteile, Call-to-Actions, die Registrierung und der Login sowie das anschließende Control Panel, das es ermöglichte, Abonnements abzuschließen und zu verwalten, wurden so konzipiert und entwickelt, dass unsere Nutzer ihr Ziel so schnell und einfach wie möglich erreichen konnten.",
+    "en": "To ensure a smooth start with “VISPA”, flawless usability was our focus. Explanations, videos, benefits, call-to-actions, registration and login, and the subsequent control panel, which made it possible to conclude and manage subscriptions, were designed and developed so that our users could achieve their goal as quickly and easily as possible."
+  },
+  "environment": {
+    "de": "Umgebung",
+    "en": "Environment"
+  },
+  "environment_project3": {
+    "de": "Eine ansprechend gestaltete 3D-Umgebung war ein zentraler Bestandteil, um unseren Nutzern ein immersives und kreatives Erlebnis zu bieten. Die Umgebung konnte individuell angepasst werden, während Licht- und Schatteneffekte sowie frei platzierbare Objekte die Gestaltungsmöglichkeiten erweiterten. Diese Flexibilität sorgte dafür, dass sich die Nutzer intuitiv in der 3D-Welt bewegen und ihre Ideen nahtlos umsetzen konnten.",
+    "en": "An attractively designed 3D environment was a key part of providing our users with an immersive and creative experience. The environment could be individually adapted, while light and shadow effects and freely placeable objects expanded the design options. This flexibility ensured that users could navigate the 3D world intuitively and implement their ideas seamlessly."
+  },
+  "templates": {
+    "de": "Templates",
+    "en": "Templates"
+  },
+  "templates_project3": {
+    "de": "Damit unsere Nutzer einen schnellen und einfachen Einstieg in „VISPA“ erhalten, waren Templates ein wichtiges Werkzeug. Vom Design-Thinking-Workshop bis hin zu Präsentations- und Retrospektive-Templates war alles so gestaltet, dass jedes Modul der Templates miteinander kombiniert werden konnte.",
+    "en": "Templates were an important tool so that our users could get started quickly and easily with “VISPA”. From design thinking workshops to presentation and retrospective templates, everything was designed in such a way that every module of the templates could be combined with each other."
+  },
+  "more_projects": {
+    "de": "Weitere Projekte",
+    "en": "More projects"
+  },
+  "ui": "UI,",
+  "ux": "UX,",
+  "ux2": "UX",
+  "3d": "3D,",
+  "3d-print": "3D-Print,",
+  "code": "Code"
 }

@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tim Schedlbauer – Project 1</title>
+    <title data-i18n="project1_title"></title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon/Favicon.svg"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/tokens.css" />
     <link
@@ -13,22 +18,19 @@
   </head>
   <body>
     <main>
-      <section class="hero-project project1">
-        <div class="hero-project-wrapper">
-          <div class="hero-project-text-wrapper fade-left">
-            <h1 class="hero-project-heading" data-i18n="project1_title"></h1>
-            <p class="hero-project-text" data-i18n="project1_text"></p>
-          </div>
-          <div class="hero-project-image fade-right">
-            <img
-              src="./assets/images/project-cards/FischerShowroom-Image.webp"
-              alt="Fischer Profil Showroom"
-            />
-          </div>
-        </div>
-      </section>
-      <div class="content-wrapper"></div>
+      <div class="smooth-wrapper" id="luxy"></div>
     </main>
     <script type="module" src="js/project1.js"></script>
+    <script src="https://min30327.github.io/luxy.js/dist/js/luxy.js"></script>
+
+    <script charset="utf-8">
+      var isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+      if (!isMobile) {
+        luxy.init({
+          wrapper: "#luxy",
+          wrapperSpeed: 0.065,
+        });
+      }
+    </script>
   </body>
 </html>

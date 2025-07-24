@@ -14,9 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader();
   await setLanguage(localStorage.getItem("lang") || "de");
 
-  initLangToggle(async () => {
-    await loadExperience(); // Erfahrungseinträge neu übersetzen
-  });
+  initLangToggle();
 
   initNav();
   await loadExperience();
@@ -37,6 +35,7 @@ async function loadExperience() {
 
       const title = document.createElement("h5");
       title.className = "job-title";
+      title.setAttribute("data-i18n", job.title);
       title.textContent = getTranslation(job.title, currentLang);
 
       const metaWrapper = document.createElement("div");
@@ -44,16 +43,19 @@ async function loadExperience() {
 
       const company = document.createElement("div");
       company.className = "job-company";
+      company.setAttribute("data-i18n", job.company);
       company.textContent = getTranslation(job.company, currentLang);
 
       const period = document.createElement("div");
       period.className = "job-period";
+      period.setAttribute("data-i18n", job.period);
       period.textContent = getTranslation(job.period, currentLang);
 
       metaWrapper.append(company, period);
 
       const text = document.createElement("div");
       text.className = "job-text";
+      text.setAttribute("data-i18n", job.text);
       text.textContent = getTranslation(job.text, currentLang);
 
       wrapper.append(title, metaWrapper, text);
