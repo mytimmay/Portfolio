@@ -166,6 +166,7 @@ button {
     padding: var(--spacing-S) var(--spacing-M);
     cursor: pointer;
     border: none;
+    background-color: var(--colors-surface-neutral);
 }
 
 button:hover {
