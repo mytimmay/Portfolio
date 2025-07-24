@@ -921,14 +921,14 @@ img {
         align-items: stretch;
     }
 
-    .section-mobile-overflow {
+    .section-mobile-overflow .scroll-content {
         overflow-y: auto;
         box-sizing: border-box;
         scrollbar-width: none;
         -ms-overflow-style: none;
     }
 
-    .section-mobile-overflow::-webkit-scrollbar {
+    .section-mobile-overflow .scroll-content::-webkit-scrollbar {
         display: none;
     }
 
