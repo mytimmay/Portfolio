@@ -212,12 +212,7 @@ button:hover {
 .scroll-content {
     flex: 1 1 auto;
     overflow-y: auto;
-
-    /* Abstand für Header */
-    padding-top: 80px;
-    padding-bottom: var(--spacing-3XL);
-    padding-left: var(--container-spacing-medium);
-    padding-right: var(--container-spacing-medium);
+    padding: var(--spacing-XL) var(--container-spacing-medium);
     gap: var(--spacing-2XL);
 
     display: flex;
@@ -290,7 +285,7 @@ button:hover {
     align-items: start;
     justify-content: center;
     gap: var(--spacing-L);
-    padding: var(--spacing-2XL) var(--container-spacing-medium);
+    padding: 0 var(--container-spacing-medium);
 }
 
 .hero-text {
