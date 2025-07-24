@@ -211,8 +211,14 @@ function setupScrollAndNavigation() {
 
   window.addEventListener("keydown", (e) => {
     if (isAnimating) return;
-    if (e.key === "ArrowDown") scrollToSection(currentIndex + 1);
-    if (e.key === "ArrowUp") scrollToSection(currentIndex - 1);
+    if (e.key === "ArrowDown" || e.key === "PageDown") {
+      e.preventDefault();
+      scrollToSection(currentIndex + 1);
+    }
+    if (e.key === "ArrowUp" || e.key === "PageUp") {
+      e.preventDefault();
+      scrollToSection(currentIndex - 1);
+    }
   });
 
   let startY = 0;
