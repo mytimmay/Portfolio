@@ -1,7 +1,6 @@
 import {
   setLanguage,
   currentLang,
-  translations,
   initLangToggle,
   getTranslation,
 } from "./i18n.js";
@@ -34,17 +33,13 @@ function renderSections() {
 
   container.querySelectorAll(".dynamic-section").forEach((el) => el.remove());
 
-  const hero = createProjectHeroSection(
-    {
-      className: "project3",
-      titleKey: "project3_title",
-      textKey: "project3_text",
-      imageSrc: "assets/images/project-cards/VispaWorkshop-Image.webp",
-      imageAlt: "VISPA Workshops",
-    },
-    translations,
-    currentLang
-  );
+  const hero = createProjectHeroSection({
+    className: "project3",
+    titleKey: "project3_title",
+    textKey: "project3_text",
+    imageSrc: "assets/images/project-cards/VispaWorkshop-Image.webp",
+    imageAlt: "VISPA Workshops",
+  });
 
   hero.classList.add("dynamic-section");
   container.prepend(hero);
@@ -425,12 +420,7 @@ function renderSections() {
         contentNodes = [processKey(sec.text)];
       }
 
-      el = createTwoColumnSection(
-        sec.left,
-        contentNodes,
-        translations,
-        currentLang
-      );
+        el = createTwoColumnSection(sec.left, contentNodes);
     } else if (sec.type === "youtube-video") {
       const iframe = document.createElement("iframe");
       iframe.src = convertYouTubeUrl(sec.src);
@@ -444,11 +434,11 @@ function renderSections() {
       el.classList.add("youtube-wrapper");
       el.appendChild(iframe);
     } else if (sec.type === "designPhases") {
-      el = createDesignProcessSection(sec.data, translations, currentLang);
+      el = createDesignProcessSection(sec.data);
     } else if (sec.type === "step") {
-      el = createProcessStep({ title: sec.h1 }, translations, currentLang);
+      el = createProcessStep({ title: sec.h1 });
     } else if (sec.type === "details") {
-      el = createDetailsSection(sec.data, translations, currentLang);
+      el = createDetailsSection(sec.data);
     } else if (sec.type === "image") {
       const img = document.createElement("img");
       img.src = sec.src;
@@ -456,7 +446,7 @@ function renderSections() {
       el = document.createElement("div");
       el.appendChild(img);
     } else if (sec.type === "moreProjects") {
-      el = createMoreProjectsSection(sec.data, translations, currentLang);
+      el = createMoreProjectsSection(sec.data);
     }
 
     if (el) {

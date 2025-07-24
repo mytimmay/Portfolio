@@ -1,12 +1,6 @@
 import { currentLang, getTranslation } from "./i18n.js";
 
-export function createTwoColumnSection(
-  leftKey,
-  rightElements,
-  translations,
-  currentLang,
-  rightId
-) {
+export function createTwoColumnSection(leftKey, rightElements, rightId) {
   const wrapper = document.createElement("div");
   wrapper.className = "two-column-list";
 
@@ -39,11 +33,7 @@ export function createTwoColumnSection(
   return wrapper;
 }
 
-export function createDesignProcessSection(
-  designPhases,
-  translations,
-  currentLang
-) {
+export function createDesignProcessSection(designPhases) {
   const wrapper = document.createElement("div");
   wrapper.className = "process";
 
@@ -91,7 +81,7 @@ export function createDesignProcessSection(
   return wrapper;
 }
 
-export function createDetailsSection(sections, translations, currentLang) {
+export function createDetailsSection(sections) {
   const wrapper = document.createElement("div");
   wrapper.className = "details";
 
@@ -125,7 +115,7 @@ export function createDetailsSection(sections, translations, currentLang) {
   return wrapper;
 }
 
-export function createProcessStep(step, translations, currentLang) {
+export function createProcessStep(step) {
   const wrapper = document.createElement("div");
   wrapper.className = "process-step";
 
@@ -138,7 +128,7 @@ export function createProcessStep(step, translations, currentLang) {
   return wrapper;
 }
 
-export function createProjectHeroSection(config, translations, currentLang) {
+export function createProjectHeroSection(config) {
   const { className, titleKey, textKey, imageSrc, imageAlt } = config;
 
   const section = document.createElement("section");
@@ -177,7 +167,7 @@ export function createProjectHeroSection(config, translations, currentLang) {
   return section;
 }
 
-export function createMoreProjectsSection(url, translations, currentLang) {
+export function createMoreProjectsSection(url) {
   const section = document.createElement("section");
   section.classList.add("more-project-links");
 

@@ -864,5 +864,9 @@
   "ux2": "UX",
   "3d": "3D,",
   "3d-print": "3D-Print,",
-  "code": "Code"
+  "code": "Code",
+  "load_error": {
+    "de": "Fehler beim Laden der Daten.",
+    "en": "Error loading data."
+  }
 }
