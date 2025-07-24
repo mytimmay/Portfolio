@@ -1,7 +1,6 @@
 import {
   setLanguage,
   currentLang,
-  translations,
   initLangToggle,
   getTranslation,
 } from "./i18n.js";
@@ -67,13 +66,12 @@ async function loadExperience() {
       createTwoColumnSection(
         "about-experience-headline",
         entries,
-        translations,
-        currentLang,
         "experience-list"
       )
     );
     initFadeAnimations();
   } catch (err) {
     console.error("Fehler beim Laden der Erfahrung:", err);
+    container.innerHTML = `<p>${getTranslation("load_error", currentLang)}</p>`;
   }
 }
