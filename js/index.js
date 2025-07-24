@@ -172,6 +172,9 @@ function setupScrollAndNavigation() {
     isAnimating = true;
 
     const target = sections[index];
+    const fromIndex = currentIndex;
+    const direction = index > fromIndex ? 1 : -1;
+
     gsap.to(window, {
       scrollTo: { y: target.offsetTop },
       duration: 1,
@@ -179,7 +182,14 @@ function setupScrollAndNavigation() {
       onComplete: () => {
         currentIndex = index;
         const scrollContainer = getScrollContainer(target);
-        if (scrollContainer) scrollContainer.scrollTop = 0;
+        if (scrollContainer) {
+          if (direction < 0) {
+            scrollContainer.scrollTop =
+              scrollContainer.scrollHeight - scrollContainer.clientHeight;
+          } else {
+            scrollContainer.scrollTop = 0;
+          }
+        }
         isAnimating = false;
         highlightProjectButtons(target.id === "projects-section");
       },
