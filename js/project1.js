@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   await setLanguage(localStorage.getItem("lang") || "de");
 
   initLangToggle();
-
   initNav();
   renderSections();
   initFadeAnimations();

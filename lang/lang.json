@@ -419,21 +419,33 @@
     "de": "November 2020 -<br>Juni 2023",
     "en": "November 2020 -<br>June 2023"
   },
-  "project4_year": {
+  "project5_year": {
     "de": "Juni 2023 - Juli 2024",
     "en": "June 2023 - July 2024"
   },
-  "project5_year": {
+  "project6_year": {
     "de": "Januar 2020 - April 2020",
     "en": "January 2020 - April 2020"
   },
-  "project6_year": {
+  "project7_year": {
     "de": "Sommersemester 2019",
     "en": "Summer term 2019"
   },
   "archive-project_detail": {
     "de": "Meine Aufgaben:",
     "en": "My tasks:"
+  },
+  "archive-project_detail2": {
+    "de": "Tools:",
+    "en": "Tools:"
+  },
+  "archive-project_detail3": {
+    "de": "Datum:",
+    "en": "Date:"
+  },
+  "archive-project_detail4": {
+    "de": "Link:",
+    "en": "Link:"
   },
   "project5_title": {
     "de": "VISHOW - Website & Designsystem",
@@ -846,5 +858,11 @@
   "more_projects": {
     "de": "Weitere Projekte",
     "en": "More projects"
-  }
+  },
+  "ui": "UI,",
+  "ux": "UX,",
+  "ux2": "UX",
+  "3d": "3D,",
+  "3d-print": "3D-Print,",
+  "code": "Code"
 }
