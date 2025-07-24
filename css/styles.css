@@ -391,7 +391,7 @@ button:hover {
     border-radius: var(--radius-m);
     display: flex;
     gap: var(--spacing-2XS);
-    padding: var(--spacing-S) var(--spacing-M);
+    padding: var(--spacing-2XS) var(--spacing-S);
     flex: 0 auto;
     flex-flow: wrap;
 }
