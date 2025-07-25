@@ -106,6 +106,8 @@ async function renderProjects() {
     projects.forEach((proj, index) => {
       const title = getTranslation(proj.titleKey, currentLang);
       const desc = getTranslation(proj.descKey, currentLang);
+      const flag = getTranslation(proj.flag, currentLang);
+      const buttonLink = getTranslation(proj.btnLink, currentLang);
 
       const card = document.createElement("a");
       card.className = "project-card";
@@ -120,7 +122,23 @@ async function renderProjects() {
       const img = document.createElement("img");
       img.src = proj.image;
       img.alt = title;
+
       imageWrapper.appendChild(img);
+
+      if (proj.flag) {
+        const flag = getTranslation(proj.flag, currentLang);
+
+        const type = document.createElement("div");
+        type.className = "flag";
+        type.setAttribute("data-i18n", proj.flag);
+        type.textContent = flag;
+
+        if (proj.bgColor) {
+          type.style.color = `var(${proj.bgColor})`;
+        }
+
+        imageWrapper.appendChild(type);
+      }
 
       const tagsHTML = (proj.tags || [])
         .map((tag, i) => {
@@ -144,6 +162,11 @@ async function renderProjects() {
       p.className = "text-block";
       p.setAttribute("data-i18n", proj.descKey);
       p.textContent = desc;
+
+      const button = document.createElement("button");
+      button.className = "project-card-button";
+      button.setAttribute("data-i18n", proj.btnLink);
+      button.textContent = buttonLink;
 
       info.append(tagsEl, h3, p);
 

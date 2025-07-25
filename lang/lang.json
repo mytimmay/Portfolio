@@ -868,5 +868,17 @@
   "load_error": {
     "de": "Fehler beim Laden der Daten.",
     "en": "Error loading data."
+  },
+  "project_flag_1": {
+    "de": "Case Study",
+    "en": "Case Study"
+  },
+  "project_flag_2": {
+    "de": "Sammlung",
+    "en": "Collection"
+  },
+  "view": {
+    "de": "Ansehen",
+    "en": "View"
   }
 }
