@@ -957,6 +957,12 @@ img {
     justify-content: center;
     gap: var(--spacing-L);
     position: relative;
+    height: auto;
+    padding-bottom: 80px;
+}
+
+body.scroll-snap .footer-section {
+    height: 100vh;
 }
 
 .footer-buttons {
