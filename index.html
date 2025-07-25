@@ -61,9 +61,10 @@
           ></video>
         </div>
       </section>
-      <section class="section section-mobile-overflow">
-        <div class="max-width">
-          <div class="skills-wrapper">
+      <section class="section section-scrollable section-mobile-overflow">
+        <div class="scroll-content">
+          <div class="max-width">
+            <div class="skills-wrapper">
             <div class="hero-text no-max-width">
               <div class="hero-text-subhead" data-i18n="skills-subtitle"></div>
               <h1 data-i18n="skills-title"></h1>
@@ -74,8 +75,12 @@
               <h1 data-i18n="tools-title"></h1>
               <div id="toolsContainer" class="chip-container"></div>
             </div>
-            <button data-i18n="about"></button>
+            <button
+              data-i18n="about"
+              onclick="window.location.href='about.html'"
+            ></button>
           </div>
+        </div>
         </div>
       </section>
       <section id="projects-section" class="section section-scrollable">
@@ -91,5 +96,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
 
     <script type="module" src="js/index.js"></script>
+    <script src="js/cookie-consent.js"></script>
   </body>
 </html>

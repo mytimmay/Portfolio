@@ -1,7 +1,6 @@
 import {
   setLanguage,
   currentLang,
-  translations,
   initLangToggle,
   getTranslation,
 } from "./i18n.js";
@@ -9,6 +8,7 @@ import { initNav } from "./nav.js";
 import { createTwoColumnSection } from "./layout.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
+import { loadFooter } from "./footer.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader();
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initNav();
   await loadExperience();
   initFadeAnimations();
+  await loadFooter();
 });
 
 async function loadExperience() {
@@ -67,13 +68,12 @@ async function loadExperience() {
       createTwoColumnSection(
         "about-experience-headline",
         entries,
-        translations,
-        currentLang,
         "experience-list"
       )
     );
     initFadeAnimations();
   } catch (err) {
     console.error("Fehler beim Laden der Erfahrung:", err);
+    container.innerHTML = `<p>${getTranslation("load_error", currentLang)}</p>`;
   }
 }

@@ -6,7 +6,9 @@
     "tags": ["UI,", "UX"],
     "titleKey": "project1_title",
     "descKey": "project1_desc",
-    "link": "project1.html"
+    "link": "project1.html",
+    "flag": "project_flag_1",
+    "btnLink": "view"
   },
   {
     "id": "project2",
@@ -15,7 +17,9 @@
     "tags": ["UI,", "UX,", "Game Design,", "3D,", "PM"],
     "titleKey": "project2_title",
     "descKey": "project2_desc",
-    "link": "project2.html"
+    "link": "project2.html",
+    "flag": "project_flag_1",
+    "btnLink": "view"
   },
   {
     "id": "project3",
@@ -24,7 +28,9 @@
     "tags": ["UI,", "UX,", "3D,", "PM"],
     "titleKey": "project3_title",
     "descKey": "project3_desc",
-    "link": "project3.html"
+    "link": "project3.html",
+    "flag": "project_flag_1",
+    "btnLink": "view"
   },
   {
     "id": "project4",
@@ -33,6 +39,7 @@
     "tags": ["UI,", "UX,", "Game Design,", "3D,", "Code"],
     "titleKey": "project4_title",
     "descKey": "project4_desc",
-    "link": "archive.html"
+    "link": "archive.html",
+    "btnLink": "view"
   }
 ]

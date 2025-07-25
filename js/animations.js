@@ -1,15 +1,14 @@
 export function initFadeAnimations() {
   const elements = document.querySelectorAll(
-    '.fade-left, .fade-right, .fade-top'
+    ".fade-left, .fade-right, .fade-top"
   );
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-        } else {
-          entry.target.classList.remove('in-view');
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
         }
       });
     },
@@ -20,9 +19,9 @@ export function initFadeAnimations() {
     elements.forEach((el) => observer.observe(el));
   };
 
-  if (document.readyState === 'complete') {
+  if (document.readyState === "complete") {
     startObserving();
   } else {
-    window.addEventListener('load', startObserving, { once: true });
+    window.addEventListener("load", startObserving, { once: true });
   }
 }

@@ -5,9 +5,14 @@ import {
   initLangToggle,
   getTranslation,
 } from "./i18n.js";
-import { initNav, highlightProjectButtons } from "./nav.js";
+import {
+  initNav,
+  highlightProjectButtons,
+  highlightContactButtons,
+} from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
+import { loadFooter } from "./footer.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader({ transparent: true, indexPage: true });
@@ -15,9 +20,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   initLangToggle();
 
-  initNav(highlightProjectButtons);
+  initNav(highlightProjectButtons, highlightContactButtons);
   await renderChipsAndProjects();
   initFadeAnimations();
+  await loadFooter();
   setupScrollAndNavigation();
   window.history.scrollRestoration = "manual";
   setTimeout(() => window.scrollTo(0, 0), 0);
@@ -106,6 +112,8 @@ async function renderProjects() {
     projects.forEach((proj, index) => {
       const title = getTranslation(proj.titleKey, currentLang);
       const desc = getTranslation(proj.descKey, currentLang);
+      const flag = getTranslation(proj.flag, currentLang);
+      const buttonLink = getTranslation(proj.btnLink, currentLang);
 
       const card = document.createElement("a");
       card.className = "project-card";
@@ -120,7 +128,23 @@ async function renderProjects() {
       const img = document.createElement("img");
       img.src = proj.image;
       img.alt = title;
+
       imageWrapper.appendChild(img);
+
+      if (proj.flag) {
+        const flag = getTranslation(proj.flag, currentLang);
+
+        const type = document.createElement("div");
+        type.className = "flag";
+        type.setAttribute("data-i18n", proj.flag);
+        type.textContent = flag;
+
+        if (proj.bgColor) {
+          type.style.color = `var(${proj.bgColor})`;
+        }
+
+        imageWrapper.appendChild(type);
+      }
 
       const tagsHTML = (proj.tags || [])
         .map((tag, i) => {
@@ -144,6 +168,11 @@ async function renderProjects() {
       p.className = "text-block";
       p.setAttribute("data-i18n", proj.descKey);
       p.textContent = desc;
+
+      const button = document.createElement("button");
+      button.className = "project-card-button";
+      button.setAttribute("data-i18n", proj.btnLink);
+      button.textContent = buttonLink;
 
       info.append(tagsEl, h3, p);
 
@@ -172,6 +201,9 @@ function setupScrollAndNavigation() {
     isAnimating = true;
 
     const target = sections[index];
+    const fromIndex = currentIndex;
+    const direction = index > fromIndex ? 1 : -1;
+
     gsap.to(window, {
       scrollTo: { y: target.offsetTop },
       duration: 1,
@@ -179,9 +211,17 @@ function setupScrollAndNavigation() {
       onComplete: () => {
         currentIndex = index;
         const scrollContainer = getScrollContainer(target);
-        if (scrollContainer) scrollContainer.scrollTop = 0;
+        if (scrollContainer) {
+          if (direction < 0) {
+            scrollContainer.scrollTop =
+              scrollContainer.scrollHeight - scrollContainer.clientHeight;
+          } else {
+            scrollContainer.scrollTop = 0;
+          }
+        }
         isAnimating = false;
         highlightProjectButtons(target.id === "projects-section");
+        highlightContactButtons(target.id === "contact");
       },
     });
   }
@@ -211,8 +251,50 @@ function setupScrollAndNavigation() {
 
   window.addEventListener("keydown", (e) => {
     if (isAnimating) return;
-    if (e.key === "ArrowDown") scrollToSection(currentIndex + 1);
-    if (e.key === "ArrowUp") scrollToSection(currentIndex - 1);
+    const section = sections[currentIndex];
+    const scrollContainer = getScrollContainer(section);
+
+    if (e.key === "PageDown") {
+      e.preventDefault();
+      if (scrollContainer) {
+        const atBottom =
+          scrollContainer.scrollTop + scrollContainer.clientHeight >=
+          scrollContainer.scrollHeight - 1;
+        if (!atBottom) {
+          scrollContainer.scrollTop = Math.min(
+            scrollContainer.scrollTop + scrollContainer.clientHeight,
+            scrollContainer.scrollHeight
+          );
+          return;
+        }
+      }
+      scrollToSection(currentIndex + 1);
+    }
+
+    if (e.key === "PageUp") {
+      e.preventDefault();
+      if (scrollContainer) {
+        const atTop = scrollContainer.scrollTop <= 0;
+        if (!atTop) {
+          scrollContainer.scrollTop = Math.max(
+            scrollContainer.scrollTop - scrollContainer.clientHeight,
+            0
+          );
+          return;
+        }
+      }
+      scrollToSection(currentIndex - 1);
+    }
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      scrollToSection(currentIndex + 1);
+    }
+
+    if (e.key === "ArrowUp") {
+      e.preventDefault();
+      scrollToSection(currentIndex - 1);
+    }
   });
 
   let startY = 0;
@@ -249,6 +331,7 @@ function setupScrollAndNavigation() {
             (s) => s.id === "projects-section"
           );
           highlightProjectButtons(true);
+          highlightContactButtons(false);
         },
       });
     });
@@ -256,7 +339,7 @@ function setupScrollAndNavigation() {
 
   const hash = window.location.hash.replace("#", "");
   if (hash) {
-    const targetId = `${hash}-section`;
+    const targetId = hash === "contact" ? "contact" : `${hash}-section`;
     const target = document.getElementById(targetId);
     if (target) {
       gsap.to(window, {
@@ -265,13 +348,28 @@ function setupScrollAndNavigation() {
         ease: "power2.inOut",
         onComplete: () => {
           currentIndex = [...sections].findIndex((s) => s.id === targetId);
+          highlightProjectButtons(targetId === "projects-section");
+          highlightContactButtons(targetId === "contact");
         },
       });
     }
   }
 
-  document.getElementById("toContact")?.addEventListener("click", (e) => {
-    e.preventDefault();
-    scrollToSection(4);
+  document.querySelectorAll(".js-to-contact").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.getElementById("contact");
+      if (!target) return;
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: target.offsetTop },
+        ease: "power2.inOut",
+        onComplete: () => {
+          currentIndex = [...sections].findIndex((s) => s.id === "contact");
+          highlightContactButtons(true);
+          highlightProjectButtons(false);
+        },
+      });
+    });
   });
 }

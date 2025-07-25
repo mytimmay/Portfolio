@@ -12,6 +12,8 @@ export async function loadHeader(options = {}) {
       brand?.setAttribute('href', 'index.html#home');
       const projects = header.querySelector('.js-to-projects');
       projects?.removeAttribute('href');
+      const contact = header.querySelector('.js-to-contact');
+      contact?.removeAttribute('href');
     }
     document.body.prepend(header);
   } catch (err) {
