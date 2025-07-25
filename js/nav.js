@@ -1,4 +1,4 @@
-export function initNav(onProjectsVisible) {
+export function initNav(onProjectsVisible, onContactVisible) {
   const burger = document.getElementById("burger-toggle");
   const navMenu = document.getElementById("nav-menu");
   const header = document.querySelector("header");
@@ -35,6 +35,9 @@ export function initNav(onProjectsVisible) {
       if (onProjectsVisible) {
         onProjectsVisible(visible.some((el) => el.id === "projects-section"));
       }
+      if (onContactVisible) {
+        onContactVisible(visible.some((el) => el.id === "contact"));
+      }
     },
     { threshold: 0.5 }
   );
@@ -44,6 +47,12 @@ export function initNav(onProjectsVisible) {
 
 export function highlightProjectButtons(active) {
   document.querySelectorAll(".js-to-projects").forEach((btn) => {
+    btn.classList.toggle("active", active);
+  });
+}
+
+export function highlightContactButtons(active) {
+  document.querySelectorAll(".js-to-contact").forEach((btn) => {
     btn.classList.toggle("active", active);
   });
 }
