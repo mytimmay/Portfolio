@@ -1061,6 +1061,10 @@ body.scroll-snap .footer-section {
     text-align: center;
 }
 
+#cookie-banner .cookie-buttons {
+    margin-top: 0.5rem;
+}
+
 #cookie-banner button {
     margin-left: 1rem;
     padding: 0.5rem 1rem;

@@ -10,24 +10,37 @@ function loadHotjar() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('cookieConsent') === 'accepted') {
+    const consent = localStorage.getItem('cookieConsent');
+    if (consent === 'accepted') {
         loadHotjar();
+        return;
+    }
+    if (consent === 'declined') {
         return;
     }
 
     const banner = document.createElement('div');
     banner.id = 'cookie-banner';
     banner.innerHTML =
-        "Diese Website verwendet Cookies zur Analyse. Durch Klick auf 'Akzeptieren' stimmst du der Nutzung zu. " +
-        "<button id='accept-cookies'>Akzeptieren</button>";
+        "Diese Website verwendet Cookies zur Analyse. Durch Klick auf 'Akzeptieren' stimmst du der Nutzung zu." +
+        "<div class='cookie-buttons'>" +
+        "<button id='accept-cookies'>Akzeptieren</button>" +
+        "<button id='decline-cookies'>Ablehnen</button>" +
+        "</div>";
 
     document.body.appendChild(banner);
     banner.style.display = 'block';
 
-    const btn = banner.querySelector('#accept-cookies');
-    btn.addEventListener('click', () => {
+    const acceptBtn = banner.querySelector('#accept-cookies');
+    const declineBtn = banner.querySelector('#decline-cookies');
+    acceptBtn.addEventListener('click', () => {
         localStorage.setItem('cookieConsent', 'accepted');
         banner.remove();
         loadHotjar();
+    });
+
+    declineBtn.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'declined');
+        banner.remove();
     });
 });
