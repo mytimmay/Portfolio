@@ -5,7 +5,11 @@ import {
   initLangToggle,
   getTranslation,
 } from "./i18n.js";
-import { initNav, highlightProjectButtons } from "./nav.js";
+import {
+  initNav,
+  highlightProjectButtons,
+  highlightContactButtons,
+} from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
 import { loadFooter } from "./footer.js";
@@ -16,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   initLangToggle();
 
-  initNav(highlightProjectButtons);
+  initNav(highlightProjectButtons, highlightContactButtons);
   await renderChipsAndProjects();
   initFadeAnimations();
   await loadFooter();
@@ -217,6 +221,7 @@ function setupScrollAndNavigation() {
         }
         isAnimating = false;
         highlightProjectButtons(target.id === "projects-section");
+        highlightContactButtons(target.id === "contact");
       },
     });
   }
@@ -326,6 +331,7 @@ function setupScrollAndNavigation() {
             (s) => s.id === "projects-section"
           );
           highlightProjectButtons(true);
+          highlightContactButtons(false);
         },
       });
     });
@@ -333,7 +339,7 @@ function setupScrollAndNavigation() {
 
   const hash = window.location.hash.replace("#", "");
   if (hash) {
-    const targetId = `${hash}-section`;
+    const targetId = hash === "contact" ? "contact" : `${hash}-section`;
     const target = document.getElementById(targetId);
     if (target) {
       gsap.to(window, {
@@ -342,13 +348,28 @@ function setupScrollAndNavigation() {
         ease: "power2.inOut",
         onComplete: () => {
           currentIndex = [...sections].findIndex((s) => s.id === targetId);
+          highlightProjectButtons(targetId === "projects-section");
+          highlightContactButtons(targetId === "contact");
         },
       });
     }
   }
 
-  document.getElementById("toContact")?.addEventListener("click", (e) => {
-    e.preventDefault();
-    scrollToSection(4);
+  document.querySelectorAll(".js-to-contact").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.getElementById("contact");
+      if (!target) return;
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: target.offsetTop },
+        ease: "power2.inOut",
+        onComplete: () => {
+          currentIndex = [...sections].findIndex((s) => s.id === "contact");
+          highlightContactButtons(true);
+          highlightProjectButtons(false);
+        },
+      });
+    });
   });
 }
