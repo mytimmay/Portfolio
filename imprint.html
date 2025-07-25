@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="imprint"></title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon/Favicon.svg"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa:200,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="smooth-wrapper" id="luxy">
+        <div class="content-wrapper">
+          <div class="two-column-list">
+            <div class="column-left">
+              <h4 class="fade-left" data-i18n="imprint"></h4>
+            </div>
+            <div class="column-right"><div class="fade-right"></div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="js/imprint.js"></script>
+    <script src="https://min30327.github.io/luxy.js/dist/js/luxy.js"></script>
+
+    <script charset="utf-8">
+      var isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+      if (!isMobile) {
+        luxy.init({
+          wrapper: "#luxy",
+          wrapperSpeed: 0.065,
+        });
+      }
+    </script>
+  </body>
+</html>
