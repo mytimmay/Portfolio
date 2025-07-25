@@ -8,6 +8,7 @@ import { initNav } from "./nav.js";
 import { createTwoColumnSection } from "./layout.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
+import { loadFooter } from "./footer.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader();
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initNav();
   await loadExperience();
   initFadeAnimations();
+  await loadFooter();
 });
 
 async function loadExperience() {

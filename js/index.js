@@ -8,6 +8,7 @@ import {
 import { initNav, highlightProjectButtons } from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
+import { loadFooter } from "./footer.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader({ transparent: true, indexPage: true });
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initNav(highlightProjectButtons);
   await renderChipsAndProjects();
   initFadeAnimations();
+  await loadFooter();
   setupScrollAndNavigation();
   window.history.scrollRestoration = "manual";
   setTimeout(() => window.scrollTo(0, 0), 0);
