@@ -969,3 +969,42 @@ img {
         align-items: center;
     }
 }
+/* === FOOTER SECTION === */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-L);
+    position: relative;
+    height: auto;
+    padding-bottom: 80px;
+}
+
+body.scroll-snap .footer-section {
+    height: 100vh;
+}
+
+.footer-buttons {
+    display: flex;
+    gap: var(--spacing-M);
+}
+
+.footer-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--container-spacing-medium);
+    background-color: var(--colors-surface-neutral-invert);
+    color: var(--colors-text-neutral);
+}
+
+.footer-bar a {
+    color: inherit;
+    text-decoration: none;
+}

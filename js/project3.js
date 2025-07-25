@@ -7,6 +7,7 @@ import {
 import { initNav } from "./nav.js";
 import { initFadeAnimations } from "./animations.js";
 import { loadHeader } from "./header.js";
+import { loadFooter } from "./footer.js";
 import {
   createTwoColumnSection,
   createDesignProcessSection,
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initNav();
   renderSections();
   initFadeAnimations();
+  await loadFooter();
 });
 
 function renderSections() {
