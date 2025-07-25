@@ -880,5 +880,13 @@
   "view": {
     "de": "Ansehen",
     "en": "View"
+  },
+  "privacypolicy": {
+    "de": "Datenschutz",
+    "en": "Privacy policy"
+  },
+  "imprint": {
+    "de": "Impressum",
+    "en": "Imprint"
   }
 }
