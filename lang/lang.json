@@ -888,5 +888,53 @@
   "imprint": {
     "de": "Impressum",
     "en": "Imprint"
+  },
+  "imprint_section1_title": {
+    "de": "Angaben gemäß § 5 TMG",
+    "en": "Information according to § 5 TMG"
+  },
+  "imprint_section1_text": {
+    "de": "Tim Schedlbauer\nMusterstraße 1\n12345 Musterstadt",
+    "en": "Tim Schedlbauer\nMusterstrasse 1\n12345 Example City"
+  },
+  "imprint_section2_title": {
+    "de": "Kontakt",
+    "en": "Contact"
+  },
+  "imprint_section2_text": {
+    "de": "E-Mail: tim@example.com",
+    "en": "Email: tim@example.com"
+  },
+  "imprint_section3_title": {
+    "de": "Haftungsausschluss",
+    "en": "Disclaimer"
+  },
+  "imprint_section3_text": {
+    "de": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für externe Links. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.",
+    "en": "Despite careful content control we assume no liability for external links. The operators of the linked pages are solely responsible for their content."
+  },
+  "privacy_section1_title": {
+    "de": "Allgemeines",
+    "en": "General"
+  },
+  "privacy_section1_text": {
+    "de": "Diese Website erhebt keine personenbezogenen Daten und verwendet keine Cookies.",
+    "en": "This website does not collect personal data and does not use cookies."
+  },
+  "privacy_section2_title": {
+    "de": "Kontakt",
+    "en": "Contact"
+  },
+  "privacy_section2_text": {
+    "de": "Bei Fragen zum Datenschutz kontaktieren Sie uns per E-Mail.",
+    "en": "If you have any questions about data protection, please contact us by email."
+  },
+  "privacy_section3_title": {
+    "de": "Verantwortliche Stelle",
+    "en": "Responsible entity"
+  },
+  "privacy_section3_text": {
+    "de": "Tim Schedlbauer, Musterstraße 1, 12345 Musterstadt",
+    "en": "Tim Schedlbauer, Musterstrasse 1, 12345 Example City"
   }
 }
