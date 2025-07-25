@@ -347,8 +347,19 @@ function setupScrollAndNavigation() {
     }
   }
 
-  document.getElementById("toContact")?.addEventListener("click", (e) => {
-    e.preventDefault();
-    scrollToSection(4);
+  document.querySelectorAll(".js-to-contact").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.getElementById("contact");
+      if (!target) return;
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: target.offsetTop },
+        ease: "power2.inOut",
+        onComplete: () => {
+          currentIndex = [...sections].findIndex((s) => s.id === "contact");
+        },
+      });
+    });
   });
 }
