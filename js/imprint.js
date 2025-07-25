@@ -30,6 +30,12 @@ function renderSections() {
   const wrapper = document.createElement("div");
   wrapper.className = "content-wrapper";
 
+  const h2 = document.createElement("h2");
+  h2.className = "center";
+  h2.setAttribute("data-i18n", "imprint");
+  h2.textContent = getTranslation("imprint", currentLang);
+  wrapper.appendChild(h2);
+
   const sections = [
     { title: "imprint_section1_title", text: "imprint_section1_text" },
     { title: "imprint_section2_title", text: "imprint_section2_text" },
