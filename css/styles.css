@@ -1,10 +1,12 @@
 @import './tokens.css';
 
 /* === RESET === */
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 /* === BASE === */
@@ -18,8 +20,6 @@ body {
     line-height: var(--font-lineheight-normal);
     color: var(--colors-text-neutral);
     background-color: var(--colors-surface-neutral-invert);
-
-
 }
 
 .main {
@@ -76,7 +76,6 @@ header {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    padding: 0 var(--container-spacing-medium);
     justify-content: center;
 }
 
@@ -96,6 +95,7 @@ nav {
     justify-content: center;
     width: 100%;
     max-width: var(--container-size-max-width);
+    padding: 0 var(--container-spacing-medium);
 }
 
 
@@ -199,7 +199,6 @@ button:hover {
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
 }
 
 /* Scrollbare Section muss nur Layout definieren */
@@ -214,6 +213,7 @@ button:hover {
     flex: 1 1 auto;
     overflow-y: auto;
     padding: var(--spacing-XL) var(--container-spacing-medium);
+    padding-top: 120px;
     gap: var(--spacing-2XL);
 
     display: flex;
@@ -239,6 +239,7 @@ button:hover {
     width: 100%;
     height: 100%;
     max-width: var(--container-size-max-width);
+    padding: 0 var(--container-spacing-medium);
     margin: 0 auto;
     z-index: 1;
 }
@@ -285,7 +286,7 @@ button:hover {
     align-items: start;
     justify-content: flex-end;
     gap: var(--spacing-L);
-    padding: var(--spacing-2XL) var(--container-spacing-medium);
+    padding: var(--spacing-2XL) 0;
 }
 
 .hero-wrapper-right {
@@ -294,13 +295,16 @@ button:hover {
     align-items: end;
     justify-content: flex-end;
     gap: var(--spacing-L);
-    padding: var(--spacing-2XL) var(--container-spacing-medium);
+    padding: var(--spacing-2XL) 0;
 }
 
 .skills-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: var(--spacing-XL);
+    padding-bottom: var(--spacing-L);
+    height: 100%;
 }
 
 .skills-wrapper {
@@ -318,7 +322,6 @@ button:hover {
     align-items: start;
     justify-content: flex-start;
     gap: var(--spacing-XS);
-    max-width: 400px;
 }
 
 .scroll-info {
@@ -914,7 +917,6 @@ img {
     gap: var(--spacing-2XL);
     /*padding-top: var(--spacing-4XL);*/
     height: auto;
-    padding-bottom: 256px;
 }
 
 body.scroll-snap .footer-section {
@@ -927,6 +929,7 @@ body.scroll-snap .footer-section {
     justify-content: center;
     gap: var(--spacing-M);
     padding: 0 var(--container-spacing-medium);
+    padding-bottom: 256px;
 }
 
 .footer-button {
@@ -956,7 +959,6 @@ body.scroll-snap .footer-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-L) var(--container-spacing-medium);
     background-color: var(--colors-surface-brand-primary);
     margin: 0 auto;
 }
@@ -968,6 +970,7 @@ body.scroll-snap .footer-section {
     align-items: center;
     justify-content: space-between;
     gap: var(--spacing-L);
+    padding: var(--spacing-L) var(--container-spacing-medium);
 }
 
 .footer-left {
@@ -1100,6 +1103,10 @@ body.scroll-snap .footer-section {
     }
 
     .footer-buttons {
+        flex-direction: column;
+    }
+
+    .archive-text {
         flex-direction: column;
     }
 }

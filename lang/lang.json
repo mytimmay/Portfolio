@@ -15,10 +15,13 @@
     "de": "UI/UX Designer, 3D Artist & Developer",
     "en": "UI/UX Designer, 3D Artist & Developer"
   },
-  "hero2_title": "Erlebnisse",
+  "hero2_title": {
+    "de": "Erlebnisse",
+    "en": "experiences"
+  },
   "hero2_subtitle1": {
     "de": "Ich entwickle positive digitale",
-    "en": "Ich entwickle positive digitale"
+    "en": "I develop positive digital"
   },
   "hero2_subtitle2": {
     "de": "Iterativ. Durchdacht. Nutzerzentriert.",
@@ -27,7 +30,7 @@
 
   "scroll_info": {
     "de": "Scroll down",
-    "en": "Scroll\ndown"
+    "en": "Scroll down"
   },
 
   "skills-subtitle": { "de": "Meine", "en": "My" },
