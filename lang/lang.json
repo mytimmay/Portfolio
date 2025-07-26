@@ -1,22 +1,33 @@
 {
   "projects": { "de": "Projekte", "en": "Projects" },
+  "myprojects": { "de": "Meine Projekte", "en": "My Projects" },
   "about": { "de": "Über mich", "en": "About" },
   "contact": { "de": "Kontakt", "en": "Contact" },
+  "mycontact": { "de": "Mein Kontakt", "en": "My Contact" },
   "menu_toggle": { "de": "Menü öffnen", "en": "Open menu" },
   "name": "Tim Schedlbauer",
-  "hero1_title": "UI/UX Designer",
-  "hero1_subtitle": {
-    "de": "Mein Fokus - Intuitive digitale Produkte",
-    "en": "My focus - Intuitive digital products"
+  "intro": {
+    "de": "Hi, ich bin",
+    "en": "Hi, I am"
   },
-  "hero2_title": "Mobile, Web & Desktop",
+  "hero1_title": "Tim Schedlbauer",
+  "hero1_subtitle": {
+    "de": "UI/UX Designer, 3D Artist & Developer",
+    "en": "UI/UX Designer, 3D Artist & Developer"
+  },
+  "hero2_title": "Erlebnisse",
   "hero2_subtitle1": {
-    "de": "Digitale Apps für",
-    "en": "Digital apps for"
+    "de": "Ich entwickle positive digitale",
+    "en": "Ich entwickle positive digitale"
   },
   "hero2_subtitle2": {
     "de": "Iterativ. Durchdacht. Nutzerzentriert.",
     "en": "Iterative. Planned. User-centered"
+  },
+
+  "scroll_info": {
+    "de": "Scroll down",
+    "en": "Scroll\ndown"
   },
 
   "skills-subtitle": { "de": "Meine", "en": "My" },
