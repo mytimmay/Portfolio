@@ -91,8 +91,8 @@ function renderSections() {
   ];
 
   const urls = [
-    { title: "project2_title", href: "project2.html" },
-    { title: "project3_title", href: "project3.html" },
+  { title: "project2_title", href: "project2" },
+  { title: "project3_title", href: "project3" },
   ];
 
   const sections = [

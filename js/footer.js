@@ -2,7 +2,7 @@ import { setLanguage, currentLang } from "./i18n.js";
 
 export async function loadFooter() {
   try {
-    const res = await fetch("footer.html");
+    const res = await fetch("footer");
     const html = await res.text();
     const temp = document.createElement("div");
     temp.innerHTML = html.trim();
