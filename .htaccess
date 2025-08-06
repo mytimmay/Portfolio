@@ -1,8 +1,14 @@
 RewriteEngine On
 
-# Rewrite English prefixed paths to base paths
-RewriteRule ^en/(.*)$ $1 [L]
+# Rewrite English-prefixed paths to their base counterparts
+RewriteRule ^en/(.*)$ /$1 [L]
 
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)$ $1.html [L]
+# Allow direct access to /en or /en/ to serve the main index
+RewriteRule ^en/?$ /index.html [L]
+
+# Append .html extension for extensionless requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/?$ /$1.html [L]
 
