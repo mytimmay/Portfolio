@@ -4,6 +4,7 @@ import {
   translations,
   initLangToggle,
   getTranslation,
+  getInitialLanguage,
 } from "./i18n.js";
 import {
   initNav,
@@ -16,7 +17,7 @@ import { loadFooter } from "./footer.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader({ transparent: true, indexPage: true });
-  await setLanguage(localStorage.getItem("lang") || "de");
+  await setLanguage(getInitialLanguage());
 
   initLangToggle();
 

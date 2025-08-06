@@ -23,7 +23,7 @@ async function loadTranslations() {
     .then((json) => {
       translations = json;
       return translations;
-    });
+  });
   return translationsPromise;
 }
 
@@ -32,6 +32,27 @@ function updateLangButtonUI() {
     const lang = el.getAttribute("data-lang");
     el.classList.toggle("active", lang === currentLang);
   });
+}
+
+export function getLangFromPath() {
+  return window.location.pathname.startsWith("/en") ? "en" : "de";
+}
+
+export function syncPathWithLanguage(lang = currentLang) {
+  const path = window.location.pathname;
+  const isEnPath = path.startsWith("/en");
+  if (lang === "en" && !isEnPath) {
+    const newPath = "/en" + (path === "/" ? "/" : path);
+    window.history.replaceState(null, "", newPath);
+  } else if (lang === "de" && isEnPath) {
+    const newPath = path.replace(/^\/en/, "") || "/";
+    window.history.replaceState(null, "", newPath);
+  }
+}
+
+export function getInitialLanguage() {
+  if (getLangFromPath() === "en") return "en";
+  return localStorage.getItem("lang") || "de";
 }
 
 export async function setLanguage(lang) {
@@ -59,6 +80,8 @@ export async function setLanguage(lang) {
 
   localStorage.setItem("lang", lang);
   updateLangButtonUI();
+  document.documentElement.setAttribute("lang", lang);
+  syncPathWithLanguage(lang);
 }
 
 export function initLangToggle(callback) {
