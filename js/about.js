@@ -3,6 +3,7 @@ import {
   currentLang,
   initLangToggle,
   getTranslation,
+  getInitialLanguage,
 } from "./i18n.js";
 import { initNav } from "./nav.js";
 import { createTwoColumnSection } from "./layout.js";
@@ -12,7 +13,7 @@ import { loadFooter } from "./footer.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader();
-  await setLanguage(localStorage.getItem("lang") || "de");
+  await setLanguage(getInitialLanguage());
 
   initLangToggle();
 

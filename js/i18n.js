@@ -1,4 +1,6 @@
-export let currentLang = "de";
+export let currentLang = window.location.pathname.startsWith("/en")
+  ? "en"
+  : "de";
 export let translations = {};
 let translationsPromise;
 
@@ -34,6 +36,22 @@ function updateLangButtonUI() {
   });
 }
 
+function updateURLLang(lang) {
+  const basePath = window.location.pathname.replace(/^\/(en\/)?/, "/");
+  const newPath = lang === "en" ? "/en" + basePath : basePath;
+  window.history.replaceState(
+    {},
+    "",
+    newPath + window.location.search + window.location.hash
+  );
+}
+
+export function getInitialLanguage() {
+  if (window.location.pathname.startsWith("/en")) return "en";
+  const stored = localStorage.getItem("lang");
+  return stored ? stored : "de";
+}
+
 export async function setLanguage(lang) {
   currentLang = lang;
   await loadTranslations();
@@ -58,6 +76,7 @@ export async function setLanguage(lang) {
   });
 
   localStorage.setItem("lang", lang);
+  updateURLLang(lang);
   updateLangButtonUI();
 }
 
