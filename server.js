@@ -11,20 +11,12 @@ const PORT = 3000;
 // Statisches Hosting + automatische .html Erweiterung
 app.use(express.static(__dirname, { extensions: ["html"] }));
 
-// Handle /en/* URLs -> entferne /en und bediene lokale HTML-Datei
-app.use("/en", (req, res, next) => {
-  let page = req.path === "/" ? "/index" : req.path;
-  res.sendFile(path.join(__dirname, page + ".html"), (err) => {
-    if (err) next();
-  });
-});
+// "en"-Präfix auf die gleichen Dateien wie ohne Präfix abbilden
+app.use("/en", express.static(__dirname, { extensions: ["html"] }));
 
-// Fallback: URLs ohne .html bedienen
-app.get("*", (req, res, next) => {
-  let page = req.path === "/" ? "/index" : req.path;
-  res.sendFile(path.join(__dirname, page + ".html"), (err) => {
-    if (err) next();
-  });
+// 404-Fallback auf benutzerdefinierte Seite
+app.use((req, res) => {
+  res.status(404).type("html").sendFile(path.join(__dirname, "404.html"));
 });
 
 app.listen(PORT, () => {
