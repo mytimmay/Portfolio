@@ -1,14 +1,26 @@
-# --- URL ohne .html ---
+# Aktiviere Rewrite Engine
 RewriteEngine On
 
+# Statische Dateien ausschließen
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
 # Entferne .html von URLs
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Sprach-Routing für /en
+RewriteCond %{REQUEST_URI} ^/en/
+RewriteCond %{DOCUMENT_ROOT}/en%{REQUEST_URI}.html -f
+RewriteRule ^en/(.+)/?$ /en/$1.html [L]
+
+# Sprach-Fallback auf index.html in /en
+RewriteCond %{REQUEST_URI} ^/en/?$
+RewriteCond %{DOCUMENT_ROOT}/en/index.html -f
+RewriteRule ^en/?$ /en/index.html [L]
+
+# Fallback für alle anderen nicht gefundenen Seiten → 404.html
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^/]+)/?$ $1.html [L]
-
-# --- /en Routing ---
-RewriteCond %{REQUEST_URI} ^/en
-RewriteRule ^en/(.*)$ $1.html [L]
-
-# --- 404-Fallback ---
-ErrorDocument 404 /404.html
+RewriteRule ^.*$ /404.html [L]
