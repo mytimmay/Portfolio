@@ -1005,6 +1005,17 @@ body.scroll-snap .footer-section {
     color: white;
 }
 
+.error-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-XL);
+}
+
+.error-heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-M);
+}
 
 
 /* === TABLET NAV === */

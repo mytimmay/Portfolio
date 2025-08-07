@@ -982,5 +982,17 @@
   "privacy_section7_text": {
     "de": "Bei Fragen zum Datenschutz wenden Sie sich bitte an: tim.schedlbauer[at]gmail.com",
     "en": "If you have any questions about data protection, please contact: tim.schedlbauer[at]gmail.com"
+  },
+  "404_head": {
+    "de": "404",
+    "en": "404"
+  },
+  "404_subhead": {
+    "de": "Seite nicht gefunden",
+    "en": "Page not found."
+  },
+  "404_link": {
+    "de": "Zurück zur Startseite",
+    "en": "Back to home page"
   }
 }

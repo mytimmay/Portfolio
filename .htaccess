@@ -1,3 +1,14 @@
+# --- URL ohne .html ---
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)$ $1.html [L]
+
+# Entferne .html von URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# --- /en Routing ---
+RewriteCond %{REQUEST_URI} ^/en
+RewriteRule ^en/(.*)$ $1.html [L]
+
+# --- 404-Fallback ---
+ErrorDocument 404 /404.html
