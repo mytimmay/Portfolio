@@ -1,29 +1,26 @@
+# Aktiviere Rewrite Engine
 RewriteEngine On
-RewriteBase /
 
-# -------------------------------------
-# 1. Weiterleitung von .html-URLs zu HTML-losen Pfaden
-# z. B. /about.html → /about
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+# Statische Dateien ausschließen
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-# -------------------------------------
-# 2. URLs ohne .html auf tatsächliche .html-Dateien mappen
-# z. B. /about → /about.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|webp|svg|gif|ico|woff2?)$ [NC]
-RewriteRule ^([a-zA-Z0-9/_-]+)$ $1.html [L]
+# Entferne .html von URLs
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
 
-# -------------------------------------
-# 3. Sprachpfad "/en" behandeln → /en/about → /about.html (englische Variante)
+# Sprach-Routing für /en
 RewriteCond %{REQUEST_URI} ^/en/
-RewriteRule ^en/(.*)$ /$1.html [L]
+RewriteCond %{DOCUMENT_ROOT}/en%{REQUEST_URI}.html -f
+RewriteRule ^en/(.+)/?$ /en/$1.html [L]
 
-# Optional: /en auf eine spezielle Startseite leiten
-RewriteRule ^en/?$ /index.html [L]
+# Sprach-Fallback auf index.html in /en
+RewriteCond %{REQUEST_URI} ^/en/?$
+RewriteCond %{DOCUMENT_ROOT}/en/index.html -f
+RewriteRule ^en/?$ /en/index.html [L]
 
-# -------------------------------------
-# 4. Fehlerseite bei unbekannten Pfaden
-ErrorDocument 404 /404.html
+# Fallback für alle anderen nicht gefundenen Seiten → 404.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /404.html [L]
