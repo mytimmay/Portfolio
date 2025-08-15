@@ -148,6 +148,15 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
+a,
+a:visited,
+a:active,
+a:focus {
+    background-color: unset;
+    color: var(--colors-text-neutral);
+    text-decoration: none;
+}
+
 .nav-link.active {
     color: var(--colors-text-brand-color1);
 }
