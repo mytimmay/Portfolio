@@ -229,7 +229,10 @@ function setupScrollAndNavigation() {
   window.addEventListener(
     "wheel",
     (e) => {
-      if (isAnimating) return;
+      if (isAnimating) {
+        e.preventDefault();
+        return;
+      }
 
       const section = sections[currentIndex];
       const scrollContainer = getScrollContainer(section);
@@ -260,7 +263,10 @@ function setupScrollAndNavigation() {
   );
 
   window.addEventListener("keydown", (e) => {
-    if (isAnimating) return;
+    if (isAnimating) {
+      e.preventDefault();
+      return;
+    }
     const section = sections[currentIndex];
     const scrollContainer = getScrollContainer(section);
 
