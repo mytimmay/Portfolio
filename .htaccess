@@ -1,29 +1,23 @@
 RewriteEngine On
 RewriteBase /
 
-# -------------------------------------
-# 1. Weiterleitung von .html-URLs zu HTML-losen Pfaden
-# z. B. /about.html → /about
+# 1. Entferne .html aus URL (z. B. /about.html → /about)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.html$ /$1 [R=301,L]
 
-# -------------------------------------
-# 2. URLs ohne .html auf tatsächliche .html-Dateien mappen
-# z. B. /about → /about.html
+# 2. Wenn keine Datei existiert, aber .html-Datei vorhanden ist → /about → /about.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|webp|svg|gif|ico|woff2?)$ [NC]
 RewriteRule ^([a-zA-Z0-9/_-]+)$ $1.html [L]
 
-# -------------------------------------
-# 3. Sprachpfad "/en" behandeln → /en/about → /about.html (englische Variante)
+# 3. /en/... → englische Dateien (z. B. /en/about → about.html)
 RewriteCond %{REQUEST_URI} ^/en/
 RewriteRule ^en/(.*)$ /$1.html [L]
 
-# Optional: /en auf eine spezielle Startseite leiten
+# 4. Optional: /en alleine → index.html
 RewriteRule ^en/?$ /index.html [L]
 
-# -------------------------------------
-# 4. Fehlerseite bei unbekannten Pfaden
+# 5. Fallback 404
 ErrorDocument 404 /404.html
