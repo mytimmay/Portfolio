@@ -229,7 +229,10 @@ function setupScrollAndNavigation() {
   window.addEventListener(
     "wheel",
     (e) => {
-      if (isAnimating) return;
+      if (isAnimating) {
+        e.preventDefault();
+        return;
+      }
 
       const section = sections[currentIndex];
       const scrollContainer = getScrollContainer(section);
@@ -240,7 +243,17 @@ function setupScrollAndNavigation() {
         const atBottom =
           scrollContainer.scrollTop + scrollContainer.clientHeight >=
           scrollContainer.scrollHeight - 1;
-        if ((deltaY > 0 && !atBottom) || (deltaY < 0 && !atTop)) return;
+        if ((deltaY > 0 && !atBottom) || (deltaY < 0 && !atTop)) {
+          e.preventDefault();
+          const clamped =
+            Math.sign(deltaY) * Math.min(Math.abs(deltaY), 100);
+          gsap.to(scrollContainer, {
+            scrollTop: scrollContainer.scrollTop + clamped,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+          return;
+        }
       }
 
       e.preventDefault();
@@ -250,7 +263,10 @@ function setupScrollAndNavigation() {
   );
 
   window.addEventListener("keydown", (e) => {
-    if (isAnimating) return;
+    if (isAnimating) {
+      e.preventDefault();
+      return;
+    }
     const section = sections[currentIndex];
     const scrollContainer = getScrollContainer(section);
 
