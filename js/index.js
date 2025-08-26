@@ -236,17 +236,18 @@ function setupScrollAndNavigation() {
 
       const section = sections[currentIndex];
       const scrollContainer = getScrollContainer(section);
-      const deltaY = e.deltaY;
+      const rawDelta = e.deltaY;
+      const delta = -rawDelta;
+      const direction = delta > 0 ? 1 : -1;
 
       if (scrollContainer) {
         const atTop = scrollContainer.scrollTop <= 0;
         const atBottom =
           scrollContainer.scrollTop + scrollContainer.clientHeight >=
           scrollContainer.scrollHeight - 1;
-        if ((deltaY > 0 && !atBottom) || (deltaY < 0 && !atTop)) {
+        if ((direction > 0 && !atBottom) || (direction < 0 && !atTop)) {
           e.preventDefault();
-          const clamped =
-            Math.sign(deltaY) * Math.min(Math.abs(deltaY), 100);
+          const clamped = direction * Math.min(Math.abs(delta), 100);
           gsap.to(scrollContainer, {
             scrollTop: scrollContainer.scrollTop + clamped,
             duration: 0.3,
@@ -257,7 +258,7 @@ function setupScrollAndNavigation() {
       }
 
       e.preventDefault();
-      scrollToSection(currentIndex + (deltaY > 0 ? 1 : -1));
+      scrollToSection(currentIndex + direction);
     },
     { passive: false }
   );
