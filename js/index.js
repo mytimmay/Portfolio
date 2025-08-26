@@ -238,17 +238,31 @@ function setupScrollAndNavigation() {
       const scrollContainer = getScrollContainer(section);
       const deltaY = e.deltaY;
 
+      // ignore tiny wheel values that can occur with touchpads
+      if (Math.abs(deltaY) < 1) {
+        e.preventDefault();
+        return;
+      }
+
+      const direction = Math.sign(deltaY);
+
       if (scrollContainer) {
         const atTop = scrollContainer.scrollTop <= 0;
         const atBottom =
           scrollContainer.scrollTop + scrollContainer.clientHeight >=
           scrollContainer.scrollHeight - 1;
-        if ((deltaY > 0 && !atBottom) || (deltaY < 0 && !atTop)) {
+        if ((direction > 0 && !atBottom) || (direction < 0 && !atTop)) {
           e.preventDefault();
-          const clamped =
-            Math.sign(deltaY) * Math.min(Math.abs(deltaY), 100);
+          const step = scrollContainer.clientHeight / 4;
+          const target =
+            direction > 0
+              ? Math.min(
+                  scrollContainer.scrollTop + step,
+                  scrollContainer.scrollHeight - scrollContainer.clientHeight
+                )
+              : Math.max(scrollContainer.scrollTop - step, 0);
           gsap.to(scrollContainer, {
-            scrollTop: scrollContainer.scrollTop + clamped,
+            scrollTop: target,
             duration: 0.3,
             ease: "power2.out",
           });
@@ -257,7 +271,7 @@ function setupScrollAndNavigation() {
       }
 
       e.preventDefault();
-      scrollToSection(currentIndex + (deltaY > 0 ? 1 : -1));
+      scrollToSection(currentIndex + direction);
     },
     { passive: false }
   );
@@ -277,10 +291,16 @@ function setupScrollAndNavigation() {
           scrollContainer.scrollTop + scrollContainer.clientHeight >=
           scrollContainer.scrollHeight - 1;
         if (!atBottom) {
-          scrollContainer.scrollTop = Math.min(
-            scrollContainer.scrollTop + scrollContainer.clientHeight,
-            scrollContainer.scrollHeight
+          const step = scrollContainer.clientHeight / 4;
+          const target = Math.min(
+            scrollContainer.scrollTop + step,
+            scrollContainer.scrollHeight - scrollContainer.clientHeight
           );
+          gsap.to(scrollContainer, {
+            scrollTop: target,
+            duration: 0.3,
+            ease: "power2.out",
+          });
           return;
         }
       }
@@ -292,10 +312,13 @@ function setupScrollAndNavigation() {
       if (scrollContainer) {
         const atTop = scrollContainer.scrollTop <= 0;
         if (!atTop) {
-          scrollContainer.scrollTop = Math.max(
-            scrollContainer.scrollTop - scrollContainer.clientHeight,
-            0
-          );
+          const step = scrollContainer.clientHeight / 4;
+          const target = Math.max(scrollContainer.scrollTop - step, 0);
+          gsap.to(scrollContainer, {
+            scrollTop: target,
+            duration: 0.3,
+            ease: "power2.out",
+          });
           return;
         }
       }
@@ -309,10 +332,16 @@ function setupScrollAndNavigation() {
           scrollContainer.scrollTop + scrollContainer.clientHeight >=
           scrollContainer.scrollHeight - 1;
         if (!atBottom) {
-          scrollContainer.scrollTop = Math.min(
-            scrollContainer.scrollTop + 40,
+          const step = scrollContainer.clientHeight / 4;
+          const target = Math.min(
+            scrollContainer.scrollTop + step,
             scrollContainer.scrollHeight - scrollContainer.clientHeight
           );
+          gsap.to(scrollContainer, {
+            scrollTop: target,
+            duration: 0.3,
+            ease: "power2.out",
+          });
           return;
         }
       }
@@ -324,10 +353,13 @@ function setupScrollAndNavigation() {
       if (scrollContainer) {
         const atTop = scrollContainer.scrollTop <= 0;
         if (!atTop) {
-          scrollContainer.scrollTop = Math.max(
-            scrollContainer.scrollTop - 40,
-            0
-          );
+          const step = scrollContainer.clientHeight / 4;
+          const target = Math.max(scrollContainer.scrollTop - step, 0);
+          gsap.to(scrollContainer, {
+            scrollTop: target,
+            duration: 0.3,
+            ease: "power2.out",
+          });
           return;
         }
       }
