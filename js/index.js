@@ -243,26 +243,17 @@ function setupScrollAndNavigation() {
         const atBottom =
           scrollContainer.scrollTop + scrollContainer.clientHeight >=
           scrollContainer.scrollHeight - 1;
-
-        if (deltaY > 0 && atBottom) {
+        if ((deltaY > 0 && !atBottom) || (deltaY < 0 && !atTop)) {
           e.preventDefault();
-          if (currentIndex < sections.length - 1) {
-            scrollToSection(currentIndex + 1);
-          }
+          const clamped =
+            Math.sign(deltaY) * Math.min(Math.abs(deltaY), 100);
+          gsap.to(scrollContainer, {
+            scrollTop: scrollContainer.scrollTop + clamped,
+            duration: 0.3,
+            ease: "power2.out",
+          });
           return;
         }
-
-        if (deltaY < 0 && atTop) {
-          e.preventDefault();
-          if (currentIndex > 0) {
-            scrollToSection(currentIndex - 1);
-          }
-          return;
-        }
-
-        e.preventDefault();
-        scrollContainer.scrollTop += deltaY;
-        return;
       }
 
       e.preventDefault();
@@ -345,24 +336,60 @@ function setupScrollAndNavigation() {
   });
 
   let startY = 0;
-  window.addEventListener("touchstart", (e) => {
-    startY = e.touches[0].clientY;
-  });
+  let lastY = 0;
+  window.addEventListener(
+    "touchstart",
+    (e) => {
+      startY = lastY = e.touches[0].clientY;
+    },
+    { passive: false }
+  );
 
-  window.addEventListener("touchend", (e) => {
-    const dy = startY - e.changedTouches[0].clientY;
-    const section = sections[currentIndex];
-    const scrollContainer = getScrollContainer(section);
-    const atTop = scrollContainer ? scrollContainer.scrollTop <= 0 : true;
-    const atBottom = scrollContainer
-      ? scrollContainer.scrollTop + scrollContainer.clientHeight >=
-        scrollContainer.scrollHeight - 1
-      : true;
+  window.addEventListener(
+    "touchmove",
+    (e) => {
+      const currentY = e.touches[0].clientY;
+      const deltaY = lastY - currentY;
+      const section = sections[currentIndex];
+      const scrollContainer = getScrollContainer(section);
+      if (scrollContainer) {
+        const atTop = scrollContainer.scrollTop <= 0;
+        const atBottom =
+          scrollContainer.scrollTop + scrollContainer.clientHeight >=
+          scrollContainer.scrollHeight - 1;
 
-    if ((dy > 50 && atBottom) || (dy < -50 && atTop)) {
-      scrollToSection(currentIndex + (dy > 0 ? 1 : -1));
-    }
-  });
+        if ((deltaY > 0 && !atBottom) || (deltaY < 0 && !atTop)) {
+          e.preventDefault();
+          scrollContainer.scrollTop += deltaY;
+        } else {
+          e.preventDefault();
+        }
+      } else {
+        e.preventDefault();
+      }
+      lastY = currentY;
+    },
+    { passive: false }
+  );
+
+  window.addEventListener(
+    "touchend",
+    (e) => {
+      const dy = startY - e.changedTouches[0].clientY;
+      const section = sections[currentIndex];
+      const scrollContainer = getScrollContainer(section);
+      const atTop = scrollContainer ? scrollContainer.scrollTop <= 0 : true;
+      const atBottom = scrollContainer
+        ? scrollContainer.scrollTop + scrollContainer.clientHeight >=
+          scrollContainer.scrollHeight - 1
+        : true;
+
+      if ((dy > 50 && atBottom) || (dy < -50 && atTop)) {
+        scrollToSection(currentIndex + (dy > 0 ? 1 : -1));
+      }
+    },
+    { passive: false }
+  );
 
   document.querySelectorAll(".js-to-projects").forEach((btn) => {
     btn.addEventListener("click", (e) => {
