@@ -236,7 +236,11 @@ function setupScrollAndNavigation() {
 
       const section = sections[currentIndex];
       const scrollContainer = getScrollContainer(section);
-      const deltaY = e.deltaY;
+
+      let deltaY = e.deltaY;
+      if (e.deltaMode === 0 && Math.abs(deltaY) < 40) {
+        deltaY = -deltaY;
+      }
 
       if (scrollContainer) {
         const atTop = scrollContainer.scrollTop <= 0;
