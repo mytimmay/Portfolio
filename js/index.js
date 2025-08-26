@@ -238,15 +238,23 @@ function setupScrollAndNavigation() {
       const scrollContainer = getScrollContainer(section);
       const deltaY = e.deltaY;
 
+      // ignore tiny wheel values that can occur with touchpads
+      if (Math.abs(deltaY) < 1) {
+        e.preventDefault();
+        return;
+      }
+
+      const direction = Math.sign(deltaY);
+
       if (scrollContainer) {
         const atTop = scrollContainer.scrollTop <= 0;
         const atBottom =
           scrollContainer.scrollTop + scrollContainer.clientHeight >=
           scrollContainer.scrollHeight - 1;
-        if ((deltaY > 0 && !atBottom) || (deltaY < 0 && !atTop)) {
+        if ((direction > 0 && !atBottom) || (direction < 0 && !atTop)) {
           e.preventDefault();
           const clamped =
-            Math.sign(deltaY) * Math.min(Math.abs(deltaY), 100);
+            direction * Math.min(Math.abs(deltaY), 100);
           gsap.to(scrollContainer, {
             scrollTop: scrollContainer.scrollTop + clamped,
             duration: 0.3,
@@ -257,7 +265,7 @@ function setupScrollAndNavigation() {
       }
 
       e.preventDefault();
-      scrollToSection(currentIndex + (deltaY > 0 ? 1 : -1));
+      scrollToSection(currentIndex + direction);
     },
     { passive: false }
   );
