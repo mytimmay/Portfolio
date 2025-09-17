@@ -1,10 +1,10 @@
 RewriteEngine On
 RewriteBase /
 
-# 1. Entferne .html aus URL (z. B. /about.html → /about) nur wenn Datei existiert
-RewriteCond %{REQUEST_FILENAME} !-d
+# 1. Entferne .html nur bei direkten Anfragen (verhindert Redirect-Loops)
 RewriteCond %{REQUEST_FILENAME} -f
-RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
 
 # 2. Wenn keine Datei existiert, aber passende .html-Datei vorhanden ist → /about → /about.html
 RewriteCond %{REQUEST_FILENAME} !-f
