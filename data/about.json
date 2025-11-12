@@ -1,6 +1,12 @@
 {
   "experience": [
     {
+      "title": "about-experience-0-title",
+      "company": "about-experience-0-company",
+      "period": "about-experience-0-period",
+      "text": "about-experience-0-text"
+    },
+    {
       "title": "about-experience-1-title",
       "company": "about-experience-1-company",
       "period": "about-experience-1-period",

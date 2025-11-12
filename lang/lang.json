@@ -12,8 +12,8 @@
   },
   "hero1_title": "Tim Schedlbauer",
   "hero1_subtitle": {
-    "de": "UI/UX Designer mit Leidenschaft für 3D & Entwicklung",
-    "en": "UI/UX designer with a passion for 3D & development"
+    "de": "UI/UX Designer mit Leidenschaft für 2D, 3D & Entwicklung",
+    "en": "UI/UX designer with a passion for 2D, 3D & development"
   },
   "hero2_title": {
     "de": "Erlebnisse",
@@ -142,17 +142,33 @@
     "de": "Erfahrungen",
     "en": "Experience"
   },
+  "about-experience-0-title": {
+    "de": "UX/UI Designer",
+    "en": "UX/UI Designer"
+  },
   "about-experience-1-title": {
     "de": "UX/UI Designer",
     "en": "UX/UI Designer"
+  },
+  "about-experience-0-company": {
+    "de": "Freiberuflich | ",
+    "en": "Freelance | "
   },
   "about-experience-1-company": {
     "de": "Space One GmbH | ",
     "en": "Space One GmbH | "
   },
+  "about-experience-0-period": {
+    "de": "Januar 2025 - Heute",
+    "en": "January 2025 - Today"
+  },
   "about-experience-1-period": {
     "de": "November 2020 - August 2024",
     "en": "November 2020 - August 2024"
+  },
+  "about-experience-0-text": {
+    "de": "Aufbau einer freiberuflichen Tätigkeit im Bereich UX/UI-Design. Erste Projekte über Online-Plattformen, Weiterentwicklung des eigenen Portfolios sowie Spezialisierung auf interaktive Anwendungen und 3D-Design. Parallel Konzeption, Design und prototypische Umsetzung eines eigenen Spieleprojekts (digital & analog).",
+    "en": "Established freelance work in the field of UX/UI design. First projects via online platforms, further development of own portfolio, and specialization in interactive applications and 3D design. At the same time, conception, design, and prototypical implementation of own game project (digital & analog)."
   },
   "about-experience-1-text": {
     "de": "Konzeption, Design, Dokumentation und Implementierung komplexer Systeme wie Spielmechaniken, Benutzerberechtigungen, Dashboards, Abonnements, Websites, Unity-Apps, Prototyping, 3D-Modellierung und Animation. Durchführung und Auswertung von Benutzertests. Agiles Projektmanagement und Projektplanung.",
