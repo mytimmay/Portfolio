@@ -142,7 +142,7 @@ function renderSections() {
     },
     {
       type: "youtube-video",
-      src: "https://www.youtube.com/watch?v=BdJbY9q_JD4&t=2s",
+      src: "https://www.youtube.com/watch?v=BdJbY9q_JD4&t",
     },
     {
       type: "twoColumn",
@@ -445,7 +445,7 @@ function renderSections() {
         contentNodes = [processKey(sec.text)];
       }
 
-        el = createTwoColumnSection(sec.left, contentNodes);
+      el = createTwoColumnSection(sec.left, contentNodes);
     } else if (sec.type === "youtube-video") {
       const iframe = document.createElement("iframe");
       iframe.src = convertYouTubeUrl(sec.src);
